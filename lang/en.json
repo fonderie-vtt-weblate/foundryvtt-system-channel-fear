@@ -1,0 +1,30 @@
+{
+  "CHANNELFEAR.AbilityAct": "To act",
+  "CHANNELFEAR.AbilityKno": "To know", 
+  "CHANNELFEAR.AbilityBea": "To bear",
+  "CHANNELFEAR.AbilityFor": "Force",
+  "CHANNELFEAR.AbilityPer": "Perceive",
+  "CHANNELFEAR.AbilityImp": "To impose",
+  "CHANNELFEAR.AbilityKnh": "Know-how",
+  "CHANNELFEAR.AbilityFig": "Fight",
+  "CHANNELFEAR.AbilitySel": "To self-control",
+  "CHANNELFEAR.AbilityAim": "To aim",
+
+  "CHANNELFEAR.AbilityActAbbr": "act",
+  "CHANNELFEAR.AbilityKnoAbbr": "kno",
+  "CHANNELFEAR.AbilityBeaAbbr": "bea",
+  "CHANNELFEAR.AbilityForAbbr": "for",
+  "CHANNELFEAR.AbilityPerAbbr": "per",
+  "CHANNELFEAR.AbilityImpAbbr": "imp",
+  "CHANNELFEAR.AbilityKnhAbbr": "knh",
+  "CHANNELFEAR.AbilityFigAbbr": "fig",
+  "CHANNELFEAR.AbilitySelAbbr": "sel",
+  "CHANNELFEAR.AbilityAimAbbr": "aim",
+
+  "CHANNELFEAR.EffectCreate": "Create Effect",
+  "CHANNELFEAR.EffectToggle": "Toggle Effect",
+  "CHANNELFEAR.EffectEdit": "Edit Effect",
+  "CHANNELFEAR.EffectDelete": "Delete Effect",
+
+  "CHANNELFEAR.Add": "Add"
+}
