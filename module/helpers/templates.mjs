@@ -3,13 +3,10 @@
  * Pre-loaded templates are compiled and cached for fast access when rendering
  * @return {Promise}
  */
- export const preloadHandlebarsTemplates = async function() {
+export const preloadHandlebarsTemplates = async function () {
   return loadTemplates([
-
     // Actor partials.
-    "systems/channel-fear/templates/actor/parts/actor-features.html",
-    "systems/channel-fear/templates/actor/parts/actor-items.html",
-    "systems/channel-fear/templates/actor/parts/actor-spells.html",
-    "systems/channel-fear/templates/actor/parts/actor-effects.html",
+    'systems/channel-fear/templates/actor/parts/actor-items.hbs.html',
+    'systems/channel-fear/templates/actor/parts/actor-specialties.hbs.html',
   ]);
 };

@@ -1,17 +1,25 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": [
+      "character",
+      "npc"
+    ],
     "templates": {
       "base": {
         "biography": ""
       }
     },
     "character": {
-      "templates": ["base"],
+      "templates": [
+        "base"
+      ],
+      "info": {
+        "identity": "",
+        "profile": "",
+        "keywords": "",
+        "profdef": ""
+      },
       "attributes": {
-        "level": {
-          "value": 1
-        },
         "health": {
           "value": 6,
           "min": 0,
@@ -21,60 +29,93 @@
           "value": 6,
           "min": 0,
           "max": 6
+        },
+        "evolution": {
+          "value": 0,
+          "min": 0
         }
       },
       "abilities": {
         "act": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "kno": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "bea": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "for": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "per": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "imp": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "knh": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "fig": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "sel": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         },
         "aim": {
-          "value": 0
+          "value": 1,
+          "min": 1,
+          "max": 6
         }
       }
     },
     "npc": {
-      "templates": ["base"]
+      "templates": [
+        "base"
+      ]
     }
   },
   "Item": {
-    "types": ["item", "feature"],
+    "types": [
+      "item",
+      "specialty"
+    ],
     "templates": {
       "base": {
         "description": ""
       }
     },
     "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+      "templates": [
+        "base"
+      ],
+      "quantity": 1
     },
-    "feature": {
-      "templates": ["base"]
+    "specialty": {
+      "templates": [
+        "base"
+      ],
+      "ability": "act",
+      "reroll": 1
     }
   }
 }

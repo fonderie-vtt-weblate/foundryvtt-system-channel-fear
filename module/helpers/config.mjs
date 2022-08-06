@@ -16,16 +16,3 @@ export const CHANNELFEAR = {};
   "sel": "CHANNELFEAR.AbilitySel",
   "aim": "CHANNELFEAR.AbilityAim"
 };
-
-CHANNELFEAR.abilityAbbreviations = {
-  "act": "CHANNELFEAR.AbilityActAbbr",
-  "kno": "CHANNELFEAR.AbilityKnoAbbr",
-  "bea": "CHANNELFEAR.AbilityBeaAbbr",
-  "for": "CHANNELFEAR.AbilityForAbbr",
-  "per": "CHANNELFEAR.AbilityPerAbbr",
-  "imp": "CHANNELFEAR.AbilityImpAbbr",
-  "knh": "CHANNELFEAR.AbilityKnhAbbr",
-  "fig": "CHANNELFEAR.AbilityFigAbbr",
-  "sel": "CHANNELFEAR.AbilitySelAbbr",
-  "aim": "CHANNELFEAR.AbilityAimAbbr"
-};

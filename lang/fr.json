@@ -1,30 +1,14 @@
 {
-  "CHANNELFEAR.AbilityAct": "Agir",
-  "CHANNELFEAR.AbilityKno": "Savoir",
-  "CHANNELFEAR.AbilityBea": "Endurer",
-  "CHANNELFEAR.AbilityFor": "Forcer",
-  "CHANNELFEAR.AbilityPer": "Percevoir",
-  "CHANNELFEAR.AbilityImp": "S'imposer",
-  "CHANNELFEAR.AbilityKnh": "Savoir-faire",
-  "CHANNELFEAR.AbilityFig": "Se battre",
-  "CHANNELFEAR.AbilitySel": "Se contrôler",
-  "CHANNELFEAR.AbilityAim": "Viser",
-
-  "CHANNELFEAR.AbilityActAbbr": "act",
-  "CHANNELFEAR.AbilityKnoAbbr": "kno",
-  "CHANNELFEAR.AbilityBeaAbbr": "bea",
-  "CHANNELFEAR.AbilityForAbbr": "for",
-  "CHANNELFEAR.AbilityPerAbbr": "per",
-  "CHANNELFEAR.AbilityImpAbbr": "imp",
-  "CHANNELFEAR.AbilityKnhAbbr": "knh",
-  "CHANNELFEAR.AbilityFigAbbr": "fig",
-  "CHANNELFEAR.AbilitySelAbbr": "sel",
-  "CHANNELFEAR.AbilityAimAbbr": "aim",
-
-  "CHANNELFEAR.EffectCreate": "Créer Effet",
-  "CHANNELFEAR.EffectToggle": "Basculer Effet",
-  "CHANNELFEAR.EffectEdit": "Éditer Effet",
-  "CHANNELFEAR.EffectDelete": "Supprimer Effet",
-
-  "CHANNELFEAR.Add": "Ajouter"
+  "CHANNELFEAR": {
+    "AbilityAct": "Agir",
+    "AbilityKno": "Savoir",
+    "AbilityBea": "Endurer",
+    "AbilityFor": "Forcer",
+    "AbilityPer": "Percevoir",
+    "AbilityImp": "S'imposer",
+    "AbilityKnh": "Savoir-faire",
+    "AbilityFig": "Se battre",
+    "AbilitySel": "Se contrôler",
+    "AbilityAim": "Viser"
+  }
 }

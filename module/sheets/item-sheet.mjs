@@ -3,26 +3,19 @@
  * @extends {ItemSheet}
  */
 export class ChannelFearItemSheet extends ItemSheet {
-
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["channelfear", "sheet", "item"],
+      classes: ['channelfear', 'sheet', 'item'],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: '.sheet-tabs', contentSelector: '.sheet-body', initial: 'description' }],
     });
   }
 
   /** @override */
   get template() {
-    const path = "systems/channel-fear/templates/item";
-    // Return a single sheet for all item types.
-    // return `${path}/item-sheet.html`;
-
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html`.
-    return `${path}/item-${this.item.data.type}-sheet.html`;
+    return `systems/channel-fear/templates/item/item-${this.item.data.type}-sheet.hbs.html`;
   }
 
   /* -------------------------------------------- */
@@ -46,7 +39,15 @@ export class ChannelFearItemSheet extends ItemSheet {
     context.data = itemData.data;
     context.flags = itemData.flags;
 
+    if ('specialty' === itemData.type) {
+      this._prepareSpecialtyData(context);
+    }
+
     return context;
+  }
+
+  _prepareSpecialtyData(context) {
+    context.abilitiesList = CONFIG.CHANNELFEAR.abilities;
   }
 
   /* -------------------------------------------- */
