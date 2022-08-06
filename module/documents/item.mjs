@@ -12,6 +12,25 @@ export class ChannelFearItem extends Item {
     super.prepareData();
   }
 
+  prepareDerivedData() {
+    const itemData = this.data;
+
+    this._prepareSpecialtiesData(itemData);
+  }
+
+  _prepareSpecialtiesData(itemData) {
+    if ('specialty' !== itemData.type) return;
+
+    const data = itemData.data;
+
+    // Ensure specialties re-rolls are between allowed boundaries
+    if (data.reroll < 1) {
+      data.reroll = 1;
+    } else if (data.reroll > 3) {
+      data.reroll = 3;
+    }
+  }
+
   /**
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private

@@ -43,17 +43,38 @@ export class ChannelFearActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
+    if ('character' !== actorData.type) return;
 
     // Make modifications to data here. For example:
     const data = actorData.data;
+
+    // Ensure health and resource are between allowed boundaries
+    data.attributes.health.value = this._validateBoundaries(data.attributes.health);
+    data.attributes.resource.value = this._validateBoundaries(data.attributes.resource);
+
+    // Ensure abilities are between allowed boundaries
+    for (const ability of Object.entries(data.abilities)) {
+      ability.value = this._validateBoundaries(ability);
+    }
+  }
+
+  _validateBoundaries({ value, min, max }) {
+    if (value < min) {
+      return min;
+    }
+
+    if (max && value > max) {
+      return max;
+    }
+
+    return value;
   }
 
   /**
    * Prepare NPC type specific data.
    */
   _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
+    if ('npc' !== actorData.type) return;
   }
 
   /**
@@ -77,13 +98,13 @@ export class ChannelFearActor extends Actor {
 
     if (data.abilities) {
       for (let [k, v] of Object.entries(data.abilities)) {
-        data[k] = foundry.utils.deepClone(v);
+        data[k] = foundry.utils.deepClone(v.value);
       }
     }
 
     if (data.attributes) {
       for (let [k, v] of Object.entries(data.attributes)) {
-        data[k] = foundry.utils.deepClone(v);
+        data[k] = foundry.utils.deepClone(v.value);
       }
     }
   }

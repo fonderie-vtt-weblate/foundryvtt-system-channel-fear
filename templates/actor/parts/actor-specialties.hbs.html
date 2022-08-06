@@ -13,7 +13,7 @@
     <li class="item flexrow" data-item-id="{{specialty._id}}" data-reroll="1">
       <div class="item-name">
         <p class="rollable resource-label"
-           data-roll="({{#with (lookup ../data.abilities specialty.data.ability)}}{{value}}{{/with}}+{{specialty.data.reroll}})d6x6cs>3"
+           data-roll="(@{{specialty.data.ability}}+{{specialty.data.reroll}})d6x6cs>3"
            data-label="{{specialty.name}} ({{localize (lookup @root.abilitiesList specialty.data.ability)}})">
           {{specialty.name}}
         </p>
