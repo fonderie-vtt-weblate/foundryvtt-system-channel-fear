@@ -1,0 +1,51 @@
+<div class="specialties">
+  <h1 class="block-title top-shadow">
+    {{localize "CHANNELFEAR.CharacterSheet.Specialties.Title"}}
+
+    <a class="item-control item-create add-specialty" title="{{localize "CHANNELFEAR.CharacterSheet.Specialties.Add"}}"
+       data-type="specialty">
+      <i class="fas fa-plus"></i>
+    </a>
+  </h1>
+
+  <div class="block-content">
+    <div class="block-header-info small-info">
+      <div class="grid grid-3col mt-0 mb-0">
+        <div class="grid-span-2">
+          <strong>{{localize "CHANNELFEAR.CharacterSheet.Specialties.Name"}}</strong>
+          {{localize "CHANNELFEAR.CharacterSheet.Specialties.PlusLinkedAbility"}}
+        </div>
+        <div><strong>{{localize "CHANNELFEAR.CharacterSheet.Specialties.Rerolls"}}</strong></div>
+      </div>
+    </div>
+    <div class="block-content-inner">
+      <ul>
+        {{#each specialties as |specialty key|}}
+          <li class="specialty item flexrow flex-group-center" data-item-id="{{specialty._id}}" data-reroll="1">
+            <div>
+              <p class="rollable resource-label"
+                 data-roll="(@{{specialty.data.ability}}+{{specialty.data.reroll}})d6x6cs>3"
+                 data-label="{{specialty.name}} ({{localize (lookup @root.abilitiesList specialty.data.ability)}})">
+                {{specialty.name}}
+              </p>
+            </div>
+            <div class="linked-ability">({{localize (lookup @root.abilitiesList specialty.data.ability)}})</div>
+            <div class="reroll grid grid-3col">
+              <input type="checkbox" readonly disabled
+                     {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />
+              <input type="checkbox" readonly disabled
+                     {{#if (markSpecialtyActive 2 specialty.data.reroll)}}checked="checked"{{/if}} />
+              <input type="checkbox" readonly disabled
+                     {{#if (markSpecialtyActive 3 specialty.data.reroll)}}checked="checked"{{/if}} />
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+
+      <span class="small-info">
+        <strong>{{localize "CHANNELFEAR.CharacterSheet.Specialties.PointsToSpent"}}</strong>
+        {{localize "CHANNELFEAR.CharacterSheet.Specialties.PointsCost"}}
+      </span>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,36 @@
     "AbilityKnh": "Savoir-faire",
     "AbilityFig": "Se battre",
     "AbilitySel": "Se contrôler",
-    "AbilityAim": "Viser"
+    "AbilityAim": "Viser",
+
+    "Edit": "Éditer",
+    "Delete": "Supprimer",
+
+    "CharacterSheet": {
+      "Informations": "Informations",
+      "Identity": "Identité",
+      "Profile": "Profil",
+      "Keywords": "Mots-clefs",
+      "ProfDef": "Déformation(s) professionnelle(e)",
+      "Abilities": {
+        "Title": "Aptitudes",
+        "MinMaxInfo": "Valeur comprise entre {min} et {max}",
+        "PointsToSpent": "35 points à répartir",
+        "PointsCost": "(1 pt = 1 pt)"
+      },
+      "Specialties": {
+        "Title": "Spécialités",
+        "Add": "Ajouter une spécialité",
+        "Name": "Nom",
+        "PlusLinkedAbility": "(+ aptitude liée)",
+        "Rerolls": "Relances",
+        "PointsToSpent": "30 points à répartir",
+        "PointsCost": "(points = évolution)"
+      },
+      "Weapons": "Armes",
+      "Health": "Santé",
+      "Resource": "Ressource",
+      "Evolution": "Évolution"
+    }
   }
 }

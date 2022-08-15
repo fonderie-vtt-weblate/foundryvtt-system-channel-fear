@@ -41,6 +41,15 @@ Hooks.once('init', async function () {
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
 /* -------------------------------------------- */
+Handlebars.registerHelper('concat', (...values) => {
+  values.pop(); // Last element is specific to Handlebars
+
+  return new Handlebars.SafeString(values.map(v => 'function' === typeof v.toString ? v : '').join(''));
+});
+
+Handlebars.registerHelper('image', fileName => `systems/channel-fear/images/${fileName}`);
+
+Handlebars.registerHelper('markSpecialtyActive', (askedLevel, currentLevel) => currentLevel >= askedLevel);
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

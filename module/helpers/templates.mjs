@@ -6,7 +6,8 @@
 export const preloadHandlebarsTemplates = async function () {
   return loadTemplates([
     // Actor partials.
-    'systems/channel-fear/templates/actor/parts/actor-items.hbs.html',
-    'systems/channel-fear/templates/actor/parts/actor-specialties.hbs.html',
+    'systems/channel-fear/templates/actor/parts/actor-items.hbs',
+    'systems/channel-fear/templates/actor/parts/actor-abilities.hbs',
+    'systems/channel-fear/templates/actor/parts/actor-specialties.hbs',
   ]);
 };

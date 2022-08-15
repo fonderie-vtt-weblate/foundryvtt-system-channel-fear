@@ -1,0 +1,25 @@
+<div class="abilities">
+  <h1 class="block-title top-shadow">{{localize "CHANNELFEAR.CharacterSheet.Abilities.Title"}}</h1>
+
+  <div class="block-content">
+    <div class="block-header-info small-info">
+      {{{localize "CHANNELFEAR.CharacterSheet.Abilities.MinMaxInfo" min=(concat '<strong>' 1 '</strong>') max=(concat '<strong>' 6 '</strong>')}}}
+    </div>
+
+    <div class="block-content-inner">
+      {{#each data.abilities as |ability key|}}
+        <div class="ability flex flex-group-center">
+          <input type="text" id="data.abilities.{{key}}.value" name="data.abilities.{{key}}.value"
+                 value="{{ability.value}}" data-dtype="Number" />
+          <label for="data.abilities.{{key}}.value" class="resource-label rollable"
+                 data-roll="{{ability.value}}d6x6cs>3" data-label="{{ability.label}}">{{ability.label}}</label>
+        </div>
+      {{/each}}
+
+      <span class="small-info">
+        <strong>{{localize "CHANNELFEAR.CharacterSheet.Abilities.PointsToSpent"}}</strong>
+        {{localize "CHANNELFEAR.CharacterSheet.Abilities.PointsCost"}}
+      </span>
+    </div>
+  </div>
+</div>

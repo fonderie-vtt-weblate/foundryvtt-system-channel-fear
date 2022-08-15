@@ -9,6 +9,36 @@
     "AbilityKnh": "Know-how",
     "AbilityFig": "Fight",
     "AbilitySel": "To self-control",
-    "AbilityAim": "To aim"
+    "AbilityAim": "To aim",
+
+    "Edit": "Edit",
+    "Delete": "Delete",
+
+    "CharacterSheet": {
+      "Informations": "Informations",
+      "Identity": "Identity",
+      "Profile": "Profile",
+      "Keywords": "Keywords",
+      "ProfDef": "Professional deformation(s)",
+      "Abilities": {
+        "Title": "Abilities",
+        "MinMaxInfo": "Value between {min} and {max}",
+        "PointsToSpent": "35 points to distribute",
+        "PointsCost": "(1 pt = 1 pt)"
+      },
+      "Specialties": {
+        "Title": "Specialties",
+        "Add": "Add a specialty",
+        "Name": "Name",
+        "PlusLinkedAbility": "(+ linked ability)",
+        "Rerolls": "Rerolls",
+        "PointsToSpent": "30 points to distribute",
+        "PointsCost": "(points = evolution)"
+      },
+      "Weapons": "Weapons",
+      "Health": "Health",
+      "Resource": "Resource",
+      "Evolution": "Evolution"
+    }
   }
 }

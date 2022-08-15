@@ -15,7 +15,7 @@ export class ChannelFearItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    return `systems/channel-fear/templates/item/item-${this.item.data.type}-sheet.hbs.html`;
+    return `systems/channel-fear/templates/item/item-${this.item.data.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */
