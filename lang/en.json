@@ -10,10 +10,10 @@
     "AbilityFig": "Fight",
     "AbilitySel": "To self-control",
     "AbilityAim": "To aim",
-
     "Edit": "Edit",
     "Delete": "Delete",
-
+    "xD": "{x}D",
+    "xR": "{x}R",
     "CharacterSheet": {
       "Yno": "A {serial} created by Anthony “Yno” Combrexelle",
       "YnoSerial": "serial",

@@ -32,8 +32,8 @@
             </div>
             <div class="flex-initial linked-ability">({{lookup @root.abilitiesList weapon.data.ability}})</div>
             <div class="flex-initial reroll">
-              {{weapon.data.category}}D
-              <strong>({{weapon.data.reroll}}R)</strong>
+              {{localize "CF.xD" x=weapon.data.category}}
+              <strong>({{localize "CF.xR" x=weapon.data.reroll}})</strong>
             </div>
           </li>
         {{/each}}

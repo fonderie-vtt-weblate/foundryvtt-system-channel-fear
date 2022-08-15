@@ -1,6 +1,7 @@
 <form class="{{cssClass}}" autocomplete="off">
   <header class="sheet-header">
     <div class="header-fields">
+      <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="__Name" /></h1>
     </div>
   </header>
@@ -22,6 +23,11 @@
       <div class="resource-content flexrow flex-center flex-between">
         <input type="number" id="data.reroll" name="data.reroll" value="{{data.reroll}}" data-dtype="Number"
                min="1" max="3" />
+      </div>
+      <label for="data.category" class="resource-label">__Catégorie</label>
+      <div class="resource-content flexrow flex-center flex-between">
+        <input type="number" id="data.category" name="data.category" value="{{data.category}}" data-dtype="Number"
+               min="1" max="5" />
       </div>
     </div>
   </section>

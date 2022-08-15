@@ -10,10 +10,21 @@
     "AbilityFig": "Se battre",
     "AbilitySel": "Se contrôler",
     "AbilityAim": "Viser",
-
     "Edit": "Éditer",
     "Delete": "Supprimer",
-
+    "xD": "{x}D",
+    "xR": "{x}R",
+    "Weapons": {
+      "Singular": "Arme",
+      "Plural": "Arme",
+      "Categories": {
+        "BareHands": "Mains nues",
+        "VeryLight": "Très légère",
+        "Light": "Légère",
+        "Medium": "Moyenne",
+        "Heavy": "Lourde"
+      }
+    },
     "CharacterSheet": {
       "Yno": "Un {serial} créé par Anthony « Yno » Combrexelle",
       "YnoSerial": "serial",
