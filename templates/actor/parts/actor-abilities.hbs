@@ -3,16 +3,16 @@
 
   <div class="block-content">
     <div class="block-header-info small-info">
-      {{{localize "CF.CharacterSheet.Abilities.MinMaxInfo" min=(concat '<strong>' 1 '</strong>') max=(concat '<strong>' 6 '</strong>')}}}
+      {{{localize "CF.CharacterSheet.Abilities.MinMaxInfo" min='<strong>1</strong>' max='<strong></strong>'}}}
     </div>
 
     <div class="block-content-inner">
       {{#each data.abilities as |ability key|}}
         <div class="ability flex flex-group-center">
-          <input type="text" id="data.abilities.{{key}}.value" name="data.abilities.{{key}}.value"
-                 value="{{ability.value}}" data-dtype="Number" />
-          <label for="data.abilities.{{key}}.value" class="resource-label rollable"
-                 data-roll="{{ability.value}}d6x6cs>3" data-label="{{ability.label}}">{{ability.label}}</label>
+          <input type="text" id="data.abilities.{{key}}" name="data.abilities.{{key}}"
+                 value="{{ability}}" data-dtype="Number" />
+          <label for="data.abilities.{{key}}" class="resource-label rollable" data-roll="{{ability}}d6x6cs>3"
+                 data-label="{{lookup ../abilitiesList key}}">{{lookup ../abilitiesList key}}</label>
         </div>
       {{/each}}
 

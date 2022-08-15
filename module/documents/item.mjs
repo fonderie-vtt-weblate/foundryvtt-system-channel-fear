@@ -19,13 +19,31 @@ export class ChannelFearItem extends Item {
   }
 
   _prepareSpecialtiesData(itemData) {
+    this._prepareSpecialtyData(itemData);
+    this._prepareWeaponData(itemData);
+  }
+
+  _prepareSpecialtyData(itemData) {
     if ('specialty' !== itemData.type) return;
 
     const data = itemData.data;
 
-    // Ensure specialties re-rolls are between allowed boundaries
+    // Ensure specialty reroll is between allowed boundaries
     if (data.reroll < 1) {
       data.reroll = 1;
+    } else if (data.reroll > 3) {
+      data.reroll = 3;
+    }
+  }
+
+  _prepareWeaponData(itemData) {
+    if ('weapon' !== itemData.type) return;
+
+    const data = itemData.data;
+
+    // Ensure weapon reroll is between allowed boundaries
+    if (data.reroll < 0) {
+      data.reroll = 0;
     } else if (data.reroll > 3) {
       data.reroll = 3;
     }
@@ -35,9 +53,10 @@ export class ChannelFearItem extends Item {
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private
    */
-   getRollData() {
+  getRollData() {
     // If present, return the actor's roll data.
-    if ( !this.actor ) return null;
+    if (!this.actor) return null;
+
     const rollData = this.actor.getRollData();
     rollData.item = foundry.utils.deepClone(this.data.data);
 
@@ -46,7 +65,6 @@ export class ChannelFearItem extends Item {
 
   /**
    * Handle clickable rolls.
-   * @param {Event} event   The originating click event
    * @private
    */
   async roll() {
@@ -55,15 +73,15 @@ export class ChannelFearItem extends Item {
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
-    const label = `[${item.type}] ${item.name}`;
+    const flavor = `[${item.type}] ${item.name}`;
 
     // If there's no roll data, send a chat message.
     if (!this.data.data.formula) {
       ChatMessage.create({
         speaker: speaker,
         rollMode: rollMode,
-        flavor: label,
-        content: item.data.description ?? ''
+        flavor,
+        content: item.data.description ?? '',
       });
     }
     // Otherwise, create a roll and send a chat message from it.
@@ -76,9 +94,9 @@ export class ChannelFearItem extends Item {
       // If you need to store the value first, uncomment the next line.
       // let result = await roll.roll({async: true});
       roll.toMessage({
-        speaker: speaker,
-        rollMode: rollMode,
-        flavor: label,
+        speaker,
+        rollMode,
+        flavor,
       });
       return roll;
     }

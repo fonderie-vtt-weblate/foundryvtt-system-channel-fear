@@ -13,7 +13,7 @@
         <select name="data.ability" data-dtype="String">
           {{#select data.ability}}
             {{#each abilitiesList as |ability key|}}
-              <option value="{{key}}">{{localize ability}}</option>
+              <option value="{{key}}">{{ability}}</option>
             {{/each}}
           {{/select}}
         </select>

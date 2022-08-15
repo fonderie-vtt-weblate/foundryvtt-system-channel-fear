@@ -26,11 +26,11 @@
             <div>
               <p class="rollable resource-label"
                  data-roll="(@{{specialty.data.ability}}+{{specialty.data.reroll}})d6x6cs>3"
-                 data-label="{{specialty.name}} ({{localize (lookup @root.abilitiesList specialty.data.ability)}})">
+                 data-label="{{specialty.name}} ({{lookup @root.abilitiesList specialty.data.ability}})">
                 {{specialty.name}}
               </p>
             </div>
-            <div class="linked-ability">({{localize (lookup @root.abilitiesList specialty.data.ability)}})</div>
+            <div class="linked-ability">({{lookup @root.abilitiesList specialty.data.ability}})</div>
             <div class="reroll grid grid-3col">
               <input type="checkbox" readonly disabled
                      {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />

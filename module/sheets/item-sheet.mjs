@@ -1,3 +1,5 @@
+import { getTranslatedAbilities } from '../helpers/config.mjs';
+
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -9,7 +11,6 @@ export class ChannelFearItemSheet extends ItemSheet {
       classes: ['channelfear', 'sheet', 'item'],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: '.sheet-tabs', contentSelector: '.sheet-body', initial: 'description' }],
     });
   }
 
@@ -47,7 +48,7 @@ export class ChannelFearItemSheet extends ItemSheet {
   }
 
   _prepareAbilitiesData(context) {
-    context.abilitiesList = CONFIG.CF.abilities;
+    context.abilitiesList = getTranslatedAbilities(game.i18n);
   }
 
   /* -------------------------------------------- */

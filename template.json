@@ -18,72 +18,21 @@
         "profdef": ""
       },
       "attributes": {
-        "health": {
-          "value": 6,
-          "min": 0,
-          "max": 6
-        },
-        "resource": {
-          "value": 6,
-          "min": 0,
-          "max": 6
-        },
-        "evolution": {
-          "value": 0,
-          "min": 0
-        }
+        "health": 6,
+        "resource": 6,
+        "evolution": 0
       },
       "abilities": {
-        "act": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "kno": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "bea": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "for": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "per": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "imp": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "knh": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "fig": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "sel": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        },
-        "aim": {
-          "value": 1,
-          "min": 1,
-          "max": 6
-        }
+        "act": 1,
+        "kno": 1,
+        "bea": 1,
+        "for": 1,
+        "per": 1,
+        "imp": 1,
+        "knh": 1,
+        "fig": 1,
+        "sel": 1,
+        "aim": 1
       }
     },
     "npc": {

@@ -1,4 +1,5 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import { getTranslatedAbilities } from '../helpers/config.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -79,11 +80,7 @@ export class ChannelFearActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    context.abilitiesList = CONFIG.CF.abilities;
-
-    for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.CF.abilities[k]) ?? k;
-    }
+    context.abilitiesList = getTranslatedAbilities(game.i18n);
   }
 
   /**

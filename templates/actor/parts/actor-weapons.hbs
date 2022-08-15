@@ -26,11 +26,11 @@
             <div class="flex-auto align-left">
               <p class="rollable resource-label"
                  data-roll="(@{{weapon.data.ability}}+{{weapon.data.reroll}})d6x6cs>3"
-                 data-label="{{weapon.name}} ({{localize (lookup @root.abilitiesList weapon.data.ability)}})">
+                 data-label="{{weapon.name}} ({{lookup @root.abilitiesList weapon.data.ability}})">
                 <strong>{{weapon.name}}</strong>
               </p>
             </div>
-            <div class="flex-initial linked-ability">({{localize (lookup @root.abilitiesList weapon.data.ability)}})</div>
+            <div class="flex-initial linked-ability">({{lookup @root.abilitiesList weapon.data.ability}})</div>
             <div class="flex-initial reroll">
               {{weapon.data.category}}D
               <strong>({{weapon.data.reroll}}R)</strong>

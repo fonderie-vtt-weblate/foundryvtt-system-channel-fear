@@ -49,16 +49,16 @@ export class ChannelFearActor extends Actor {
     const data = actorData.data;
 
     // Ensure health and resource are between allowed boundaries
-    data.attributes.health.value = this._validateBoundaries(data.attributes.health);
-    data.attributes.resource.value = this._validateBoundaries(data.attributes.resource);
+    data.attributes.health = this._validateBoundaries(data.attributes.health, 0, 6);
+    data.attributes.resource = this._validateBoundaries(data.attributes.resource, 0);
 
     // Ensure abilities are between allowed boundaries
-    for (const ability of Object.entries(data.abilities)) {
-      ability.value = this._validateBoundaries(ability);
+    for (let ability of Object.entries(data.abilities)) {
+      ability = this._validateBoundaries(ability, 0, 6);
     }
   }
 
-  _validateBoundaries({ value, min, max }) {
+  _validateBoundaries(value, min, max) {
     if (value < min) {
       return min;
     }
@@ -98,13 +98,13 @@ export class ChannelFearActor extends Actor {
 
     if (data.abilities) {
       for (let [k, v] of Object.entries(data.abilities)) {
-        data[k] = foundry.utils.deepClone(v.value);
+        data[k] = v;
       }
     }
 
     if (data.attributes) {
       for (let [k, v] of Object.entries(data.attributes)) {
-        data[k] = foundry.utils.deepClone(v.value);
+        data[k] = v;
       }
     }
   }

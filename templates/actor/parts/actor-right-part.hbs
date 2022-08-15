@@ -18,9 +18,8 @@
         </div>
 
         <div class="block-content-inner u-relative">
-          <input type="text" id="data.attributes.health.value" name="data.attributes.health.value"
-                 value="{{data.attributes.health.value}}" data-dtype="Number" class="attribute-input"
-                 min="{{data.attributes.health.min}}" max="{{data.attributes.health.max}}" />
+          <input type="text" id="data.attributes.health" name="data.attributes.health"
+                 value="{{data.attributes.health}}" data-dtype="Number" class="attribute-input" min="0" max="6" />
 
           <ul class="small-info">
             <li>
@@ -52,9 +51,8 @@
         </div>
 
         <div class="block-content-inner u-relative">
-          <input type="text" id="data.attributes.resource.value" name="data.attributes.resource.value"
-                 value="{{data.attributes.resource.value}}" data-dtype="Number" class="attribute-input"
-                 min="{{data.attributes.resource.min}}" max="{{data.attributes.resource.max}}" />
+          <input type="text" name="data.attributes.resource" value="{{data.attributes.resource}}" data-dtype="Number"
+                 class="attribute-input" min="0" max="6" />
 
           <p class="small-info">
             <strong>{{localize "CF.CharacterSheet.Resource.SuccessTitle"}}</strong><br />
@@ -79,8 +77,8 @@
         </div>
 
         <div class="block-content-inner u-relative">
-          <input type="text" id="data.attributes.evolution.value" name="data.attributes.evolution.value"
-                 value="{{data.attributes.evolution.value}}" data-dtype="Number" class="attribute-input" />
+          <input type="text" id="data.attributes.evolution" name="data.attributes.evolution"
+                 value="{{data.attributes.evolution}}" data-dtype="Number" class="attribute-input" />
 
           <ul class="small-info">
             <li>
