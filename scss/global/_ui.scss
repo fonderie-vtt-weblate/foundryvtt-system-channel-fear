@@ -1,0 +1,9 @@
+#logo {
+  opacity: 0;
+  height: 100px;
+
+  &.loaded {
+    opacity: 1;
+    transition: opacity .3s ease-out;
+  }
+}

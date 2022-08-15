@@ -56,8 +56,19 @@ Handlebars.registerHelper('markSpecialtyActive', (askedLevel, currentLevel) => c
 /* -------------------------------------------- */
 
 Hooks.once('ready', async function () {
+  const logo = document.getElementById('logo');
+  logo.src = '/systems/channel-fear/images/logo.webp';
+  logo.removeAttribute('height');
+  logo.classList.add('loaded');
+
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
+});
+
+Hooks.on('renderPause', (app, html, options) => {
+  if (options.paused) {
+    html.find('img')[0].src = 'systems/channel-fear/images/logo.webp';
+  }
 });
 
 /* -------------------------------------------- */
