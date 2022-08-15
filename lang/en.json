@@ -1,5 +1,5 @@
 {
-  "CHANNELFEAR": {
+  "CF": {
     "AbilityAct": "To act",
     "AbilityKno": "To know",
     "AbilityBea": "To bear",
@@ -15,6 +15,8 @@
     "Delete": "Delete",
 
     "CharacterSheet": {
+      "Yno": "A {serial} created by Anthony « Yno » Combrexelle",
+      "YnoSerial": "serial",
       "Informations": "Informations",
       "Identity": "Identity",
       "Profile": "Profile",
@@ -35,10 +37,36 @@
         "PointsToSpent": "30 points to distribute",
         "PointsCost": "(points = evolution)"
       },
-      "Weapons": "Weapons",
-      "Health": "Health",
-      "Resource": "Resource",
-      "Evolution": "Evolution"
+      "Weapons": {
+        "Title": "Weapons",
+        "Add": "Add a weapon",
+        "Name": "Name",
+        "PlusLinkedAbility": "(+ linked ability)",
+        "Damages": "Damages"
+      },
+      "Health": {
+        "Title": "Health",
+        "MaxInfo": "In good health",
+        "AtValue": "At {value}",
+        "WhenAt2": "+1 success required",
+        "WhenAt1": "+2 success required",
+        "WhenAt0": "unconscious"
+      },
+      "Resource": {
+        "Title": "Resource",
+        "MaxInfo": "In good shape",
+        "SuccessTitle": "Success",
+        "SuccessDesc": "+1 automatic success",
+        "ProfDefBonusDesc": "Roll automatically successful once per episode"
+      },
+      "Evolution": {
+        "Title": "Evolution",
+        "Subtitle": "In reserve",
+        "Points": "Points",
+        "SpecialtyFromTo": "{from}R > {to}R in specialty",
+        "AbilityBonusDesc": "+1D in ability",
+        "ProfDefBonusDesc": "+1 professional deformation"
+      }
     }
   }
 }

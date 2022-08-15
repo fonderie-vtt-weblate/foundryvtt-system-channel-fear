@@ -6,7 +6,7 @@ import { ChannelFearActorSheet } from './sheets/actor-sheet.mjs';
 import { ChannelFearItemSheet } from './sheets/item-sheet.mjs';
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
-import { CHANNELFEAR } from './helpers/config.mjs';
+import { CF } from './helpers/config.mjs';
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -22,7 +22,7 @@ Hooks.once('init', async function () {
   };
 
   // Add custom constants for configuration.
-  CONFIG.CHANNELFEAR = CHANNELFEAR;
+  CONFIG.CF = CF;
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = ChannelFearActor;

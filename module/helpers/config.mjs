@@ -1,18 +1,18 @@
-export const CHANNELFEAR = {};
+export const CF = {};
 
 /**
  * The set of Ability Scores used within the sytem.
  * @type {Object}
  */
- CHANNELFEAR.abilities = {
-  "act": "CHANNELFEAR.AbilityAct",
-  "kno": "CHANNELFEAR.AbilityKno",
-  "bea": "CHANNELFEAR.AbilityBea",
-  "for": "CHANNELFEAR.AbilityFor",
-  "per": "CHANNELFEAR.AbilityPer",
-  "imp": "CHANNELFEAR.AbilityImp",
-  "knh": "CHANNELFEAR.AbilityKnh",
-  "fig": "CHANNELFEAR.AbilityFig",
-  "sel": "CHANNELFEAR.AbilitySel",
-  "aim": "CHANNELFEAR.AbilityAim"
+ CF.abilities = {
+  "act": "CF.AbilityAct",
+  "kno": "CF.AbilityKno",
+  "bea": "CF.AbilityBea",
+  "for": "CF.AbilityFor",
+  "per": "CF.AbilityPer",
+  "imp": "CF.AbilityImp",
+  "knh": "CF.AbilityKnh",
+  "fig": "CF.AbilityFig",
+  "sel": "CF.AbilitySel",
+  "aim": "CF.AbilityAim"
 };

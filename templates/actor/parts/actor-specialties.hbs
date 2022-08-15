@@ -1,8 +1,8 @@
 <div class="specialties">
   <h1 class="block-title top-shadow">
-    {{localize "CHANNELFEAR.CharacterSheet.Specialties.Title"}}
+    {{localize "CF.CharacterSheet.Specialties.Title"}}
 
-    <a class="item-control item-create add-specialty" title="{{localize "CHANNELFEAR.CharacterSheet.Specialties.Add"}}"
+    <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Specialties.Add"}}"
        data-type="specialty">
       <i class="fas fa-plus"></i>
     </a>
@@ -12,12 +12,13 @@
     <div class="block-header-info small-info">
       <div class="grid grid-3col mt-0 mb-0">
         <div class="grid-span-2">
-          <strong>{{localize "CHANNELFEAR.CharacterSheet.Specialties.Name"}}</strong>
-          {{localize "CHANNELFEAR.CharacterSheet.Specialties.PlusLinkedAbility"}}
+          <strong>{{localize "CF.CharacterSheet.Specialties.Name"}}</strong>
+          {{localize "CF.CharacterSheet.Specialties.PlusLinkedAbility"}}
         </div>
-        <div><strong>{{localize "CHANNELFEAR.CharacterSheet.Specialties.Rerolls"}}</strong></div>
+        <div class="align-center"><strong>{{localize "CF.CharacterSheet.Specialties.Rerolls"}}</strong></div>
       </div>
     </div>
+
     <div class="block-content-inner">
       <ul>
         {{#each specialties as |specialty key|}}
@@ -43,8 +44,8 @@
       </ul>
 
       <span class="small-info">
-        <strong>{{localize "CHANNELFEAR.CharacterSheet.Specialties.PointsToSpent"}}</strong>
-        {{localize "CHANNELFEAR.CharacterSheet.Specialties.PointsCost"}}
+        <strong>{{localize "CF.CharacterSheet.Specialties.PointsToSpent"}}</strong>
+        {{localize "CF.CharacterSheet.Specialties.PointsCost"}}
       </span>
     </div>
   </div>

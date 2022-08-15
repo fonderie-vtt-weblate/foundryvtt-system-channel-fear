@@ -1,0 +1,63 @@
+.biography {
+  background: linear-gradient(65deg, $c-medium-gray 50%, $c-white 50%);
+  width: 240px;
+  height: 280px;
+  rotate: 5deg;
+  margin-left: 20px;
+  box-shadow: -5px 5px 15px 0px $c-black;
+}
+
+.stacked-blocks {
+  height: 100%;
+  @include gray-to-blue-gradient;
+
+  .stacked-block {
+    margin-top: 10px;
+
+    .block-title {
+      padding-left: 40px;
+    }
+
+    &.reversed {
+      margin-left: 20px;
+      border-top-left-radius: 15px;
+      box-shadow: -5px -5px 15px -2px $c-black;
+
+      .block-title {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .attribute-input {
+    background-color: $c-white;
+    border: 1px dotted $c-black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 8px;
+    top: -20px;
+    text-align: center;
+    font-size: xx-large;
+  }
+
+  .evolution-list {
+    padding-inline-start: 10px;
+  }
+
+  .block-header-info {
+    padding-left: 10px;
+  }
+
+  .weapons-list {
+    .weapon {
+      .reroll {
+        padding: 0 5px;
+      }
+    }
+
+    .head-damages {
+      padding-right: 5px;
+    }
+  }
+}

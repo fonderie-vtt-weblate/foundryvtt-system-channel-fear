@@ -11,8 +11,7 @@ export class ChannelFearActorSheet extends ActorSheet {
       classes: ['channelfear', 'sheet', 'actor'],
       template: 'systems/channel-fear/templates/actor/actor-sheet.hbs',
       width: 870,
-      height: 926,
-      tabs: [{ navSelector: '.sheet-tabs', contentSelector: '.sheet-body', initial: 'general' }],
+      height: 936,
     });
   }
 
@@ -24,7 +23,7 @@ export class ChannelFearActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   contextMenuItems = [{
-    name: game.i18n.localize('CHANNELFEAR.Edit'),
+    name: game.i18n.localize('CF.Edit'),
     icon: '<i class="fas fa-edit"></i>',
     callback: element => {
       const item = this.actor.items.get(element[0].dataset.itemId);
@@ -32,7 +31,7 @@ export class ChannelFearActorSheet extends ActorSheet {
       item.sheet.render(true);
     },
   }, {
-    name: game.i18n.localize('CHANNELFEAR.Delete'),
+    name: game.i18n.localize('CF.Delete'),
     icon: '<i class="fas fa-trash"></i>',
     callback: element => {
       this.actor.deleteEmbeddedDocuments('Item', [element[0].dataset.itemId]);
@@ -80,10 +79,10 @@ export class ChannelFearActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    context.abilitiesList = CONFIG.CHANNELFEAR.abilities;
+    context.abilitiesList = CONFIG.CF.abilities;
 
     for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.CHANNELFEAR.abilities[k]) ?? k;
+      v.label = game.i18n.localize(CONFIG.CF.abilities[k]) ?? k;
     }
   }
 
@@ -98,23 +97,23 @@ export class ChannelFearActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const specialties = [];
+    const weapons = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (i.type === 'item') {
+      if ('item' === i.type) {
         gear.push(i);
-      }
-      // Append to specialties.
-      else if (i.type === 'specialty') {
+      } else if ('specialty' === i.type) {
         specialties.push(i);
+      } else if ('weapon' === i.type) {
+        weapons.push(i);
       }
     }
 
-    // Assign and return
     context.gear = gear;
     context.specialties = specialties;
+    context.weapons = weapons;
   }
 
   /* -------------------------------------------- */
@@ -134,7 +133,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
 
-    new ContextMenu(html, '.specialty', this.contextMenuItems);
+    new ContextMenu(html, '.item', this.contextMenuItems);
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));

@@ -1,5 +1,5 @@
 {
-  "CHANNELFEAR": {
+  "CF": {
     "AbilityAct": "Agir",
     "AbilityKno": "Savoir",
     "AbilityBea": "Endurer",
@@ -15,6 +15,8 @@
     "Delete": "Supprimer",
 
     "CharacterSheet": {
+      "Yno": "Un {serial} créé par Anthony « Yno » Combrexelle",
+      "YnoSerial": "serial",
       "Informations": "Informations",
       "Identity": "Identité",
       "Profile": "Profil",
@@ -35,10 +37,36 @@
         "PointsToSpent": "30 points à répartir",
         "PointsCost": "(points = évolution)"
       },
-      "Weapons": "Armes",
-      "Health": "Santé",
-      "Resource": "Ressource",
-      "Evolution": "Évolution"
+      "Weapons": {
+        "Title": "Armes",
+        "Add": "Ajouter une arme",
+        "Name": "Nom",
+        "PlusLinkedAbility": "(+ aptitude liée)",
+        "Damages": "Dégâts"
+      },
+      "Health": {
+        "Title": "Santé",
+        "MaxInfo": "En bonne santé",
+        "AtValue": "À {value}",
+        "WhenAt2": "+1 réussite exigée",
+        "WhenAt1": "+2 réussites exigées",
+        "WhenAt0": "inconscient"
+      },
+      "Resource": {
+        "Title": "Ressource",
+        "MaxInfo": "En pleine forme",
+        "SuccessTitle": "Réussite",
+        "SuccessDesc": "+1 réussite automatique",
+        "ProfDefBonusDesc": "Jet automatiquement réussi 1 fois par épisode"
+      },
+      "Evolution": {
+        "Title": "Évolution",
+        "Subtitle": "En réserve",
+        "Points": "Points",
+        "SpecialtyFromTo": "{from}R > {to}R en spécialité",
+        "AbilityBonusDesc": "+1D en aptitude",
+        "ProfDefBonusDesc": "+1 déformation professionnelle"
+      }
     }
   }
 }

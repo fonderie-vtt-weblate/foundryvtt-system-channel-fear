@@ -3,6 +3,14 @@
   display: flex;
 }
 
+.flex-auto {
+  flex: auto;
+}
+
+.flex-initial {
+  flex: initial;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {

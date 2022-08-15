@@ -1,0 +1,28 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="__Name" /></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <div class="resource">
+      <label for="data.ability" class="resource-label">__Arme</label>
+      <div class="resource-content flexrow flex-center flex-between">
+        <select name="data.ability" data-dtype="String">
+          {{#select data.ability}}
+            {{#each abilitiesList as |ability key|}}
+              <option value="{{key}}">{{localize ability}}</option>
+            {{/each}}
+          {{/select}}
+        </select>
+      </div>
+      <label for="data.reroll" class="resource-label">__Relance</label>
+      <div class="resource-content flexrow flex-center flex-between">
+        <input type="number" id="data.reroll" name="data.reroll" value="{{data.reroll}}" data-dtype="Number"
+               min="1" max="3" />
+      </div>
+    </div>
+  </section>
+</form>

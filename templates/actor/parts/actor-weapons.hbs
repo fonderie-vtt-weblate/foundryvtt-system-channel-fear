@@ -1,0 +1,43 @@
+<div class="stacked-block weapons-list">
+  <h1 class="block-title">
+    {{localize "CF.CharacterSheet.Weapons.Title"}}
+
+    <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Weapons.Add"}}"
+       data-type="weapon">
+      <i class="fas fa-plus"></i>
+    </a>
+  </h1>
+
+  <div class="block-content">
+    <div class="block-header-info small-info align-left">
+      <div class="grid grid-3col mt-0 mb-0">
+        <div class="grid-span-2">
+          <strong>{{localize "CF.CharacterSheet.Weapons.Name"}}</strong>
+          {{localize "CF.CharacterSheet.Weapons.PlusLinkedAbility"}}
+        </div>
+        <div class="align-right head-damages"><strong>{{localize "CF.CharacterSheet.Weapons.Damages"}}</strong></div>
+      </div>
+    </div>
+
+    <div class="block-content-inner">
+      <ul>
+        {{#each weapons as |weapon id|}}
+          <li class="weapon item flexrow flex-group-center" data-item-id="{{weapon._id}}" data-reroll="0">
+            <div class="flex-auto align-left">
+              <p class="rollable resource-label"
+                 data-roll="(@{{weapon.data.ability}}+{{weapon.data.reroll}})d6x6cs>3"
+                 data-label="{{weapon.name}} ({{localize (lookup @root.abilitiesList weapon.data.ability)}})">
+                <strong>{{weapon.name}}</strong>
+              </p>
+            </div>
+            <div class="flex-initial linked-ability">({{localize (lookup @root.abilitiesList weapon.data.ability)}})</div>
+            <div class="flex-initial reroll">
+              {{weapon.data.category}}D
+              <strong>({{weapon.data.reroll}}R)</strong>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

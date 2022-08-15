@@ -1,28 +1,36 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
-  <div class="grid grid-3col">
+<form class="{{cssClass}} {{actor.type}}" autocomplete="off">
+  <div class="grid grid-3col no-gap">
     <div class="grid-span-2">
-      <img src="{{ image 'cf_logo.webp' }}" alt="" width="406" height="150" class="phone-photo" />
+      <div class="banner-yno small-info">
+        <p>
+          {{{localize "CF.CharacterSheet.Yno" serial=(
+              concat '<span class="serial"><span class="arrow-right"></span>' (localize "CF.CharacterSheet.YnoSerial") "</span>"
+          )}}}
+        </p>
+      </div>
+
+      <img src="{{ image "cf_logo.webp" }}" alt="" width="540" height="200" class="logo" />
 
       <div class="basic-informations">
-        <h1 class="block-title top-shadow">{{localize "CHANNELFEAR.CharacterSheet.Informations"}}</h1>
+        <h1 class="block-title top-shadow informations">{{localize "CF.CharacterSheet.Informations"}}</h1>
 
         <div class="block-content top-shadow">
           <div class="grid grid-12col mt-0 block-content-inner">
             <div class="grid-span-8 informations-container">
               <p class="flex flex-group-center">
-                <label for="char-name">{{localize "CHANNELFEAR.CharacterSheet.Identity"}}</label>
+                <label for="char-name">{{localize "CF.CharacterSheet.Identity"}}</label>
                 <input name="name" type="text" value="{{actor.name}}" id="char-name" />
               </p>
               <p class="flex flex-group-center">
-                <label for="char-profile">{{localize "CHANNELFEAR.CharacterSheet.Profile"}}</label>
+                <label for="char-profile">{{localize "CF.CharacterSheet.Profile"}}</label>
                 <input name="data.info.profile" type="text" value="{{data.info.profile}}" id="char-profile" />
               </p>
               <p>
-                <label for="char-keywords">{{localize "CHANNELFEAR.CharacterSheet.Keywords"}}</label>
+                <label for="char-keywords">{{localize "CF.CharacterSheet.Keywords"}}</label>
                 <textarea name="data.info.keywords" id="char-keywords" rows="3">{{data.info.keywords}}</textarea>
               </p>
               <p>
-                <label for="char-profdef">{{localize "CHANNELFEAR.CharacterSheet.ProfDef"}}</label>
+                <label for="char-profdef">{{localize "CF.CharacterSheet.ProfDef"}}</label>
                 <textarea name="data.info.profdef" id="char-profdef" rows="5">{{data.info.profdef}}</textarea>
               </p>
             </div>
@@ -40,57 +48,6 @@
         </div>
       </div>
     </div>
-    <div>
-      <p>__Notes</p>
-
-      <div class="resources grid grid-3col">
-        <div class="resource">
-          <label for="data.attributes.health.value" class="resource-label">
-            {{localize "CHANNELFEAR.CharacterSheet.Health"}}
-          </label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" id="data.attributes.health.value" name="data.attributes.health.value"
-                   value="{{data.attributes.health.value}}" data-dtype="Number"
-                   min="{{data.attributes.health.min}}" max="{{data.attributes.health.max}}" />
-            <span> / </span>
-            <input type="text" name="data.attributes.health.max" value="{{data.attributes.health.max}}"
-                   data-dtype="Number" readonly />
-          </div>
-        </div>
-
-        <div class="resource flex-group-center">
-          <label for="data.attributes.resource.value" class="resource-label">
-            {{localize "CHANNELFEAR.CharacterSheet.Resource"}}
-          </label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" id="data.attributes.resource.value" name="data.attributes.resource.value"
-                   value="{{data.attributes.resource.value}}" data-dtype="Number"
-                   min="{{data.attributes.resource.min}}" max="{{data.attributes.resource.max}}" />
-            <span> / </span>
-            <input type="text" name="data.attributes.resource.max" value="{{data.attributes.resource.max}}"
-                   data-dtype="Number" readonly />
-          </div>
-        </div>
-
-        <div class="resource flex-group-center">
-          <label for="data.attributes.evolution.value" class="resource-label">
-            {{localize "CHANNELFEAR.CharacterSheet.Evolution"}}
-          </label>
-          <div class="resource-content flexrow flex-center flex-between">
-            <input type="text" id="data.attributes.evolution.value" name="data.attributes.evolution.value"
-                   value="{{data.attributes.evolution.value}}" data-dtype="Number" />
-          </div>
-        </div>
-      </div>
-
-      <div class="biography" data-group="primary" data-tab="description">
-        <p>__BIO</p>
-        {{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner editable=editable}}
-      </div>
-
-      <div class="items" data-group="primary" data-tab="items">
-        {{> "systems/channel-fear/templates/actor/parts/actor-items.hbs"}}
-      </div>
-    </div>
+    <div>{{> "systems/channel-fear/templates/actor/parts/actor-right-part.hbs"}}</div>
   </div>
 </form>

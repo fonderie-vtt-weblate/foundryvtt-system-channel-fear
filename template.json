@@ -6,7 +6,7 @@
     ],
     "templates": {
       "base": {
-        "biography": ""
+        "keywords": ""
       }
     },
     "character": {
@@ -14,9 +14,7 @@
         "base"
       ],
       "info": {
-        "identity": "",
         "profile": "",
-        "keywords": "",
         "profdef": ""
       },
       "attributes": {
@@ -97,25 +95,29 @@
   "Item": {
     "types": [
       "item",
-      "specialty"
+      "specialty",
+      "weapon"
     ],
     "templates": {
-      "base": {
-        "description": ""
+      "with_ability_reroll": {
+        "ability": "act",
+        "reroll": 0
       }
     },
     "item": {
-      "templates": [
-        "base"
-      ],
       "quantity": 1
     },
     "specialty": {
       "templates": [
-        "base"
+        "with_ability_reroll"
       ],
-      "ability": "act",
       "reroll": 1
+    },
+    "weapon": {
+      "templates": [
+        "with_ability_reroll"
+      ],
+      "category": 1
     }
   }
 }
