@@ -1,9 +1,5 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/effects.mjs';
 
-/**
- * Extend the basic ActorSheet with some very simple modifications
- * @extends {ActorSheet}
- */
 export class ChannelFearActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
@@ -73,22 +69,10 @@ export class ChannelFearActorSheet extends ActorSheet {
     return context;
   }
 
-  /**
-   * @param {Object} context The actor to prepare.
-   *
-   * @return {undefined}
-   */
   _prepareCharacterData(context) {
     context.abilitiesList = CONFIG.CF.abilities;
   }
 
-  /**
-   * Organize and classify Items for Character sheets.
-   *
-   * @param {Object} context The actor to prepare.
-   *
-   * @return {undefined}
-   */
   _prepareItems(context) {
     // Initialize containers.
     const gear = [];
@@ -118,13 +102,10 @@ export class ChannelFearActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // -------------------------------------------------------------
-    // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
 
     new ContextMenu(html, '.item', this.contextMenuItems);
 
-    // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
     html.find('.item-edit').click(ev => {
@@ -133,7 +114,6 @@ export class ChannelFearActorSheet extends ActorSheet {
       item.sheet.render(true);
     });
 
-    // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents('.item');
       const item = this.actor.items.get(li.data('itemId'));
@@ -144,7 +124,6 @@ export class ChannelFearActorSheet extends ActorSheet {
     // Active Effect management
     html.find('.effect-control').click(ev => onManageActiveEffect(ev, this.actor));
 
-    // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
 
     // Drag events for macros.
@@ -158,11 +137,6 @@ export class ChannelFearActorSheet extends ActorSheet {
     }
   }
 
-  /**
-   * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
-   * @param {Event} event   The originating click event
-   * @private
-   */
   async _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
@@ -179,11 +153,6 @@ export class ChannelFearActorSheet extends ActorSheet {
     await Item.create(itemData, { parent: this.actor });
   }
 
-  /**
-   * Handle clickable rolls.
-   * @param {Event} event   The originating click event
-   * @private
-   */
   _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
@@ -199,15 +168,45 @@ export class ChannelFearActorSheet extends ActorSheet {
     }
 
     // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let label = dataset.label ?? '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
+    if (dataset.actionValue) {
+      new Dialog({
+        title: '__Difficulté',
+        content: `
+<p>__Choisissez la difficulté du jet</p>
+<p>
+  <select id="roll-difficulty">
+    <option value="1">Relativement facile - 1 réussite</option>
+    <option value="2">Moyenne - 2 réussites</option>
+    <option value="3">Difficile - 3 réussites</option>
+    <option value="4">Très difficile - 4 réussites</option>
+  </select>
+</p>
+`,
+        buttons: {
+          roll: {
+            icon: '<i class="fas fa-dice"></i>',
+            label: '__Lancer les dés',
+            callback: async html => {
+              const difficulty = parseInt(html.find('#roll-difficulty').val(), 10);
+              const roll = new Roll(`${dataset.actionValue}d6x6cs>3`, this.actor.getRollData());
+              const rollResult = await roll.roll();
+
+              console.log(rollResult.total, difficulty, rollResult.total === difficulty, rollResult.total > difficulty);
+
+              await roll.toMessage({
+                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                flavor: dataset.label ?? '',
+                rollMode: game.settings.get('core', 'rollMode'),
+              });
+            },
+          },
+          close: {
+            icon: '<i class="fas fa-times"></i>',
+            label: '__Annuler',
+          },
+        },
+        default: 'close',
+      }).render(true);
     }
   }
 }

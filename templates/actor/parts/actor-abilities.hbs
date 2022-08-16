@@ -11,7 +11,7 @@
         <div class="ability flex flex-group-center">
           <input type="text" id="data.abilities.{{key}}" name="data.abilities.{{key}}"
                  value="{{ability}}" data-dtype="Number" />
-          <label for="data.abilities.{{key}}" class="resource-label rollable" data-roll="{{ability}}d6x6cs>3"
+          <label for="data.abilities.{{key}}" class="rollable" data-action-value="{{ability}}"
                  data-label="{{localize (lookup ../abilitiesList key)}}">{{localize (lookup ../abilitiesList key)}}</label>
         </div>
       {{/each}}
