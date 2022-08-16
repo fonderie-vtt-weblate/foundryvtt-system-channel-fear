@@ -47,6 +47,11 @@ export class ChannelFearItem extends Item {
     } else if (data.reroll > 3) {
       data.reroll = 3;
     }
+
+    // Ensure weapons lower thant category 4 can not have more than 1 reroll
+    if (4 > data.category) {
+      data.reroll = Math.min(data.reroll, 1);
+    }
   }
 
   /**

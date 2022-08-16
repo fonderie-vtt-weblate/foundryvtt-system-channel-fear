@@ -34,7 +34,8 @@
         "Light": "Light",
         "Medium": "Medium",
         "Heavy": "Heavy"
-      }
+      },
+      "Contact": "Contact weapon"
     },
     "CharacterSheet": {
       "Yno": "A {serial} created by Anthony “Yno” Combrexelle",

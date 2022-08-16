@@ -34,7 +34,8 @@
         "Light": "Légère",
         "Medium": "Moyenne",
         "Heavy": "Lourde"
-      }
+      },
+      "Contact": "Arme de contact"
     },
     "CharacterSheet": {
       "Yno": "Un {serial} créé par Anthony « Yno » Combrexelle",
