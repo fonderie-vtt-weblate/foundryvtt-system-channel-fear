@@ -1,6 +1,6 @@
 <div class="stacked-block weapons-list">
   <h1 class="block-title">
-    {{localize "CF.CharacterSheet.Weapons.Title"}}
+    {{localize "CF.Global.Weapons"}}
 
     <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Weapons.Add"}}"
        data-type="weapon">
@@ -12,7 +12,7 @@
     <div class="block-header-info small-info align-left">
       <div class="grid grid-3col mt-0 mb-0">
         <div class="grid-span-2">
-          <strong>{{localize "CF.CharacterSheet.Weapons.Name"}}</strong>
+          <strong>{{localize "CF.Global.Name"}}</strong>
           {{localize "CF.CharacterSheet.Weapons.PlusLinkedAbility"}}
         </div>
         <div class="align-right head-damages"><strong>{{localize "CF.CharacterSheet.Weapons.Damages"}}</strong></div>
@@ -26,14 +26,14 @@
             <div class="flex-auto align-left">
               <p class="rollable resource-label"
                  data-roll="(@{{weapon.data.ability}}+{{weapon.data.reroll}})d6x6cs>3"
-                 data-label="{{weapon.name}} ({{lookup @root.abilitiesList weapon.data.ability}})">
+                 data-label="{{weapon.name}} ({{localize (lookup @root.abilitiesList weapon.data.ability)}})">
                 <strong>{{weapon.name}}</strong>
               </p>
             </div>
-            <div class="flex-initial linked-ability">({{lookup @root.abilitiesList weapon.data.ability}})</div>
+            <div class="flex-initial linked-ability">({{localize (lookup @root.abilitiesList weapon.data.ability)}})</div>
             <div class="flex-initial reroll">
-              {{localize "CF.xD" x=weapon.data.category}}
-              <strong>({{localize "CF.xR" x=weapon.data.reroll}})</strong>
+              {{localize "CF.Global.xD" x=weapon.data.category}}
+              <strong>({{localize "CF.Global.xR" x=weapon.data.reroll}})</strong>
             </div>
           </li>
         {{/each}}

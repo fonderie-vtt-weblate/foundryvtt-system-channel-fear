@@ -1,6 +1,6 @@
 <div class="specialties">
   <h1 class="block-title top-shadow">
-    {{localize "CF.CharacterSheet.Specialties.Title"}}
+    {{localize "CF.Global.Specialties"}}
 
     <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Specialties.Add"}}"
        data-type="specialty">
@@ -12,10 +12,10 @@
     <div class="block-header-info small-info">
       <div class="grid grid-3col mt-0 mb-0">
         <div class="grid-span-2">
-          <strong>{{localize "CF.CharacterSheet.Specialties.Name"}}</strong>
+          <strong>{{localize "CF.Global.Name"}}</strong>
           {{localize "CF.CharacterSheet.Specialties.PlusLinkedAbility"}}
         </div>
-        <div class="align-center"><strong>{{localize "CF.CharacterSheet.Specialties.Rerolls"}}</strong></div>
+        <div class="align-center"><strong>{{localize "CF.Global.Rerolls"}}</strong></div>
       </div>
     </div>
 
@@ -26,11 +26,11 @@
             <div>
               <p class="rollable resource-label"
                  data-roll="(@{{specialty.data.ability}}+{{specialty.data.reroll}})d6x6cs>3"
-                 data-label="{{specialty.name}} ({{lookup @root.abilitiesList specialty.data.ability}})">
+                 data-label="{{specialty.name}} ({{localize (lookup @root.abilitiesList specialty.data.ability)}})">
                 {{specialty.name}}
               </p>
             </div>
-            <div class="linked-ability">({{lookup @root.abilitiesList specialty.data.ability}})</div>
+            <div class="linked-ability">({{localize (lookup @root.abilitiesList specialty.data.ability)}})</div>
             <div class="reroll grid grid-3col">
               <input type="checkbox" readonly disabled
                      {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />

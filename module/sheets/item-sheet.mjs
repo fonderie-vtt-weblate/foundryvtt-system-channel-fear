@@ -1,5 +1,3 @@
-import { getTranslatedAbilities } from '../helpers/config.mjs';
-
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
@@ -42,13 +40,21 @@ export class ChannelFearItemSheet extends ItemSheet {
 
     if (['specialty', 'weapon'].includes(itemData.type)) {
       this._prepareAbilitiesData(context);
+
+      if ('weapon' === itemData.type) {
+        this._prepareWeaponsData(context);
+      }
     }
 
     return context;
   }
 
   _prepareAbilitiesData(context) {
-    context.abilitiesList = getTranslatedAbilities(game.i18n);
+    context.abilitiesList = CONFIG.CF.abilities;
+  }
+
+  _prepareWeaponsData(context) {
+    context.weaponsCategories = CONFIG.CF.weaponsCategories;
   }
 
   /* -------------------------------------------- */

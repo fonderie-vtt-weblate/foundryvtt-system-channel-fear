@@ -1,22 +1,33 @@
 {
   "CF": {
-    "AbilityAct": "Agir",
-    "AbilityKno": "Savoir",
-    "AbilityBea": "Endurer",
-    "AbilityFor": "Forcer",
-    "AbilityPer": "Percevoir",
-    "AbilityImp": "S'imposer",
-    "AbilityKnh": "Savoir-faire",
-    "AbilityFig": "Se battre",
-    "AbilitySel": "Se contrôler",
-    "AbilityAim": "Viser",
-    "Edit": "Éditer",
-    "Delete": "Supprimer",
-    "xD": "{x}D",
-    "xR": "{x}R",
+    "Abilities": {
+      "Act": "Agir",
+      "Kno": "Savoir",
+      "Bea": "Endurer",
+      "For": "Forcer",
+      "Per": "Percevoir",
+      "Imp": "S'imposer",
+      "Knh": "Savoir-faire",
+      "Fig": "Se battre",
+      "Sel": "Se contrôler",
+      "Aim": "Viser"
+    },
+    "Global": {
+      "xD": "{x}D",
+      "xR": "{x}R",
+      "Ability": "Aptitude",
+      "Abilities": "Aptitudes",
+      "Category": "Catégorie",
+      "Delete": "Supprimer",
+      "Edit": "Éditer",
+      "Name": "Nom",
+      "Rerolls": "Relances",
+      "Specialty": "Spécialité",
+      "Specialties": "Spécialités",
+      "Weapon": "Arme",
+      "Weapons": "Armes"
+    },
     "Weapons": {
-      "Singular": "Arme",
-      "Plural": "Arme",
       "Categories": {
         "BareHands": "Mains nues",
         "VeryLight": "Très légère",
@@ -34,24 +45,18 @@
       "Keywords": "Mots-clefs",
       "ProfDef": "Déformation(s) professionnelle(e)",
       "Abilities": {
-        "Title": "Aptitudes",
         "MinMaxInfo": "Valeur comprise entre {min} et {max}",
         "PointsToSpent": "35 points à répartir",
         "PointsCost": "(1 pt = 1 pt)"
       },
       "Specialties": {
-        "Title": "Spécialités",
         "Add": "Ajouter une spécialité",
-        "Name": "Nom",
         "PlusLinkedAbility": "(+ aptitude liée)",
-        "Rerolls": "Relances",
         "PointsToSpent": "30 points à répartir",
         "PointsCost": "(points = évolution)"
       },
       "Weapons": {
-        "Title": "Armes",
         "Add": "Ajouter une arme",
-        "Name": "Nom",
         "PlusLinkedAbility": "(+ aptitude liée)",
         "Damages": "Dégâts"
       },

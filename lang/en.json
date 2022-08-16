@@ -1,19 +1,41 @@
 {
   "CF": {
-    "AbilityAct": "To act",
-    "AbilityKno": "To know",
-    "AbilityBea": "To bear",
-    "AbilityFor": "Force",
-    "AbilityPer": "Perceive",
-    "AbilityImp": "To impose",
-    "AbilityKnh": "Know-how",
-    "AbilityFig": "Fight",
-    "AbilitySel": "To self-control",
-    "AbilityAim": "To aim",
-    "Edit": "Edit",
-    "Delete": "Delete",
-    "xD": "{x}D",
-    "xR": "{x}R",
+    "Abilities": {
+      "Act": "To act",
+      "Kno": "To know",
+      "Bea": "To bear",
+      "For": "Force",
+      "Per": "Perceive",
+      "Imp": "To impose",
+      "Knh": "Know-how",
+      "Fig": "Fight",
+      "Sel": "To self-control",
+      "Aim": "To aim"
+    },
+    "Global": {
+      "xD": "{x}D",
+      "xR": "{x}R",
+      "Ability": "Ability",
+      "Abilities": "Abilities",
+      "Category": "Category",
+      "Delete": "Delete",
+      "Edit": "Edit",
+      "Name": "Name",
+      "Rerolls": "Rerolls",
+      "Specialty": "Specialty",
+      "Specialties": "Specialties",
+      "Weapon": "Weapon",
+      "Weapons": "Weapons"
+    },
+    "Weapons": {
+      "Categories": {
+        "BareHands": "Bare hands",
+        "VeryLight": "Very light",
+        "Light": "Light",
+        "Medium": "Medium",
+        "Heavy": "Heavy"
+      }
+    },
     "CharacterSheet": {
       "Yno": "A {serial} created by Anthony “Yno” Combrexelle",
       "YnoSerial": "serial",
@@ -23,24 +45,18 @@
       "Keywords": "Keywords",
       "ProfDef": "Professional deformation(s)",
       "Abilities": {
-        "Title": "Abilities",
         "MinMaxInfo": "Value between {min} and {max}",
         "PointsToSpent": "35 points to distribute",
         "PointsCost": "(1 pt = 1 pt)"
       },
       "Specialties": {
-        "Title": "Specialties",
         "Add": "Add a specialty",
-        "Name": "Name",
         "PlusLinkedAbility": "(+ linked ability)",
-        "Rerolls": "Rerolls",
         "PointsToSpent": "30 points to distribute",
         "PointsCost": "(points = evolution)"
       },
       "Weapons": {
-        "Title": "Weapons",
         "Add": "Add a weapon",
-        "Name": "Name",
         "PlusLinkedAbility": "(+ linked ability)",
         "Damages": "Damages"
       },

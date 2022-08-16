@@ -1,5 +1,4 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/effects.mjs';
-import { getTranslatedAbilities } from '../helpers/config.mjs';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -24,7 +23,7 @@ export class ChannelFearActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   contextMenuItems = [{
-    name: game.i18n.localize('CF.Edit'),
+    name: game.i18n.localize('CF.Global.Edit'),
     icon: '<i class="fas fa-edit"></i>',
     callback: element => {
       const item = this.actor.items.get(element[0].dataset.itemId);
@@ -32,7 +31,7 @@ export class ChannelFearActorSheet extends ActorSheet {
       item.sheet.render(true);
     },
   }, {
-    name: game.i18n.localize('CF.Delete'),
+    name: game.i18n.localize('CF.Global.Delete'),
     icon: '<i class="fas fa-trash"></i>',
     callback: element => {
       this.actor.deleteEmbeddedDocuments('Item', [element[0].dataset.itemId]);
@@ -80,7 +79,7 @@ export class ChannelFearActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    context.abilitiesList = getTranslatedAbilities(game.i18n);
+    context.abilitiesList = CONFIG.CF.abilities;
   }
 
   /**
