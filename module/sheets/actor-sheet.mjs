@@ -1,4 +1,5 @@
 import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/effects.mjs';
+import * as Dice from '../dice.mjs';
 
 export class ChannelFearActorSheet extends ActorSheet {
   /** @override */
@@ -153,7 +154,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     await Item.create(itemData, { parent: this.actor });
   }
 
-  _onRoll(event) {
+  async _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
@@ -167,46 +168,19 @@ export class ChannelFearActorSheet extends ActorSheet {
       }
     }
 
-    // Handle rolls that supply the formula directly.
-    if (dataset.actionValue) {
-      new Dialog({
-        title: '__Difficulté',
-        content: `
-<p>__Choisissez la difficulté du jet</p>
-<p>
-  <select id="roll-difficulty">
-    <option value="1">Relativement facile - 1 réussite</option>
-    <option value="2">Moyenne - 2 réussites</option>
-    <option value="3">Difficile - 3 réussites</option>
-    <option value="4">Très difficile - 4 réussites</option>
-  </select>
-</p>
-`,
-        buttons: {
-          roll: {
-            icon: '<i class="fas fa-dice"></i>',
-            label: '__Lancer les dés',
-            callback: async html => {
-              const difficulty = parseInt(html.find('#roll-difficulty').val(), 10);
-              const roll = new Roll(`${dataset.actionValue}d6x6cs>3`, this.actor.getRollData());
-              const rollResult = await roll.roll();
+    // Handle rolls of abilities.
+    if (dataset.ability) {
+      const { resources } = await Dice.abilityCheck({
+        ability: dataset.ability,
+        label: dataset.label || '',
+        actor: this.actor,
+        currentActorResource: this.actor.data.data.resource,
+      });
 
-              console.log(rollResult.total, difficulty, rollResult.total === difficulty, rollResult.total > difficulty);
-
-              await roll.toMessage({
-                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                flavor: dataset.label ?? '',
-                rollMode: game.settings.get('core', 'rollMode'),
-              });
-            },
-          },
-          close: {
-            icon: '<i class="fas fa-times"></i>',
-            label: '__Annuler',
-          },
-        },
-        default: 'close',
-      }).render(true);
+      // Remove used resource points
+      if (0 < resources) {
+        await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource - resources });
+      }
     }
   }
 }

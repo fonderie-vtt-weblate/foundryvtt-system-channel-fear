@@ -17,11 +17,14 @@
       "xR": "{x}R",
       "Ability": "Ability",
       "Abilities": "Abilities",
+      "Cancel": "Cancel",
       "Category": "Category",
       "Delete": "Delete",
+      "Difficulty": "Difficulty",
       "Edit": "Edit",
       "Name": "Name",
       "Rerolls": "Rerolls",
+      "RollDice": "Roll dice",
       "Specialty": "Specialty",
       "Specialties": "Specialties",
       "Weapon": "Weapon",
@@ -83,6 +86,21 @@
         "SpecialtyFromTo": "{from}R > {to}R in specialty",
         "AbilityBonusDesc": "+1D in ability",
         "ProfDefBonusDesc": "+1 professional deformation"
+      }
+    },
+    "Rolls": {
+      "AbilityCheck": {
+        "Title": "Ability roll",
+        "Difficulty": "Roll difficulty",
+        "Difficulty1": "Relatively easy - 1 success",
+        "Difficulty2": "Medium - 2 successes",
+        "Difficulty3": "Difficult - 3 successes",
+        "Difficulty4": "Very difficult - 4 successes",
+        "ResourcesToUse": "Resource points to use",
+        "Card": {
+          "Title": "Ability roll: {ability}",
+          "Difficulty": "Difficulty: {difficulty}"
+        }
       }
     }
   }

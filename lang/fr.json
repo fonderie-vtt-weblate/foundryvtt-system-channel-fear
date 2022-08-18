@@ -17,11 +17,14 @@
       "xR": "{x}R",
       "Ability": "Aptitude",
       "Abilities": "Aptitudes",
+      "Cancel": "Annuler",
       "Category": "Catégorie",
       "Delete": "Supprimer",
+      "Difficulty": "Difficulté",
       "Edit": "Éditer",
       "Name": "Nom",
       "Rerolls": "Relances",
+      "RollDice": "Lancer les dés",
       "Specialty": "Spécialité",
       "Specialties": "Spécialités",
       "Weapon": "Arme",
@@ -83,6 +86,21 @@
         "SpecialtyFromTo": "{from}R > {to}R en spécialité",
         "AbilityBonusDesc": "+1D en aptitude",
         "ProfDefBonusDesc": "+1 déformation professionnelle"
+      }
+    },
+    "Rolls": {
+      "AbilityCheck": {
+        "Title": "Jet d'aptitude",
+        "Difficulty": "Difficulté du jet",
+        "Difficulty1": "Relativement facile - 1 réussite",
+        "Difficulty2": "Moyenne - 2 réussites",
+        "Difficulty3": "Difficile - 3 réussites",
+        "Difficulty4": "Très difficile - 4 réussites",
+        "ResourcesToUse": "Points de ressources à utiliser",
+        "Card": {
+          "Title": "Jet d'aptitude : {ability}",
+          "Difficulty": "Difficulté : {difficulty}"
+        }
       }
     }
   }
