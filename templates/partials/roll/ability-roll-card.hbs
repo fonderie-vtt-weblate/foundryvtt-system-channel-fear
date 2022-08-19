@@ -11,6 +11,6 @@
       {{{tooltip}}}
     {{/if}}
 
-    <h4 class="dice-total">{{total}}</h4>
+    <h4 class="dice-total{{#if success}} success{{/if}}{{#unless success}} failure{{/unless}}">{{total}}</h4>
   </div>
 </div>

@@ -13,6 +13,7 @@ export async function abilityCheck({ ability, label, actor, currentActorResource
       ability: label,
       difficulty,
       total: difficulty,
+      success: true,
     });
   } else {
     let formula = `${ability}d6x6cs>3`;
@@ -28,6 +29,7 @@ export async function abilityCheck({ ability, label, actor, currentActorResource
       ability: label,
       difficulty,
       total: rollResult.total,
+      success: rollResult.total >= difficulty,
       formula: rollResult.formula,
       tooltip: await rollResult.getTooltip(),
     });

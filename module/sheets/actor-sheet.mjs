@@ -182,20 +182,27 @@ export class ChannelFearActorSheet extends ActorSheet {
   }
 
   async _abilityRolled({ resources, difficulty, rollResult }) {
+    let newResources = this.actor.data.data.resource;
+
     // Remove used resource points
     if (0 < resources) {
-      await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource - resources });
+      --newResources;
     }
 
     // Margin of success/failure if difficulty > 1
     if (1 < difficulty) {
       if (rollResult.total > difficulty) {
         // Success -> +1 resource point
-        await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource + 1 });
+        ++newResources;
       } else if (0 === rollResult.total) {
         // Failure -> -1 resource point
-        await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource - 1 });
+        --newResources;
       }
+    }
+
+    // Update if needed
+    if (newResources !== this.actor.data.data.resource) {
+      await this.actor.update({ 'data.attributes.resource': newResources });
     }
   }
 }
