@@ -159,27 +159,42 @@ export class ChannelFearActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    // Handle item rolls.
-    if (dataset.rollType) {
-      if (dataset.rollType === 'item') {
-        const itemId = element.closest('.item').dataset.itemId;
-        const item = this.actor.items.get(itemId);
-        if (item) return item.roll();
-      }
-    }
-
     // Handle rolls of abilities.
     if (dataset.ability) {
-      const { resources } = await Dice.abilityCheck({
+      const checkResult = await Dice.abilityCheck({
         ability: dataset.ability,
         label: dataset.label || '',
         actor: this.actor,
         currentActorResource: this.actor.data.data.resource,
       });
 
-      // Remove used resource points
-      if (0 < resources) {
-        await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource - resources });
+      await this._abilityRolled(checkResult);
+    }
+
+    // Handle rolls of specialties.
+    if (dataset.specialty) {
+      const item = this.actor.items.get(dataset.specialty);
+
+      if (item) {
+        item.roll();
+      }
+    }
+  }
+
+  async _abilityRolled({ resources, difficulty, rollResult }) {
+    // Remove used resource points
+    if (0 < resources) {
+      await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource - resources });
+    }
+
+    // Margin of success/failure if difficulty > 1
+    if (1 < difficulty) {
+      if (rollResult.total > difficulty) {
+        // Success -> +1 resource point
+        await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource + 1 });
+      } else if (0 === rollResult.total) {
+        // Failure -> -1 resource point
+        await this.actor.update({ 'data.attributes.resource': this.actor.data.data.resource - 1 });
       }
     }
   }

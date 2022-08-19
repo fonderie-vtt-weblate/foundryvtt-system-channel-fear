@@ -4,37 +4,45 @@ export async function abilityCheck({ ability, label, actor, currentActorResource
   // Ensure to not use more resources than necessary
   resources = Math.min(difficulty, resources);
 
+  let chatContent, rollResult, messageType;
+
   // Used resources = difficulty level -> no roll
   if (resources === difficulty) {
-    ChatMessage.create({
-      user: game.user.id,
-      speaker: ChatMessage.getSpeaker({ actor }),
-      sound: CONFIG.sounds.dice,
-      content: await renderTemplate('systems/channel-fear/templates/partials/roll/ability-roll-success.hbs', {
-        ability: label,
-        difficulty,
-      }),
+    messageType = CONST.CHAT_MESSAGE_TYPES.OTHER;
+    chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/ability-roll-card.hbs', {
+      ability: label,
+      difficulty,
+      total: difficulty,
     });
+  } else {
+    let formula = `${ability}d6x6cs>3`;
+    if (0 < resources) {
+      formula = `${resources} + ${formula}`;
+    }
 
-    return { resources };
+    const roll = new Roll(formula, actor.getRollData());
+    rollResult = await roll.roll({ async: true });
+
+    messageType = CONST.CHAT_MESSAGE_TYPES.ROLL;
+    chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/ability-roll-card.hbs', {
+      ability: label,
+      difficulty,
+      total: rollResult.total,
+      formula: rollResult.formula,
+      tooltip: await rollResult.getTooltip(),
+    });
   }
 
-  let formula = `${ability}d6x6cs>3`;
-  if (0 < resources) {
-    formula = `${resources} + ${formula}`;
-  }
-
-  const roll = new Roll(formula, actor.getRollData());
-  const rollResult = await roll.roll({ async: true });
-
-  console.log(rollResult.total, difficulty, rollResult.total === difficulty, rollResult.total > difficulty);
-
-  await roll.toMessage({
+  await ChatMessage.create({
+    user: game.user.id,
     speaker: ChatMessage.getSpeaker({ actor }),
-    flavor: label,
+    roll: rollResult,
+    content: chatContent,
+    sound: CONFIG.sounds.dice,
+    type: messageType,
   });
 
-  return { resources };
+  return { difficulty, resources, rollResult };
 }
 
 async function _getAbilityCheckOptions(currentActorResource) {
