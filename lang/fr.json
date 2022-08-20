@@ -24,6 +24,7 @@
       "Edit": "Éditer",
       "Name": "Nom",
       "Rerolls": "Relances",
+      "Reroll": "Relance",
       "RollDice": "Lancer les dés",
       "Specialty": "Spécialité",
       "Specialties": "Spécialités",
@@ -89,6 +90,7 @@
       }
     },
     "Rolls": {
+      "Difficulty": "Difficulté : {difficulty}",
       "AbilityCheck": {
         "Title": "Jet d'aptitude",
         "Difficulty": "Difficulté du jet",
@@ -98,8 +100,12 @@
         "Difficulty4": "Très difficile - 4 réussites",
         "ResourcesToUse": "Points de ressources à utiliser",
         "Card": {
-          "Title": "Jet d'aptitude : {ability}",
-          "Difficulty": "Difficulté : {difficulty}"
+          "Title": "Jet d'aptitude : {name}"
+        }
+      },
+      "SpecialtyCheck": {
+        "Card": {
+          "Title": "Jet de spécialité : {name}"
         }
       }
     }

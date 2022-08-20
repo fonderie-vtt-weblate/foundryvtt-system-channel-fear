@@ -1,0 +1,12 @@
+{{> "systems/channel-fear/templates/partials/roll/ability-roll-card.hbs" title=title}}
+
+{{#if reroll.can}}
+  <div class="channelfear dice-reroll">
+    <button type="button" class="rollable reroll" data-difficulty="{{difficulty}}" data-bonus="{{total}}"
+            data-reroll-usable="{{reroll.usable}}" data-reroll-available="{{reroll.available}}"
+            data-label="{{specialty}}" data-actor-id="{{actorId}}">
+      <i class="fas fa-dice"></i>
+      {{localize "CF.Global.Reroll"}} ({{reroll.usable}})
+    </button>
+  </div>
+{{/if}}

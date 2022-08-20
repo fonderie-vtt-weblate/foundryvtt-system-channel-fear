@@ -1,3 +1,5 @@
+import * as Dice from '../dice.mjs';
+
 /**
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
@@ -75,6 +77,10 @@ export class ChannelFearItem extends Item {
   async roll() {
     const item = this.data;
 
+    if ('specialty' === item.type) {
+      return this._rollSpecialty(item);
+    }
+
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
@@ -105,5 +111,19 @@ export class ChannelFearItem extends Item {
       });
       return roll;
     }
+  }
+
+  async _rollSpecialty(specialty) {
+    const ability = this.actor.data.data.abilities[specialty.data.ability];
+
+    const checkResult = await Dice.specialtyCheck({
+      ability: ability,
+      label: specialty.name,
+      actor: this.actor,
+      currentActorResource: this.actor.data.data.resource,
+      reroll: specialty.data.reroll,
+    });
+
+    // console.log(checkResult);
   }
 }

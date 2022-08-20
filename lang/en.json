@@ -24,6 +24,7 @@
       "Edit": "Edit",
       "Name": "Name",
       "Rerolls": "Rerolls",
+      "Reroll": "Reroll",
       "RollDice": "Roll dice",
       "Specialty": "Specialty",
       "Specialties": "Specialties",
@@ -89,6 +90,7 @@
       }
     },
     "Rolls": {
+      "Difficulty": "Difficulty: {difficulty}",
       "AbilityCheck": {
         "Title": "Ability roll",
         "Difficulty": "Roll difficulty",
@@ -98,8 +100,12 @@
         "Difficulty4": "Very difficult - 4 successes",
         "ResourcesToUse": "Resource points to use",
         "Card": {
-          "Title": "Ability roll: {ability}",
-          "Difficulty": "Difficulty: {difficulty}"
+          "Title": "Ability roll: {name}"
+        }
+      },
+      "SpecialtyCheck": {
+        "Card": {
+          "Title": "Specialty roll: {name}"
         }
       }
     }

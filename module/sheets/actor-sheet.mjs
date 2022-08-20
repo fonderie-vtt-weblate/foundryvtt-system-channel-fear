@@ -107,25 +107,23 @@ export class ChannelFearActorSheet extends ActorSheet {
 
     new ContextMenu(html, '.item', this.contextMenuItems);
 
-    html.find('.item-create').click(this._onItemCreate.bind(this));
+    html.find('.item-create').on('click', this._onItemCreate.bind(this));
 
-    html.find('.item-edit').click(ev => {
+    html.find('.item-edit').on('click', ev => {
       const li = $(ev.currentTarget).parents('.item');
       const item = this.actor.items.get(li.data('itemId'));
       item.sheet.render(true);
     });
 
-    html.find('.item-delete').click(ev => {
+    html.find('.item-delete').on('click', ev => {
       const li = $(ev.currentTarget).parents('.item');
       const item = this.actor.items.get(li.data('itemId'));
       item.delete();
       li.slideUp(200, () => this.render(false));
     });
 
-    // Active Effect management
-    html.find('.effect-control').click(ev => onManageActiveEffect(ev, this.actor));
-
-    html.find('.rollable').click(this._onRoll.bind(this));
+    html.find('.effect-control').on('click', ev => onManageActiveEffect(ev, this.actor));
+    html.find('.rollable').on('click', this._onRoll.bind(this));
 
     // Drag events for macros.
     if (this.actor.isOwner) {
@@ -178,6 +176,11 @@ export class ChannelFearActorSheet extends ActorSheet {
       if (item) {
         item.roll();
       }
+    }
+
+    // Handle rerolls
+    if (dataset.rerollUsable) {
+      cosnole.log(dataset);
     }
   }
 

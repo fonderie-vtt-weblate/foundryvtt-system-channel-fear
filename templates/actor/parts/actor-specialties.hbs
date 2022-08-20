@@ -22,7 +22,7 @@
     <div class="block-content-inner">
       <ul>
         {{#each specialties as |specialty key|}}
-          <li class="specialty item flexrow flex-group-center">
+          <li class="specialty item flexrow flex-group-center" data-item-id="{{specialty._id}}">
             <div>
               <p class="rollable resource-label" data-specialty="{{specialty._id}}">{{specialty.name}}</p>
             </div>

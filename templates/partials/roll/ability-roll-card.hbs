@@ -1,7 +1,7 @@
 <div class="dice-roll">
   <div class="dice-flavor">
-    {{localize "CF.Rolls.AbilityCheck.Card.Title" ability=ability}}
-    ({{localize "CF.Rolls.AbilityCheck.Card.Difficulty" difficulty=difficulty}})
+    {{title}}
+    ({{localize "CF.Rolls.Difficulty" difficulty=difficulty}})
   </div>
   <div class="dice-result">
     {{#if formula}}
@@ -11,6 +11,6 @@
       {{{tooltip}}}
     {{/if}}
 
-    <h4 class="dice-total{{#if success}} success{{/if}}{{#unless success}} failure{{/unless}}">{{total}}</h4>
+    <h4 class="dice-total{{#if success}} success{{/if}}{{#if failure}} failure{{/if}}">{{total}}</h4>
   </div>
 </div>

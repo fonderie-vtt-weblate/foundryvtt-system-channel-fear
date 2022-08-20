@@ -10,5 +10,9 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/channel-fear/templates/actor/parts/actor-specialties.hbs',
     'systems/channel-fear/templates/actor/parts/actor-right-part.hbs',
     'systems/channel-fear/templates/actor/parts/actor-weapons.hbs',
+    // Rolls partials.
+    'systems/channel-fear/templates/partials/roll/ability-roll-dialog.hbs',
+    'systems/channel-fear/templates/partials/roll/ability-roll-card.hbs',
+    'systems/channel-fear/templates/partials/roll/specialty-roll-card.hbs',
   ]);
 };
