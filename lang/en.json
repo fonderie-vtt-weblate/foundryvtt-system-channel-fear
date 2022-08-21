@@ -109,6 +109,12 @@
         "Card": {
           "Title": "Specialty roll: {name}"
         }
+      },
+      "WeaponCheck": {
+        "Title": "Weapon roll",
+        "Card": {
+          "Title": "Weapon roll: {name}"
+        }
       }
     }
   }

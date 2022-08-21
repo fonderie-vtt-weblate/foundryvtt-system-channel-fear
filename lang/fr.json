@@ -109,6 +109,12 @@
         "Card": {
           "Title": "Jet de spécialité : {name}"
         }
+      },
+      "WeaponCheck": {
+        "Title": "Jet d'arme",
+        "Card": {
+          "Title": "Jet d'arme : {name}"
+        }
       }
     }
   }

@@ -1,81 +1,79 @@
 export async function abilityCheck({ ability, label, actor, currentActorResource }) {
-  let { difficulty, resources } = await _getAbilityCheckOptions('CF.Rolls.AbilityCheck.Title', currentActorResource);
+  let { difficulty, resources } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', currentActorResource);
 
-  // Ensure to not use more resources than necessary
-  resources = Math.min(difficulty, resources);
-
-  // Used resources = difficulty level -> no roll
-  if (resources === difficulty) {
-    await _rollNoRoll(actor, difficulty, label);
-    await _handleRollResult({ actor, difficulty, usedResources: resources });
-
-    return;
-  }
-
-  const rollResult = await _getRollResult(ability, resources);
-  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/ability-roll-card.hbs', {
+  await _doCheck({
     title: game.i18n.format('CF.Rolls.AbilityCheck.Card.Title', { name: label }),
+    dice: ability,
+    usedResources: resources,
     difficulty,
-    total: rollResult.total,
-    success: rollResult.total >= difficulty,
-    failure: rollResult.total < difficulty,
-    hardSuccess: 1 < difficulty && rollResult.total > difficulty,
-    hardFailure: 1 < difficulty && 0 === rollResult.total,
-    formula: rollResult.formula,
-    tooltip: await rollResult.getTooltip(),
+    actor,
   });
-
-  await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
-  await _handleRollResult({ actor, difficulty, usedResources: resources, rollResult });
 }
 
 export async function specialtyCheck({ ability, label, actor, currentActorResource, reroll }) {
-  let { difficulty, resources } = await _getAbilityCheckOptions('CF.Rolls.SpecialtyCheck.Title', currentActorResource);
+  let { difficulty, resources } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', currentActorResource);
 
-  // Ensure to not use more resources than necessary
-  resources = Math.min(difficulty, resources);
+  await _doCheck({
+    title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: label }),
+    dice: ability,
+    usedResources: resources,
+    actor,
+    difficulty,
+    reroll,
+  });
+}
 
-  // Used resources = difficulty level -> no roll
-  if (resources === difficulty) {
-    await _rollNoRoll(actor, difficulty, label);
-    await _handleRollResult({ actor, difficulty, usedResources: resources });
+export async function weaponCheck({ ability, label, actor, currentActorResource, reroll }) {
+  let { difficulty, resources } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', currentActorResource);
+
+  await _doCheck({
+    title: game.i18n.format('CF.Rolls.WeaponCheck.Card.Title', { name: label }),
+    dice: ability,
+    usedResources: resources,
+    actor,
+    difficulty,
+    reroll,
+  });
+}
+
+export async function reroll({ difficulty, bonus, usable, available, label, actor }) {
+  await _doCheck({
+    dice: usable,
+    reroll: available - usable,
+    title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: label }),
+    actor,
+    bonus,
+    difficulty,
+  });
+}
+
+async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedResources }) {
+  if (usedResources) {
+    // Ensure to not use more resources than necessary
+    usedResources = Math.min(difficulty, usedResources);
+  }
+
+  const score = (usedResources || 0) + (bonus || 0);
+
+  // Current score = difficulty level -> no roll
+  if (score === difficulty) {
+    await _rollNoRoll({
+      actor,
+      difficulty,
+      title,
+      usedResources,
+    });
+
+    await _handleRollResult({ actor, difficulty, usedResources });
 
     return;
   }
 
-  const { rollResult } = await _doSpecialtyCheck({
-    difficulty,
-    dice: ability,
-    bonus: resources,
-    label,
-    actor,
-    reroll,
-  });
-
-  await _handleRollResult({ actor, difficulty, usedResources: resources, rollResult });
-}
-
-export async function reroll({ difficulty, bonus, usable, available, label, actor }) {
-  const { rollResult } = await _doSpecialtyCheck({
-    difficulty,
-    dice: usable,
-    bonus,
-    label,
-    actor,
-    reroll: available - usable,
-  });
-
-  await _handleRollResult({ actor, difficulty, rollResult });
-}
-
-async function _doSpecialtyCheck({ difficulty, dice, bonus, label, actor, reroll }) {
-  const rollResult = await _getRollResult(dice, bonus);
+  const rollResult = await _getRollResult(dice, score);
   const isSuccess = rollResult.total >= difficulty;
   const isHardFailure = 1 < difficulty && 0 === rollResult.total;
   const canReroll = 1 < difficulty && !isHardFailure && rollResult.total < difficulty && 0 < reroll;
-  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/specialty-roll-card.hbs', {
-    title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: label }),
-    difficulty,
+  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
     reroll: {
       can: canReroll,
       available: reroll,
@@ -89,11 +87,12 @@ async function _doSpecialtyCheck({ difficulty, dice, bonus, label, actor, reroll
     formula: rollResult.formula,
     tooltip: await rollResult.getTooltip(),
     actorId: actor.id,
+    difficulty,
+    title,
   });
 
   await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
-
-  return { difficulty, bonus, rollResult };
+  await _handleRollResult({ actor, difficulty, rollResult, usedResources });
 }
 
 function _getRollResult(dice, bonus) {
@@ -105,9 +104,9 @@ function _getRollResult(dice, bonus) {
   return new Roll(formula).roll({ async: true });
 }
 
-async function _rollNoRoll(actor, difficulty, label) {
-  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/ability-roll-card.hbs', {
-    ability: label,
+async function _rollNoRoll({ title, actor, difficulty, usedResources }) {
+  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
+    title,
     difficulty,
     total: difficulty,
     success: true,
@@ -128,7 +127,7 @@ function _createChatMessage(actor, rollResult, content, type) {
   });
 }
 
-async function _getAbilityCheckOptions(title, currentActorResource) {
+async function _getCheckOptions(title, currentActorResource) {
   let resourceChoices;
   if (0 < currentActorResource) {
     resourceChoices = [...Array(currentActorResource + 1).keys()];
@@ -166,7 +165,7 @@ function _processAbilityCheckOptions(form) {
   };
 }
 
-async function _handleRollResult({ actor, usedResources, difficulty, rollResult }) {
+async function _handleRollResult({ actor, difficulty, rollResult, usedResources }) {
   let newResources = actor.data.data.resource;
 
   // Remove used resource points

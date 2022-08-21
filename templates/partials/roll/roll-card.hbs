@@ -1,4 +1,21 @@
-{{> "systems/channel-fear/templates/partials/roll/ability-roll-card.hbs" title=title}}
+<div class="dice-roll">
+  <div class="dice-flavor">
+    {{title}}
+    ({{localize "CF.Rolls.Difficulty" difficulty=difficulty}})
+  </div>
+  <div class="dice-result">
+    {{#if formula}}
+      <div class="dice-formula">{{formula}}</div>
+    {{/if}}
+    {{#if tooltip}}
+      {{{tooltip}}}
+    {{/if}}
+
+    <h4 class="dice-total{{#if success}} success{{/if}}{{#if failure}} failure{{/if}}{{#if hardSuccess}} hard-success{{/if}}{{#if hardFailure}} hard-failure{{/if}}">
+      {{total}}
+    </h4>
+  </div>
+</div>
 
 {{#if reroll.can}}
   <div class="channelfear dice-reroll" data-actor-id="{{actorId}}">

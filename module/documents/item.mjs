@@ -81,6 +81,10 @@ export class ChannelFearItem extends Item {
       return this._rollSpecialty(item);
     }
 
+    if ('weapon' === item.type) {
+      return this._rollWeapon(item);
+    }
+
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });
     const rollMode = game.settings.get('core', 'rollMode');
@@ -125,6 +129,13 @@ export class ChannelFearItem extends Item {
     });
   }
 
-    // console.log(checkResult);
+  async _rollWeapon(weapon) {
+    await Dice.weaponCheck({
+      ability: this.actor.data.data.abilities[weapon.data.ability],
+      label: weapon.name,
+      actor: this.actor,
+      currentActorResource: this.actor.data.data.resource,
+      reroll: weapon.data.reroll,
+    });
   }
 }
