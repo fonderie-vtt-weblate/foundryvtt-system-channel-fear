@@ -23,7 +23,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     name: game.i18n.localize('CF.Global.Edit'),
     icon: '<i class="fas fa-edit"></i>',
     callback: element => {
-      const item = this.actor.items.get(element[0].dataset.itemId);
+      const item = this.actor.items.get(element[0].dataset.item);
 
       item.sheet.render(true);
     },
@@ -31,7 +31,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     name: game.i18n.localize('CF.Global.Delete'),
     icon: '<i class="fas fa-trash"></i>',
     callback: element => {
-      this.actor.deleteEmbeddedDocuments('Item', [element[0].dataset.itemId]);
+      this.actor.deleteEmbeddedDocuments('Item', [element[0].dataset.item]);
     },
   }];
 
@@ -111,13 +111,13 @@ export class ChannelFearActorSheet extends ActorSheet {
 
     html.find('.item-edit').on('click', ev => {
       const li = $(ev.currentTarget).parents('.item');
-      const item = this.actor.items.get(li.data('itemId'));
+      const item = this.actor.items.get(li.data('item'));
       item.sheet.render(true);
     });
 
     html.find('.item-delete').on('click', ev => {
       const li = $(ev.currentTarget).parents('.item');
-      const item = this.actor.items.get(li.data('itemId'));
+      const item = this.actor.items.get(li.data('item'));
       item.delete();
       li.slideUp(200, () => this.render(false));
     });
@@ -157,55 +157,23 @@ export class ChannelFearActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    // Handle rolls of abilities.
+    // Handle rolls of abilities
     if (dataset.ability) {
-      const checkResult = await Dice.abilityCheck({
+      await Dice.abilityCheck({
         ability: dataset.ability,
         label: dataset.label || '',
         actor: this.actor,
         currentActorResource: this.actor.data.data.resource,
       });
-
-      await this._abilityRolled(checkResult);
     }
 
-    // Handle rolls of specialties.
-    if (dataset.specialty) {
-      const item = this.actor.items.get(dataset.specialty);
+    // Handle rolls of items
+    if (dataset.item) {
+      const item = this.actor.items.get(dataset.item);
 
       if (item) {
-        item.roll();
+        await item.roll();
       }
-    }
-
-    // Handle rerolls
-    if (dataset.rerollUsable) {
-      cosnole.log(dataset);
-    }
-  }
-
-  async _abilityRolled({ resources, difficulty, rollResult }) {
-    let newResources = this.actor.data.data.resource;
-
-    // Remove used resource points
-    if (0 < resources) {
-      --newResources;
-    }
-
-    // Margin of success/failure if difficulty > 1
-    if (1 < difficulty) {
-      if (rollResult.total > difficulty) {
-        // Success -> +1 resource point
-        ++newResources;
-      } else if (0 === rollResult.total) {
-        // Failure -> -1 resource point
-        --newResources;
-      }
-    }
-
-    // Update if needed
-    if (newResources !== this.actor.data.data.resource) {
-      await this.actor.update({ 'data.attributes.resource': newResources });
     }
   }
 }

@@ -105,6 +105,7 @@
         }
       },
       "SpecialtyCheck": {
+        "Title": "Jet de spécialté",
         "Card": {
           "Title": "Jet de spécialité : {name}"
         }

@@ -7,8 +7,9 @@ export async function abilityCheck({ ability, label, actor, currentActorResource
   // Used resources = difficulty level -> no roll
   if (resources === difficulty) {
     await _rollNoRoll(actor, difficulty, label);
+    await _handleRollResult({ actor, difficulty, usedResources: resources });
 
-    return { difficulty, resources };
+    return;
   }
 
   const rollResult = await _getRollResult(ability, resources);
@@ -25,8 +26,7 @@ export async function abilityCheck({ ability, label, actor, currentActorResource
   });
 
   await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
-
-  return { difficulty, resources, rollResult };
+  await _handleRollResult({ actor, difficulty, usedResources: resources, rollResult });
 }
 
 export async function specialtyCheck({ ability, label, actor, currentActorResource, reroll }) {
@@ -38,8 +38,9 @@ export async function specialtyCheck({ ability, label, actor, currentActorResour
   // Used resources = difficulty level -> no roll
   if (resources === difficulty) {
     await _rollNoRoll(actor, difficulty, label);
+    await _handleRollResult({ actor, difficulty, usedResources: resources });
 
-    return { difficulty, resources };
+    return;
   }
 
   const { rollResult } = await _doSpecialtyCheck({
@@ -51,11 +52,11 @@ export async function specialtyCheck({ ability, label, actor, currentActorResour
     reroll,
   });
 
-  return { difficulty, resources, rollResult };
+  await _handleRollResult({ actor, difficulty, usedResources: resources, rollResult });
 }
 
 export async function reroll({ difficulty, bonus, usable, available, label, actor }) {
-  await _doSpecialtyCheck({
+  const { rollResult } = await _doSpecialtyCheck({
     difficulty,
     dice: usable,
     bonus,
@@ -63,12 +64,15 @@ export async function reroll({ difficulty, bonus, usable, available, label, acto
     actor,
     reroll: available - usable,
   });
+
+  await _handleRollResult({ actor, difficulty, rollResult });
 }
 
 async function _doSpecialtyCheck({ difficulty, dice, bonus, label, actor, reroll }) {
   const rollResult = await _getRollResult(dice, bonus);
-  const canReroll = rollResult.total < difficulty && reroll >= (difficulty - rollResult.total);
   const isSuccess = rollResult.total >= difficulty;
+  const isHardFailure = 1 < difficulty && 0 === rollResult.total;
+  const canReroll = 1 < difficulty && !isHardFailure && rollResult.total < difficulty && 0 < reroll;
   const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/specialty-roll-card.hbs', {
     title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: label }),
     difficulty,
@@ -81,7 +85,7 @@ async function _doSpecialtyCheck({ difficulty, dice, bonus, label, actor, reroll
     success: isSuccess,
     failure: !isSuccess && (0 === rollResult.total || !canReroll),
     hardSuccess: 1 < difficulty && rollResult.total > difficulty,
-    hardFailure: 1 < difficulty && 0 === rollResult.total,
+    hardFailure: isHardFailure,
     formula: rollResult.formula,
     tooltip: await rollResult.getTooltip(),
     actorId: actor.id,
@@ -160,4 +164,29 @@ function _processAbilityCheckOptions(form) {
     difficulty: parseInt(form.difficulty.value, 10),
     resources: parseInt(form.resources ? form.resources.value : '', 10),
   };
+}
+
+async function _handleRollResult({ actor, usedResources, difficulty, rollResult }) {
+  let newResources = actor.data.data.resource;
+
+  // Remove used resource points
+  if (0 < usedResources) {
+    newResources -= usedResources;
+  }
+
+  // Margin of success/failure if difficulty > 1
+  if (1 < difficulty) {
+    if (rollResult.total > difficulty) {
+      // Success -> +1 resource point
+      ++newResources;
+    } else if (0 === rollResult.total) {
+      // Failure -> -1 resource point
+      --newResources;
+    }
+  }
+
+  // Update if needed
+  if (newResources !== actor.data.data.resource) {
+    await actor.update({ 'data.attributes.resource': Math.min(newResources, CONFIG.CF.maxResource) });
+  }
 }

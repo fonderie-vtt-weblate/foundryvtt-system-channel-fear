@@ -29,5 +29,7 @@ async function _onReroll(e) {
   } = e.currentTarget.dataset;
   const actor = await game.actors.get(actorId);
 
-  await Dice.reroll({ difficulty, bonus, usable, available, label, actor });
+  if (actor) {
+    await Dice.reroll({ difficulty, bonus, usable, available, label, actor });
+  }
 }

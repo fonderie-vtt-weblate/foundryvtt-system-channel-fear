@@ -116,13 +116,14 @@ export class ChannelFearItem extends Item {
   async _rollSpecialty(specialty) {
     const ability = this.actor.data.data.abilities[specialty.data.ability];
 
-    const checkResult = await Dice.specialtyCheck({
+    await Dice.specialtyCheck({
       ability: ability,
       label: specialty.name,
       actor: this.actor,
       currentActorResource: this.actor.data.data.resource,
       reroll: specialty.data.reroll,
     });
+  }
 
     // console.log(checkResult);
   }
