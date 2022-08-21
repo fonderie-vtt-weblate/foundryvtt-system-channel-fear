@@ -19,6 +19,7 @@
       "Abilities": "Aptitudes",
       "Cancel": "Annuler",
       "Category": "Catégorie",
+      "Damages": "Dégâts",
       "Delete": "Supprimer",
       "Difficulty": "Difficulté",
       "Edit": "Éditer",
@@ -63,8 +64,7 @@
       },
       "Weapons": {
         "Add": "Ajouter une arme",
-        "PlusLinkedAbility": "(+ aptitude liée)",
-        "Damages": "Dégâts"
+        "PlusLinkedAbility": "(+ aptitude liée)"
       },
       "Health": {
         "Title": "Santé",
@@ -92,14 +92,16 @@
     },
     "Rolls": {
       "Difficulty": "Difficulté : {difficulty}",
-      "AbilityCheck": {
-        "Title": "Jet d'aptitude",
+      "Dialog": {
         "Difficulty": "Difficulté du jet",
         "Difficulty1": "Relativement facile - 1 réussite",
         "Difficulty2": "Moyenne - 2 réussites",
         "Difficulty3": "Difficile - 3 réussites",
         "Difficulty4": "Très difficile - 4 réussites",
-        "ResourcesToUse": "Points de ressources à utiliser",
+        "ResourcesToUse": "Points de ressources à utiliser"
+      },
+      "AbilityCheck": {
+        "Title": "Jet d'aptitude",
         "Card": {
           "Title": "Jet d'aptitude : {name}"
         }
@@ -114,6 +116,12 @@
         "Title": "Jet d'arme",
         "Card": {
           "Title": "Jet d'arme : {name}"
+        }
+      },
+      "Damages": {
+        "Title": "Jet de dégâts",
+        "Card": {
+          "Title": "Jet de dégâts : {name}"
         }
       }
     }

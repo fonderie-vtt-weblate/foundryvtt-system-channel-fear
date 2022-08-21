@@ -163,7 +163,6 @@ export class ChannelFearActorSheet extends ActorSheet {
         ability: dataset.ability,
         label: dataset.label || '',
         actor: this.actor,
-        currentActorResource: this.actor.data.data.resource,
       });
     }
 

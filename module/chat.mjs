@@ -1,35 +1,59 @@
 import * as Dice from './dice.mjs';
 
 export function addChatListeners(html) {
-  html.find('.reroll').on('click', _onReroll);
+  html.find('.reroll').on('click', _handleReroll);
+  html.find('.use-weapon').on('click', _handleWeaponDamages);
 }
 
-export function hideRerollButtons(html) {
-  const rerollContainer = html[0].querySelector('.channelfear.dice-reroll');
-  if (!rerollContainer) {
+export function hideActionsButtons(html) {
+  const actionsContainer = html[0].querySelector('.channelfear.chat-actions');
+  if (!actionsContainer) {
     return;
   }
 
-  const actor = game.actors.get(rerollContainer.dataset.actorId);
+  const actor = game.actors.get(actionsContainer.dataset.actorId);
   if (actor && !actor.isOwner) {
-    rerollContainer.style.display = 'none';
+    actionsContainer.style.display = 'none';
   }
 }
 
-async function _onReroll(e) {
+async function _handleReroll(e) {
   e.preventDefault();
 
+  const data = e.currentTarget.dataset;
+  const actor = await game.actors.get(data.actorId);
+
+  if (!actor) {
+    return;
+  }
+
   const {
-    difficulty,
-    bonus,
     rerollUsable: usable,
     rerollAvailable: available,
+    bonus,
+    difficulty,
     label,
-    actorId,
-  } = e.currentTarget.dataset;
-  const actor = await game.actors.get(actorId);
+    type,
+  } = data;
 
-  if (actor) {
-    await Dice.reroll({ difficulty, bonus, usable, available, label, actor });
+  await Dice.reroll({ actor, available, bonus, difficulty, label, type, usable });
+}
+
+async function _handleWeaponDamages(e) {
+  e.preventDefault();
+
+  const data = e.currentTarget.dataset;
+  const actor = await game.actors.get(data.actorId);
+
+  if (!actor) {
+    return;
   }
+
+  const {
+    dice,
+    label,
+    reroll,
+  } = data;
+
+  await Dice.useWeapon({ actor, dice, label, reroll });
 }

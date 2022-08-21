@@ -1,7 +1,7 @@
 <div class="dice-roll">
   <div class="dice-flavor">
     {{title}}
-    ({{localize "CF.Rolls.Difficulty" difficulty=difficulty}})
+    {{#if difficulty}}({{localize "CF.Rolls.Difficulty" difficulty=difficulty}}){{/if}}
   </div>
   <div class="dice-result">
     {{#if formula}}
@@ -18,12 +18,23 @@
 </div>
 
 {{#if reroll.can}}
-  <div class="channelfear dice-reroll" data-actor-id="{{actorId}}">
+  <div class="channelfear chat-actions" data-actor-id="{{actorId}}">
     <button type="button" class="rollable reroll" data-difficulty="{{difficulty}}" data-bonus="{{total}}"
             data-reroll-usable="{{reroll.usable}}" data-reroll-available="{{reroll.available}}"
-            data-label="{{specialty}}" data-actor-id="{{actorId}}">
+            data-type="{{reroll.type}}" data-label="{{reroll.label}}" data-actor-id="{{actorId}}">
       <i class="fas fa-dice"></i>
       {{localize "CF.Global.Reroll"}} ({{localize "CF.Global.XOutOfY" x=reroll.usable y=reroll.available}})
     </button>
   </div>
 {{/if}}
+
+{{#if success}}{{#if weapon}}
+  <div class="channelfear chat-actions" data-actor-id="{{actorId}}">
+    <button type="button" class="rollable use-weapon" data-actor-id="{{actorId}}" data-label="{{weapon.name}}"
+            data-reroll="{{weapon.data.reroll}}"
+            data-dice="{{weapon.data.category}}">
+      <i class="fas fa-fist-raised"></i>
+      {{localize "CF.Global.Damages"}} ({{localize "CF.Global.xD" x=weapon.data.category}})
+    </button>
+  </div>
+{{/if}}{{/if}}

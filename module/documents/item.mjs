@@ -118,24 +118,10 @@ export class ChannelFearItem extends Item {
   }
 
   async _rollSpecialty(specialty) {
-    const ability = this.actor.data.data.abilities[specialty.data.ability];
-
-    await Dice.specialtyCheck({
-      ability: ability,
-      label: specialty.name,
-      actor: this.actor,
-      currentActorResource: this.actor.data.data.resource,
-      reroll: specialty.data.reroll,
-    });
+    await Dice.specialtyCheck(specialty);
   }
 
   async _rollWeapon(weapon) {
-    await Dice.weaponCheck({
-      ability: this.actor.data.data.abilities[weapon.data.ability],
-      label: weapon.name,
-      actor: this.actor,
-      currentActorResource: this.actor.data.data.resource,
-      reroll: weapon.data.reroll,
-    });
+    await Dice.weaponCheck(weapon);
   }
 }

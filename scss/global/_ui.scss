@@ -19,6 +19,10 @@ body {
     text-shadow: 0 0 10px red;
     cursor: pointer;
   }
+
+  #context-menu {
+    text-shadow: none;
+  }
 }
 
 .dice-roll {

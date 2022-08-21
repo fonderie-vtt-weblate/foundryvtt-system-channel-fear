@@ -51,7 +51,7 @@ Hooks.on('renderPause', (app, html, options) => {
 
 Hooks.on('renderChatMessage', (app, html, data) => {
   Chat.addChatListeners(html);
-  Chat.hideRerollButtons(html);
+  Chat.hideActionsButtons(html);
 });
 
 /**

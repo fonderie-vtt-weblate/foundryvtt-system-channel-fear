@@ -1,53 +1,86 @@
-export async function abilityCheck({ ability, label, actor, currentActorResource }) {
-  let { difficulty, resources } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', currentActorResource);
+export async function abilityCheck({ ability, label, actor }) {
+  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', actor.data.data.resource);
 
   await _doCheck({
+    dice: ability,
     title: game.i18n.format('CF.Rolls.AbilityCheck.Card.Title', { name: label }),
-    dice: ability,
     usedResources: resources,
-    difficulty,
     actor,
+    difficulty,
   });
 }
 
-export async function specialtyCheck({ ability, label, actor, currentActorResource, reroll }) {
-  let { difficulty, resources } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', currentActorResource);
+export async function specialtyCheck(specialty) {
+  const actor = specialty.document.actor;
+  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', actor.data.data.resource);
 
   await _doCheck({
-    title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: label }),
-    dice: ability,
+    dice: actor.data.data.abilities[specialty.data.ability],
+    reroll: {
+      available: specialty.data.reroll,
+      label: specialty.name,
+      type: 'specialty',
+    },
+    title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: specialty.name }),
     usedResources: resources,
     actor,
     difficulty,
-    reroll,
   });
 }
 
-export async function weaponCheck({ ability, label, actor, currentActorResource, reroll }) {
-  let { difficulty, resources } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', currentActorResource);
+export async function weaponCheck(weapon) {
+  const actor = weapon.document.actor;
+  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', actor.data.data.resource);
 
   await _doCheck({
-    title: game.i18n.format('CF.Rolls.WeaponCheck.Card.Title', { name: label }),
-    dice: ability,
+    dice: actor.data.data.abilities[weapon.data.ability],
+    title: game.i18n.format('CF.Rolls.WeaponCheck.Card.Title', { name: weapon.name }),
     usedResources: resources,
     actor,
     difficulty,
-    reroll,
+    weapon,
   });
 }
 
-export async function reroll({ difficulty, bonus, usable, available, label, actor }) {
+export async function reroll({ actor, available, bonus, difficulty, label, type, usable }) {
+  const i18nKey = 'specialty' === type ? 'CF.Rolls.SpecialtyCheck.Card.Title' : 'CF.Rolls.Damages.Card.Title';
+
   await _doCheck({
     dice: usable,
-    reroll: available - usable,
-    title: game.i18n.format('CF.Rolls.SpecialtyCheck.Card.Title', { name: label }),
+    reroll: {
+      available: available - usable,
+      type: type,
+      label,
+    },
+    title: game.i18n.format(i18nKey, { name: label }),
     actor,
     bonus,
     difficulty,
   });
 }
 
-async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedResources }) {
+export async function useWeapon({ actor, dice, label, reroll }) {
+  const rollResult = await _getRollResult(dice);
+  const canReroll = 0 < reroll;
+  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
+    actorId: actor.id,
+    formula: rollResult.formula,
+    reroll: {
+      available: reroll,
+      can: canReroll,
+      type: 'weapon',
+      usable: Math.min(reroll, _getNbFailure(rollResult)),
+      label,
+    },
+    title: game.i18n.format('CF.Rolls.Damages.Card.Title', { name: label }),
+    tooltip: await rollResult.getTooltip(),
+    total: rollResult.total,
+  });
+
+  await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
+}
+
+async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedResources, weapon }) {
   if (usedResources) {
     // Ensure to not use more resources than necessary
     usedResources = Math.min(difficulty, usedResources);
@@ -61,7 +94,7 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
       actor,
       difficulty,
       title,
-      usedResources,
+      weapon,
     });
 
     await _handleRollResult({ actor, difficulty, usedResources });
@@ -70,25 +103,45 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
   }
 
   const rollResult = await _getRollResult(dice, score);
-  const isSuccess = rollResult.total >= difficulty;
-  const isHardFailure = 1 < difficulty && 0 === rollResult.total;
-  const canReroll = 1 < difficulty && !isHardFailure && rollResult.total < difficulty && 0 < reroll;
-  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
-    reroll: {
+  let isSuccess = false;
+  let isHardFailure = false;
+  let canReroll = reroll && 0 < reroll.available;
+  let rerollData = { can: false };
+
+  if (difficulty) {
+    isSuccess = rollResult.total >= difficulty;
+    isHardFailure = 1 < difficulty && 0 === rollResult.total;
+    canReroll = canReroll && 1 < difficulty && rollResult.total < difficulty;
+  }
+
+  canReroll = canReroll && !isHardFailure;
+
+  if (canReroll) {
+    const usable = Math.min(reroll.available, _getNbFailure(rollResult));
+
+    canReroll = 0 < usable;
+    rerollData = {
+      available: reroll.available,
       can: canReroll,
-      available: reroll,
-      usable: Math.min(reroll, difficulty - rollResult.total),
-    },
-    total: rollResult.total,
-    success: isSuccess,
-    failure: !isSuccess && (0 === rollResult.total || !canReroll),
+      label: reroll.label,
+      type: reroll.type,
+      usable,
+    };
+  }
+
+  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
+    actorId: actor.id,
+    failure: (!reroll || 'weapon' !== reroll.type) && !isSuccess && (0 === rollResult.total || !canReroll),
+    formula: rollResult.formula,
     hardSuccess: 1 < difficulty && rollResult.total > difficulty,
     hardFailure: isHardFailure,
-    formula: rollResult.formula,
+    success: isSuccess || (reroll && 'weapon' === reroll.type && !canReroll),
+    reroll: rerollData,
     tooltip: await rollResult.getTooltip(),
-    actorId: actor.id,
+    total: rollResult.total,
     difficulty,
     title,
+    weapon,
   });
 
   await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
@@ -104,13 +157,14 @@ function _getRollResult(dice, bonus) {
   return new Roll(formula).roll({ async: true });
 }
 
-async function _rollNoRoll({ title, actor, difficulty, usedResources }) {
+async function _rollNoRoll({ title, actor, difficulty, weapon }) {
   const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
-    title,
-    difficulty,
     total: difficulty,
     success: true,
     failure: false,
+    difficulty,
+    title,
+    weapon,
   });
 
   _createChatMessage(actor, null, chatContent, CONST.CHAT_MESSAGE_TYPES.OTHER);
@@ -134,7 +188,7 @@ async function _getCheckOptions(title, currentActorResource) {
     resourceChoices = Object.assign({}, ...resourceChoices.map((e, i) => ({ [e]: resourceChoices[i] })));
   }
 
-  const html = await renderTemplate('systems/channel-fear/templates/partials/roll/ability-roll-dialog.hbs', {
+  const html = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-dialog.hbs', {
     resourceChoices,
   });
 
@@ -174,7 +228,7 @@ async function _handleRollResult({ actor, difficulty, rollResult, usedResources 
   }
 
   // Margin of success/failure if difficulty > 1
-  if (1 < difficulty) {
+  if (rollResult && 1 < difficulty) {
     if (rollResult.total > difficulty) {
       // Success -> +1 resource point
       ++newResources;
@@ -188,4 +242,11 @@ async function _handleRollResult({ actor, difficulty, rollResult, usedResources 
   if (newResources !== actor.data.data.resource) {
     await actor.update({ 'data.attributes.resource': Math.min(newResources, CONFIG.CF.maxResource) });
   }
+}
+
+function _getNbFailure(rollResult) {
+  return rollResult.dice[0].results.reduce(
+    (prev, result) => prev + (result.success ? 0 : 1),
+    0,
+  );
 }

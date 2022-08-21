@@ -20,6 +20,7 @@
       "Cancel": "Cancel",
       "Category": "Category",
       "Delete": "Delete",
+      "Damages": "Damages",
       "Difficulty": "Difficulty",
       "Edit": "Edit",
       "Name": "Name",
@@ -63,8 +64,7 @@
       },
       "Weapons": {
         "Add": "Add a weapon",
-        "PlusLinkedAbility": "(+ linked ability)",
-        "Damages": "Damages"
+        "PlusLinkedAbility": "(+ linked ability)"
       },
       "Health": {
         "Title": "Health",
@@ -92,14 +92,16 @@
     },
     "Rolls": {
       "Difficulty": "Difficulty: {difficulty}",
-      "AbilityCheck": {
-        "Title": "Ability roll",
+      "Dialog": {
         "Difficulty": "Roll difficulty",
         "Difficulty1": "Relatively easy - 1 success",
         "Difficulty2": "Medium - 2 successes",
         "Difficulty3": "Difficult - 3 successes",
         "Difficulty4": "Very difficult - 4 successes",
-        "ResourcesToUse": "Resource points to use",
+        "ResourcesToUse": "Resource points to use"
+      },
+      "AbilityCheck": {
+        "Title": "Ability roll",
         "Card": {
           "Title": "Ability roll: {name}"
         }
@@ -114,6 +116,12 @@
         "Title": "Weapon roll",
         "Card": {
           "Title": "Weapon roll: {name}"
+        }
+      },
+      "Damages": {
+        "Title": "Damages roll",
+        "Card": {
+          "Title": "Damages roll: {name}"
         }
       }
     }
