@@ -2,6 +2,10 @@
   "ACTOR.TypeCharacter": "Joueur",
   "ACTOR.TypeNpc": "Second rôle",
   "CF": {
+    "Warnings": {
+      "MacroOnlyForOwnedItem": "Vous pouvez seulement créer des macros pour les objets que vous possédez",
+      "MacroItemNotFound": "Le personnage que vous contrôlez n'a pas d'objet ayant l'ID {id}"
+    },
     "Abilities": {
       "Act": "Agir",
       "Kno": "Savoir",

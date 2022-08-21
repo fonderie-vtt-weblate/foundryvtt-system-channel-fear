@@ -18,7 +18,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     name: game.i18n.localize('CF.Global.Edit'),
     icon: '<i class="fas fa-edit"></i>',
     callback: element => {
-      const item = this.actor.items.get(element[0].dataset.item);
+      const item = this.actor.items.get(element[0].dataset.itemId);
 
       item.sheet.render(true);
     },
@@ -26,7 +26,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     name: game.i18n.localize('CF.Global.Delete'),
     icon: '<i class="fas fa-trash"></i>',
     callback: element => {
-      this.actor.deleteEmbeddedDocuments('Item', [element[0].dataset.item]);
+      this.actor.deleteEmbeddedDocuments('Item', [element[0].dataset.itemId]);
     },
   }];
 
@@ -93,12 +93,12 @@ export class ChannelFearActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
-    html.find('.rollable').on('click', this._onRoll.bind(this));
-
     if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
+      html.find('.rollable').on('click', this._onRoll.bind(this));
+
+      const handler = ev => this._onDragStart(ev);
+
       html.find('li.item').each((i, li) => {
-        if (li.classList.contains('inventory-header')) return;
         li.setAttribute('draggable', true);
         li.addEventListener('dragstart', handler, false);
       });
@@ -134,8 +134,8 @@ export class ChannelFearActorSheet extends ActorSheet {
       });
     }
 
-    if (dataset.item) {
-      const item = this.actor.items.get(dataset.item);
+    if (dataset.itemId) {
+      const item = this.actor.items.get(dataset.itemId);
 
       if (item) {
         await item.roll();

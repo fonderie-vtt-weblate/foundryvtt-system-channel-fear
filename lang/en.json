@@ -2,6 +2,10 @@
   "ACTOR.TypeCharacter": "Player",
   "ACTOR.TypeNpc": "Second role",
   "CF": {
+    "Warnings": {
+      "MacroOnlyForOwnedItem": "You can only create macro buttons for owned Items",
+      "MacroItemNotFound": "Your controlled Actor does not have an item with ID {id}"
+    },
     "Abilities": {
       "Act": "To act",
       "Kno": "To know",
