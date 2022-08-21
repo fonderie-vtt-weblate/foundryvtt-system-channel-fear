@@ -45,7 +45,10 @@ Hooks.on('renderPause', (app, html, options) => {
   }
 });
 
-Hooks.on('renderChatMessage', (app, html, data) => Chat.addChatListeners(html));
+Hooks.on('renderChatMessage', (app, html, data) => {
+  Chat.addChatListeners(html);
+  Chat.hideRerollButtons(html);
+});
 
 /**
  * Create a Macro from an Item drop.
