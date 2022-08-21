@@ -39,68 +39,9 @@
       </div>
     </div>
 
-    <div class="stacked-block">
-      <h1 class="block-title">{{localize "CF.CharacterSheet.Resource.Title"}}</h1>
-
-      <div class="block-content">
-        <div class="block-header-info small-info align-right grid grid-4col mt-0">
-          <div class="grid-span-3">
-            {{{localize "CF.CharacterSheet.Resource.MaxInfo"}}}
-            <strong>6</strong>
-          </div>
-        </div>
-
-        <div class="block-content-inner u-relative">
-          <input type="text" name="data.attributes.resource" value="{{data.attributes.resource}}" data-dtype="Number"
-                 class="attribute-input" min="0" max="6" />
-
-          <p class="small-info">
-            <strong>{{localize "CF.CharacterSheet.Resource.SuccessTitle"}}</strong><br />
-            {{localize "CF.CharacterSheet.Resource.SuccessDesc"}}
-          </p>
-          <p class="small-info">
-            <strong>{{localize "CF.CharacterSheet.ProfDef"}}</strong><br />
-            {{localize "CF.CharacterSheet.Resource.ProfDefBonusDesc"}}
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="stacked-block reversed">
-      <h1 class="block-title no-radius">{{localize "CF.CharacterSheet.Evolution.Title"}}</h1>
-
-      <div class="block-content">
-        <div class="block-header-info small-info align-right grid grid-4col mt-0">
-          <div class="grid-span-3">
-            {{{localize "CF.CharacterSheet.Evolution.Subtitle"}}}
-          </div>
-        </div>
-
-        <div class="block-content-inner u-relative">
-          <input type="text" id="data.attributes.evolution" name="data.attributes.evolution"
-                 value="{{data.attributes.evolution}}" data-dtype="Number" class="attribute-input" />
-
-          <ul class="small-info">
-            <li>
-              <strong>{{localize "CF.CharacterSheet.Evolution.Points" value=5}}</strong>
-              {{localize "CF.CharacterSheet.Evolution.SpecialtyFromTo" from=0 to=1}}
-            </li>
-            <li>
-              <strong>{{localize "CF.CharacterSheet.Evolution.Points" value=10}}</strong>
-              {{localize "CF.CharacterSheet.Evolution.SpecialtyFromTo" from=1 to=2}}
-            </li>
-            <li>
-              <strong>{{localize "CF.CharacterSheet.Evolution.Points" value=15}}</strong>
-
-              <ul class="evolution-list">
-                <li>{{localize "CF.CharacterSheet.Evolution.SpecialtyFromTo" from=2 to=3}}</li>
-                <li>{{localize "CF.CharacterSheet.Evolution.AbilityBonusDesc"}}</li>
-                <li>{{localize "CF.CharacterSheet.Evolution.ProfDefBonusDesc"}}</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    {{#unless isNpc}}
+      {{> "systems/channel-fear/templates/actor/parts/actor-resources.hbs"}}
+      {{> "systems/channel-fear/templates/actor/parts/actor-evolution.hbs"}}
+    {{/unless}}
   </div>
 </div>

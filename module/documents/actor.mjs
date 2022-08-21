@@ -3,6 +3,7 @@ export class ChannelFearActor extends Actor {
     const actorData = this.data;
 
     this._prepareCharacterData(actorData);
+    this._prepareNpcData(actorData);
   }
 
   _prepareCharacterData(actorData) {
@@ -19,6 +20,25 @@ export class ChannelFearActor extends Actor {
     // Ensure abilities are between allowed boundaries
     for (let ability of Object.entries(data.abilities)) {
       ability = this._validateBoundaries(ability, 0, CONFIG.CF.maxAbility);
+    }
+  }
+
+  _prepareNpcData(actorData) {
+    if ('npc' !== actorData.type) {
+      return;
+    }
+
+    const data = actorData.data;
+
+    // Ensure health is between allowed boundaries
+    data.attributes.health = this._validateBoundaries(data.attributes.health, 0, CONFIG.CF.maxHealth);
+
+    if (data.abilities) {
+      const abilitiesPoints = CONFIG.CF.npcAbilitiesPoints[data.level];
+
+      for (const k of Object.keys(data.abilities)) {
+        data.abilities[k] = abilitiesPoints;
+      }
     }
   }
 

@@ -16,10 +16,12 @@
         </div>
       {{/each}}
 
-      <span class="small-info">
-        <strong>{{localize "CF.CharacterSheet.Abilities.PointsToSpent"}}</strong>
-        {{localize "CF.CharacterSheet.Abilities.PointsCost"}}
-      </span>
+      {{#unless isNpc}}
+        <span class="small-info">
+          <strong>{{localize "CF.CharacterSheet.Abilities.PointsToSpent"}}</strong>
+          {{localize "CF.CharacterSheet.Abilities.PointsCost"}}
+        </span>
+      {{/unless}}
     </div>
   </div>
 </div>

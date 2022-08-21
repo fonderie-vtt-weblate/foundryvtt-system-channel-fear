@@ -90,6 +90,17 @@
         "ProfDefBonusDesc": "+1 déformation professionnelle"
       }
     },
+    "NpcSheet": {
+      "Level": {
+        "Label": "Niveau",
+        "Values": {
+          "weak": "Faible",
+          "medium": "Moyen",
+          "strong": "Fort",
+          "unbeatable": "Imbattable"
+        }
+      }
+    },
     "Rolls": {
       "Difficulty": "Difficulté : {difficulty}",
       "Dialog": {

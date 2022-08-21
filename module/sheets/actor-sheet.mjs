@@ -1,4 +1,3 @@
-import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/effects.mjs';
 import * as Dice from '../dice.mjs';
 
 export class ChannelFearActorSheet extends ActorSheet {
@@ -37,24 +36,18 @@ export class ChannelFearActorSheet extends ActorSheet {
 
     context.data = actorData.data;
     context.flags = actorData.flags;
+    context.isNpc = false;
+    context.abilitiesList = CONFIG.CF.abilities;
+    context.rollData = context.actor.getRollData();
 
-    if ('character' === actorData.type) {
-      this._prepareItems(context);
-      this._prepareCharacterData(context);
-    }
+    this._prepareItems(context);
 
     if ('npc' === actorData.type) {
-      this._prepareItems(context);
+      context.isNpc = true;
+      context.levelsList = CONFIG.CF.npcLevels;
     }
 
-    context.rollData = context.actor.getRollData();
-    context.effects = prepareActiveEffectCategories(this.actor.effects);
-
     return context;
-  }
-
-  _prepareCharacterData(context) {
-    context.abilitiesList = CONFIG.CF.abilities;
   }
 
   _prepareItems(context) {
@@ -100,7 +93,6 @@ export class ChannelFearActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
-    html.find('.effect-control').on('click', ev => onManageActiveEffect(ev, this.actor));
     html.find('.rollable').on('click', this._onRoll.bind(this));
 
     if (this.actor.isOwner) {

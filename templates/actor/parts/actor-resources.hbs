@@ -1,0 +1,26 @@
+<div class="stacked-block">
+  <h1 class="block-title">{{localize "CF.CharacterSheet.Resource.Title"}}</h1>
+
+  <div class="block-content">
+    <div class="block-header-info small-info align-right grid grid-4col mt-0">
+      <div class="grid-span-3">
+        {{{localize "CF.CharacterSheet.Resource.MaxInfo"}}}
+        <strong>6</strong>
+      </div>
+    </div>
+
+    <div class="block-content-inner u-relative">
+      <input type="text" name="data.attributes.resource" value="{{data.attributes.resource}}" data-dtype="Number"
+             class="attribute-input" min="0" max="6" />
+
+      <p class="small-info">
+        <strong>{{localize "CF.CharacterSheet.Resource.SuccessTitle"}}</strong><br />
+        {{localize "CF.CharacterSheet.Resource.SuccessDesc"}}
+      </p>
+      <p class="small-info">
+        <strong>{{localize "CF.CharacterSheet.ProfDef"}}</strong><br />
+        {{localize "CF.CharacterSheet.Resource.ProfDefBonusDesc"}}
+      </p>
+    </div>
+  </div>
+</div>

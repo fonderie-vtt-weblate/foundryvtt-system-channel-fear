@@ -10,6 +10,8 @@ export const preloadHandlebarsTemplates = async function () {
     'systems/channel-fear/templates/actor/parts/actor-specialties.hbs',
     'systems/channel-fear/templates/actor/parts/actor-right-part.hbs',
     'systems/channel-fear/templates/actor/parts/actor-weapons.hbs',
+    'systems/channel-fear/templates/actor/parts/actor-resources.hbs',
+    'systems/channel-fear/templates/actor/parts/actor-evolution.hbs',
     // Rolls partials
     'systems/channel-fear/templates/partials/roll/roll-dialog.hbs',
     'systems/channel-fear/templates/partials/roll/roll-card.hbs',
