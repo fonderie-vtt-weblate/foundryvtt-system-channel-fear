@@ -84,7 +84,7 @@
       "Evolution": {
         "Title": "Evolution",
         "Subtitle": "In reserve",
-        "Points": "Points",
+        "Points": "{value} points",
         "SpecialtyFromTo": "{from}R > {to}R in specialty",
         "AbilityBonusDesc": "+1D in ability",
         "ProfDefBonusDesc": "+1 professional deformation"
