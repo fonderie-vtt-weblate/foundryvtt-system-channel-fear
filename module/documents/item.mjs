@@ -18,12 +18,13 @@ export class ChannelFearItem extends Item {
     }
 
     const data = itemData.data;
+    data.reroll = parseInt(data.reroll, 10);
 
     // Ensure specialty reroll is between allowed boundaries
     if (data.reroll < 1) {
       data.reroll = 1;
-    } else if (data.reroll > 3) {
-      data.reroll = 3;
+    } else if (data.reroll > CONFIG.CF.specialtyMaxReroll) {
+      data.reroll = CONFIG.CF.specialtyMaxReroll;
     }
   }
 
@@ -33,12 +34,24 @@ export class ChannelFearItem extends Item {
     }
 
     const data = itemData.data;
+    data.reroll = parseInt(data.reroll, 10);
+
+    // Add force reroll
+    if (data.contact) {
+      data.allMightHitReroll = data.reroll;
+
+      if (this.actor && this.actor.data) {
+        data.allMightHitReroll += (CONFIG.CF.allMightHitReroll[this.actor.data.data.abilities.for] || 0);
+      }
+
+      data.allMightHitReroll = Math.min(data.allMightHitReroll, CONFIG.CF.weaponMaxReroll);
+    }
 
     // Ensure weapon reroll is between allowed boundaries
     if (data.reroll < 0) {
       data.reroll = 0;
-    } else if (data.reroll > 3) {
-      data.reroll = 3;
+    } else if (data.reroll > CONFIG.CF.weaponMaxReroll) {
+      data.reroll = CONFIG.CF.weaponMaxReroll;
     }
 
     // Ensure weapons lower thant category 4 can not have more than 1 reroll

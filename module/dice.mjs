@@ -61,7 +61,8 @@ export async function reroll({ actor, available, bonus, difficulty, label, type,
 
 export async function useWeapon({ actor, dice, label, reroll }) {
   const rollResult = await _getRollResult(dice);
-  const canReroll = 0 < reroll;
+  const usable = Math.min(reroll, _getNbFailure(rollResult));
+  const canReroll = 0 < reroll && 0 < usable;
   const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
     actorId: actor.id,
     formula: rollResult.formula,
@@ -69,8 +70,8 @@ export async function useWeapon({ actor, dice, label, reroll }) {
       available: reroll,
       can: canReroll,
       type: 'weapon',
-      usable: Math.min(reroll, _getNbFailure(rollResult)),
       label,
+      usable,
     },
     title: game.i18n.format('CF.Rolls.Damages.Card.Title', { name: label }),
     tooltip: await rollResult.getTooltip(),

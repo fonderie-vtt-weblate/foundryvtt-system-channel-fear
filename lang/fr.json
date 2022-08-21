@@ -121,7 +121,8 @@
       "Damages": {
         "Title": "Jet de dégâts",
         "Card": {
-          "Title": "Jet de dégâts : {name}"
+          "Title": "Jet de dégâts : {name}",
+          "HitAllMight": "Frapper de toutes ses forces"
         }
       }
     }

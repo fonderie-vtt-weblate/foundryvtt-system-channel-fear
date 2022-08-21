@@ -121,7 +121,8 @@
       "Damages": {
         "Title": "Damages roll",
         "Card": {
-          "Title": "Damages roll: {name}"
+          "Title": "Damages roll: {name}",
+          "HitAllMight": "Hit with all your might"
         }
       }
     }

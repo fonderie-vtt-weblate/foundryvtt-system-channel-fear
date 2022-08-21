@@ -3,6 +3,14 @@ export const CF = {};
 CF.maxHealth = 6;
 CF.maxResource = 6;
 CF.maxAbility = 6;
+CF.specialtyMaxReroll = 3;
+CF.weaponMaxReroll = 3;
+
+CF.allMightHitReroll = {
+  4: 1,
+  5: 2,
+  6: 3,
+};
 
 CF.abilities = {
   'act': 'CF.Abilities.Act',
