@@ -18,7 +18,6 @@ export class ChannelFearItem extends Item {
     }
 
     const data = itemData.data;
-    data.reroll = parseInt(data.reroll, 10);
 
     // Ensure specialty reroll is between allowed boundaries
     if (data.reroll < 1) {
@@ -34,7 +33,6 @@ export class ChannelFearItem extends Item {
     }
 
     const data = itemData.data;
-    data.reroll = parseInt(data.reroll, 10);
 
     // Add force reroll
     if (data.contact) {

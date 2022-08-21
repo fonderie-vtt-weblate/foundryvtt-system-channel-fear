@@ -2,7 +2,6 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from '../helpers/
 import * as Dice from '../dice.mjs';
 
 export class ChannelFearActorSheet extends ActorSheet {
-  /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ['channelfear', 'sheet', 'actor'],
@@ -12,12 +11,9 @@ export class ChannelFearActorSheet extends ActorSheet {
     });
   }
 
-  /** @override */
   get template() {
     return `systems/channel-fear/templates/actor/actor-${this.actor.data.type}-sheet.hbs`;
   }
-
-  /* -------------------------------------------- */
 
   contextMenuItems = [{
     name: game.i18n.localize('CF.Global.Edit'),
@@ -35,36 +31,23 @@ export class ChannelFearActorSheet extends ActorSheet {
     },
   }];
 
-  /** @override */
-  getData() {
-    // Retrieve the data structure from the base sheet. You can inspect or log
-    // the context variable to see the structure, but some key properties for
-    // sheets are the actor object, the data object, whether or not it's
-    // editable, the items array, and the effects array.
-    const context = super.getData();
-
-    // Use a safe clone of the actor data for further operations.
+  getData(options) {
+    const context = super.getData(options);
     const actorData = this.actor.data.toObject(false);
 
-    // Add the actor's data to context.data for easier access, as well as flags.
     context.data = actorData.data;
     context.flags = actorData.flags;
 
-    // Prepare character data and items.
     if ('character' === actorData.type) {
       this._prepareItems(context);
       this._prepareCharacterData(context);
     }
 
-    // Prepare NPC data and items.
     if ('npc' === actorData.type) {
       this._prepareItems(context);
     }
 
-    // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
-
-    // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
 
     return context;
@@ -75,12 +58,10 @@ export class ChannelFearActorSheet extends ActorSheet {
   }
 
   _prepareItems(context) {
-    // Initialize containers.
     const gear = [];
     const specialties = [];
     const weapons = [];
 
-    // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       if ('item' === i.type) {
@@ -97,9 +78,6 @@ export class ChannelFearActorSheet extends ActorSheet {
     context.weapons = weapons;
   }
 
-  /* -------------------------------------------- */
-
-  /** @override */
   activateListeners(html) {
     super.activateListeners(html);
 
@@ -125,7 +103,6 @@ export class ChannelFearActorSheet extends ActorSheet {
     html.find('.effect-control').on('click', ev => onManageActiveEffect(ev, this.actor));
     html.find('.rollable').on('click', this._onRoll.bind(this));
 
-    // Drag events for macros.
     if (this.actor.isOwner) {
       let handler = ev => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
@@ -157,16 +134,14 @@ export class ChannelFearActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    // Handle rolls of abilities
     if (dataset.ability) {
       await Dice.abilityCheck({
         ability: dataset.ability,
-        label: dataset.label || '',
+        label: dataset.label,
         actor: this.actor,
       });
     }
 
-    // Handle rolls of items
     if (dataset.item) {
       const item = this.actor.items.get(dataset.item);
 

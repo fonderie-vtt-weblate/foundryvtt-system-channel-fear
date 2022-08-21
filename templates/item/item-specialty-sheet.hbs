@@ -1,26 +1,23 @@
 <form class="{{cssClass}}" autocomplete="off">
-  <header class="sheet-header">
-    <div class="header-fields">
-      <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-      <h1>
-        <input name="name" type="text" value="{{item.name}}" placeholder="{{localize "CF.Global.Name"}}" />
-      </h1>
-    </div>
-  </header>
+  {{> "systems/channel-fear/templates/item/parts/simple-header.hbs"}}
 
-  {{!-- Sheet Body --}}
-  <section class="sheet-body">
-    <div class="resource">
-      <label for="data.ability">{{localize "CF.Global.Ability"}}</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <select name="data.ability" data-dtype="String">
+  <section>
+    <div class="flexrow">
+      <div>
+        <label for="ability-{{item.id}}">{{localize "CF.Global.Ability"}}</label>
+        <select name="data.ability" id="ability-{{item.id}}" data-dtype="String">
           {{selectOptions abilitiesList selected=data.ability localize=true}}
         </select>
       </div>
-      <label for="data.reroll">{{localize "CF.Global.Rerolls"}}</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input type="number" id="data.reroll" name="data.reroll" value="{{data.reroll}}" data-dtype="Number"
-               min="1" max="3" />
+      <div>
+        <label for="data.reroll">{{localize "CF.Global.Rerolls"}}</label>
+        <select id="reroll-{{item.id}}" name="data.reroll" data-dtype="Number">
+          {{#select data.reroll}}
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          {{/select}}
+        </select>
       </div>
     </div>
   </section>

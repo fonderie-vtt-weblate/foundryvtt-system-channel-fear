@@ -1,7 +1,7 @@
 <form>
   <div class="form-group">
     <label for="difficulty">{{localize "CF.Rolls.Dialog.Difficulty"}}</label>
-    <select id="difficulty" name="difficulty">
+    <select id="difficulty" name="difficulty" data-dtype="Number">
       <option value="1">{{localize "CF.Rolls.Dialog.Difficulty1"}}</option>
       <option value="2">{{localize "CF.Rolls.Dialog.Difficulty2"}}</option>
       <option value="3">{{localize "CF.Rolls.Dialog.Difficulty3"}}</option>
@@ -11,7 +11,7 @@
   {{#if resourceChoices}}
     <div class="form-group">
       <label for="resources">{{localize "CF.Rolls.Dialog.ResourcesToUse"}}</label>
-      <select id="resources" name="resources">
+      <select id="resources" name="resources" data-dtype="Number">
         {{selectOptions resourceChoices}}
       </select>
     </div>
