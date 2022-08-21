@@ -49,12 +49,12 @@ export class ChannelFearActor extends Actor {
     const data = actorData.data;
 
     // Ensure health and resource are between allowed boundaries
-    data.attributes.health = this._validateBoundaries(data.attributes.health, 0, 6);
-    data.attributes.resource = this._validateBoundaries(data.attributes.resource, 0);
+    data.attributes.health = this._validateBoundaries(data.attributes.health, 0, CONFIG.CF.maxHealth);
+    data.attributes.resource = this._validateBoundaries(data.attributes.resource, 0, CONFIG.CF.maxResource);
 
     // Ensure abilities are between allowed boundaries
     for (let ability of Object.entries(data.abilities)) {
-      ability = this._validateBoundaries(ability, 0, 6);
+      ability = this._validateBoundaries(ability, 0, CONFIG.CF.maxAbility);
     }
   }
 

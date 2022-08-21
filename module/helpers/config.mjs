@@ -1,5 +1,9 @@
 export const CF = {};
 
+CF.maxHealth = 6;
+CF.maxResource = 6;
+CF.maxAbility = 6;
+
 CF.abilities = {
   'act': 'CF.Abilities.Act',
   'kno': 'CF.Abilities.Kno',
