@@ -38,12 +38,12 @@ export class ChannelFearItemSheet extends ItemSheet {
     context.data = itemData.data;
     context.flags = itemData.flags;
 
-    if (['specialty', 'weapon'].includes(itemData.type)) {
+    if ('specialty' === itemData.type) {
       this._prepareAbilitiesData(context);
+    }
 
-      if ('weapon' === itemData.type) {
-        this._prepareWeaponsData(context);
-      }
+    if ('weapon' === itemData.type) {
+      this._prepareWeaponsData(context);
     }
 
     return context;
@@ -54,6 +54,7 @@ export class ChannelFearItemSheet extends ItemSheet {
   }
 
   _prepareWeaponsData(context) {
+    context.abilitiesList = CONFIG.CF.weaponsAbilities;
     context.weaponsCategories = CONFIG.CF.weaponsCategories;
   }
 

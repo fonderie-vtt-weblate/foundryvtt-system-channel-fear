@@ -18,6 +18,10 @@ Hooks.once('init', async function () {
   CONFIG.Actor.documentClass = ChannelFearActor;
   CONFIG.Item.documentClass = ChannelFearItem;
 
+  CONFIG.canvasTextStyle.fontFamily = 'MuseoSlab';
+  CONFIG.fontFamilies.push('MuseoSlab', 'ChalkDuster');
+  CONFIG.defaultFontFamily = 'MuseoSlab';
+
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('channelfear', ChannelFearActorSheet, { makeDefault: true });
   Items.unregisterSheet('core', ItemSheet);

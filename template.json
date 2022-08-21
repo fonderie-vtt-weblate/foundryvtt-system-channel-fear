@@ -66,6 +66,7 @@
       "templates": [
         "with_ability_reroll"
       ],
+      "ability": "fig",
       "category": 1,
       "contact": false
     }

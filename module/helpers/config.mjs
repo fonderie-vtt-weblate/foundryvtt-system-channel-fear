@@ -13,6 +13,11 @@ CF.abilities = {
   'aim': 'CF.Abilities.Aim',
 };
 
+CF.weaponsAbilities = {
+  'fig': 'CF.Abilities.Fig',
+  'aim': 'CF.Abilities.Aim',
+};
+
 CF.weaponsCategories = {
   1: 'CF.Weapons.Categories.BareHands',
   2: 'CF.Weapons.Categories.VeryLight',

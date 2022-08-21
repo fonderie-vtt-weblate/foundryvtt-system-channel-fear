@@ -52,8 +52,16 @@
 
   .weapons-list {
     .weapon {
+      &-name {
+        flex-grow: 0;
+      }
+
       .reroll {
         padding: 0 5px;
+      }
+
+      .linked-ability {
+        margin-left: 5px;
       }
     }
 

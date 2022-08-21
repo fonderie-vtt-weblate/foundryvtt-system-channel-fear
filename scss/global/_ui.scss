@@ -1,3 +1,7 @@
+body {
+  font-family: $font-primary;
+}
+
 #logo {
   opacity: 0;
   height: 100px;
@@ -6,4 +10,30 @@
     opacity: 1;
     transition: opacity .3s ease-out;
   }
+}
+
+.rollable {
+  &:hover,
+  &:focus {
+    color: #000;
+    text-shadow: 0 0 10px red;
+    cursor: pointer;
+  }
+}
+
+.dice-roll {
+  .hard-success {
+    background-color: rgba(0, 128, 0, .2);
+  }
+
+  .hard-failure {
+    background-color: rgba(255, 0, 0, .2);
+  }
+}
+
+#sidebar {
+  background-image: url(../images/chat_bg.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }

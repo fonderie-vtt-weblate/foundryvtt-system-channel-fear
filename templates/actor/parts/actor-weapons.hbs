@@ -22,15 +22,15 @@
     <div class="block-content-inner">
       <ul>
         {{#each weapons as |weapon id|}}
-          <li class="weapon item flexrow flex-group-center" data-item-id="{{weapon._id}}" data-reroll="0">
-            <div class="flex-auto align-left">
-              <p class="rollable resource-label"
+          <li class="weapon item flexrow flex-group-left" data-item-id="{{weapon._id}}" data-reroll="0">
+            <div class="flex-auto weapon-name">
+              <p class="rollable"
                  data-roll="(@{{weapon.data.ability}}+{{weapon.data.reroll}})d6x6cs>3"
                  data-label="{{weapon.name}} ({{localize (lookup @root.abilitiesList weapon.data.ability)}})">
                 <strong>{{weapon.name}}</strong>
               </p>
             </div>
-            <div class="flex-initial linked-ability">({{localize (lookup @root.abilitiesList weapon.data.ability)}})</div>
+            <div class="flex-auto linked-ability">({{localize (lookup @root.abilitiesList weapon.data.ability)}})</div>
             <div class="flex-initial reroll">
               {{localize "CF.Global.xD" x=weapon.data.category}}
               <strong>({{localize "CF.Global.xR" x=weapon.data.reroll}})</strong>

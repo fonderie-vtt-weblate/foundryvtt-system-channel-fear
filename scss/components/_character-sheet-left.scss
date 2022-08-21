@@ -122,7 +122,12 @@
         font-family: $font-handwrite;
         padding-left: 5px;
 
+        &-name {
+          flex-grow: 0;
+        }
+
         .linked-ability {
+          margin-left: 5px;
           font-size: x-small;
         }
 

@@ -5,11 +5,11 @@
       <h1><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
       <div class="grid grid-2col">
         <div class="resource">
-          <label class="resource-label">Quantity</label>
+          <label>Quantity</label>
           <input type="text" name="data.quantity" value="{{data.quantity}}" data-dtype="Number"/>
         </div>
         <div class="resource">
-          <label class="resource-label">Weight</label>
+          <label>Weight</label>
           <input type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
         </div>
       </div>
@@ -35,7 +35,7 @@
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
       <div class="resource">
-        <label class="resource-label">Roll Formula</label>
+        <label>Roll Formula</label>
         <input type="text" name="data.formula" value="{{data.formula}}" data-dtype="String"/>
       </div>
     </div>

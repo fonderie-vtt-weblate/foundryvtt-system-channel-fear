@@ -18,6 +18,8 @@ export async function abilityCheck({ ability, label, actor, currentActorResource
     total: rollResult.total,
     success: rollResult.total >= difficulty,
     failure: rollResult.total < difficulty,
+    hardSuccess: 1 < difficulty && rollResult.total > difficulty,
+    hardFailure: 1 < difficulty && 0 === rollResult.total,
     formula: rollResult.formula,
     tooltip: await rollResult.getTooltip(),
   });
@@ -78,6 +80,8 @@ async function _doSpecialtyCheck({ difficulty, dice, bonus, label, actor, reroll
     total: rollResult.total,
     success: isSuccess,
     failure: !isSuccess && (0 === rollResult.total || !canReroll),
+    hardSuccess: 1 < difficulty && rollResult.total > difficulty,
+    hardFailure: 1 < difficulty && 0 === rollResult.total,
     formula: rollResult.formula,
     tooltip: await rollResult.getTooltip(),
     actorId: actor.id,
