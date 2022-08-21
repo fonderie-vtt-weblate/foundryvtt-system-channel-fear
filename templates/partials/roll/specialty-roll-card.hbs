@@ -6,7 +6,7 @@
             data-reroll-usable="{{reroll.usable}}" data-reroll-available="{{reroll.available}}"
             data-label="{{specialty}}" data-actor-id="{{actorId}}">
       <i class="fas fa-dice"></i>
-      {{localize "CF.Global.Reroll"}} ({{reroll.usable}})
+      {{localize "CF.Global.Reroll"}} ({{localize "CF.Global.XOutOfY" x=reroll.usable y=reroll.available}})
     </button>
   </div>
 {{/if}}

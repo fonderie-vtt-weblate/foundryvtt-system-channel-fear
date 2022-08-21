@@ -29,7 +29,8 @@
       "Specialty": "Spécialité",
       "Specialties": "Spécialités",
       "Weapon": "Arme",
-      "Weapons": "Armes"
+      "Weapons": "Armes",
+      "XOutOfY": "{x} sur {y}"
     },
     "Weapons": {
       "Categories": {
