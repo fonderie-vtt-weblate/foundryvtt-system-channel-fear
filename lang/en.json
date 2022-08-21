@@ -1,4 +1,6 @@
 {
+  "ACTOR.TypeCharacter": "Player",
+  "ACTOR.TypeNpc": "Second role",
   "CF": {
     "Abilities": {
       "Act": "To act",
