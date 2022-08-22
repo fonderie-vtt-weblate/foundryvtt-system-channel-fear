@@ -6,7 +6,7 @@ export class ChannelFearActorSheet extends ActorSheet {
       classes: ['channelfear', 'sheet', 'actor'],
       template: 'systems/channel-fear/templates/actor/actor-sheet.hbs',
       width: 870,
-      height: 936,
+      height: 916,
     });
   }
 
