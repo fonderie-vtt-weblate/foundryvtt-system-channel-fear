@@ -63,7 +63,7 @@ export async function useWeapon({ actor, dice, label, reroll }) {
   const rollResult = await _getRollResult(dice);
   const usable = Math.min(reroll, _getNbFailure(rollResult));
   const canReroll = 0 < reroll && 0 < usable;
-  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
+  const templateData = {
     actorId: actor.id,
     formula: rollResult.formula,
     reroll: {
@@ -76,7 +76,14 @@ export async function useWeapon({ actor, dice, label, reroll }) {
     title: game.i18n.format('CF.Rolls.Damages.Card.Title', { name: label }),
     tooltip: await rollResult.getTooltip(),
     total: rollResult.total,
-  });
+  };
+
+  if (!canReroll) {
+    templateData.success = 0 < rollResult.total;
+    templateData.failure = !templateData.success;
+  }
+
+  const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', templateData);
 
   await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
 }
@@ -98,54 +105,60 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
       weapon,
     });
 
-    await _handleRollResult({ actor, difficulty, usedResources });
+    await _handleRollResult({ canReroll: false, actor, difficulty, usedResources });
 
     return;
   }
 
   const rollResult = await _getRollResult(dice, score);
-  let isSuccess = false;
-  let canReroll = reroll && 0 < reroll.available;
+  const usableRoll = reroll ? Math.min(reroll.available, _getNbFailure(rollResult)) : 0;
+  let success = false;
+  let failure = false;
+  let hardSuccess = false;
+  let hardFailure = false;
   let rerollData = { can: false };
 
   if (difficulty) {
-    isSuccess = rollResult.total >= difficulty;
-    canReroll = canReroll && 1 < difficulty && rollResult.total < difficulty;
+    success = difficulty <= rollResult.total;
+    hardSuccess = 1 < difficulty && difficulty < rollResult.total;
   }
 
-  if (canReroll) {
-    const usable = Math.min(reroll.available, _getNbFailure(rollResult));
-
-    canReroll = 0 < usable;
+  // Reroll available
+  if (!success && 0 < usableRoll) {
     rerollData = {
       available: reroll.available,
-      can: canReroll,
+      can: true,
       label: reroll.label,
       type: reroll.type,
-      usable,
+      usable: usableRoll,
     };
+  } else {
+    failure = difficulty > rollResult.total;
+    hardFailure = 1 < difficulty && 0 === rollResult.total;
+  }
+
+  if (reroll && !rerollData.can && 'weapon' === reroll.type) {
+    success = 0 < rollResult.total;
+    failure = !success;
   }
 
   const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
     actorId: actor.id,
-    failure: (!reroll || 'weapon' !== reroll.type) && !isSuccess && (0 === rollResult.total || !canReroll),
     formula: rollResult.formula,
-    hardSuccess: 1 < difficulty && rollResult.total > difficulty,
-    hardFailure: 0 === rollResult.total && !canReroll,
-    success: isSuccess || (reroll && 'weapon' === reroll.type && !canReroll),
     reroll: rerollData,
     tooltip: await rollResult.getTooltip(),
     total: rollResult.total,
     difficulty,
+    failure,
+    hardFailure,
+    hardSuccess,
+    success,
     title,
     weapon,
   });
 
   await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
-
-  if (!canReroll) {
-    await _handleRollResult({ actor, difficulty, rollResult, usedResources });
-  }
+  await _handleRollResult({ actor, canReroll: rerollData.can, difficulty, rollResult, usedResources });
 }
 
 function _getRollResult(dice, bonus) {
@@ -159,9 +172,10 @@ function _getRollResult(dice, bonus) {
 
 async function _rollNoRoll({ title, actor, difficulty, weapon }) {
   const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', {
-    total: difficulty,
-    success: true,
+    actorId: actor.id,
     failure: false,
+    success: true,
+    total: difficulty,
     difficulty,
     title,
     weapon,
@@ -219,7 +233,7 @@ function _processAbilityCheckOptions(form) {
   };
 }
 
-async function _handleRollResult({ actor, difficulty, rollResult, usedResources }) {
+async function _handleRollResult({ actor, canReroll, difficulty, rollResult, usedResources }) {
   let newResources = actor.data.data.resource;
 
   // Remove used resource points
@@ -228,12 +242,12 @@ async function _handleRollResult({ actor, difficulty, rollResult, usedResources 
   }
 
   // Margin of success/failure if difficulty > 1
-  if (rollResult && 1 < difficulty) {
+  if (!canReroll && rollResult && 1 < difficulty) {
     if (rollResult.total > difficulty) {
-      // Success -> +1 resource point
+      // Hard success -> +1 resource point
       ++newResources;
     } else if (0 === rollResult.total) {
-      // Failure -> -1 resource point
+      // Hard failure -> -1 resource point
       --newResources;
     }
   }
