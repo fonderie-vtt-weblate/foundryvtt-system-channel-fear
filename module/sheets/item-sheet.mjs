@@ -5,7 +5,7 @@ export class ChannelFearItemSheet extends ItemSheet {
       submitOnChange: false,
       resizable: false,
       width: 480,
-      height: 200,
+      height: 204,
     });
   }
 

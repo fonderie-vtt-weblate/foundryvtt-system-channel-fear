@@ -48,7 +48,6 @@
   },
   "Item": {
     "types": [
-      "item",
       "specialty",
       "weapon"
     ],
@@ -57,9 +56,6 @@
         "ability": "act",
         "reroll": 0
       }
-    },
-    "item": {
-      "quantity": 1
     },
     "specialty": {
       "templates": [

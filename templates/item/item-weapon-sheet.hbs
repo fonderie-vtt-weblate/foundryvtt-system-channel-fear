@@ -2,11 +2,17 @@
   {{> "systems/channel-fear/templates/item/parts/simple-header.hbs"}}
 
   <section>
-    <div class="flexrow">
+    <div class="grid grid-2col">
       <div>
         <label for="ability-{{item.id}}">{{localize "CF.Global.Ability"}}</label>
         <select name="data.ability" id="ability-{{item.id}}" data-dtype="String">
           {{selectOptions abilitiesList selected=data.ability localize=true}}
+        </select>
+      </div>
+      <div>
+        <label for="category-{{item.id}}">{{localize "CF.Global.Category"}}</label>
+        <select name="data.category" id="category-{{item.id}}" data-dtype="Number">
+          {{selectOptions weaponsCategories selected=data.category localize=true}}
         </select>
       </div>
       <div>
@@ -18,14 +24,6 @@
             <option value="2">2</option>
             <option value="3">3</option>
           {{/select}}
-        </select>
-      </div>
-    </div>
-    <div class="flexrow">
-      <div>
-        <label for="category-{{item.id}}">{{localize "CF.Global.Category"}}</label>
-        <select name="data.category" id="category-{{item.id}}" data-dtype="Number">
-          {{selectOptions weaponsCategories selected=data.category localize=true}}
         </select>
       </div>
     </div>
