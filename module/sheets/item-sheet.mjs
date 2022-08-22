@@ -2,6 +2,8 @@ export class ChannelFearItemSheet extends ItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ['channelfear', 'sheet', 'item'],
+      submitOnChange: false,
+      resizable: false,
       width: 480,
       height: 200,
     });
