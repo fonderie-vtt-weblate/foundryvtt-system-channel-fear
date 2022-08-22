@@ -41,3 +41,7 @@ body {
   background-position: top;
   background-size: cover;
 }
+
+.chat-message {
+  @include blue-to-gray-gradient;
+}
