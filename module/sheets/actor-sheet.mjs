@@ -57,9 +57,8 @@ export class ChannelFearActorSheet extends ActorSheet {
 
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      if ('item' === i.type) {
-        gear.push(i);
-      } else if ('specialty' === i.type) {
+
+      if ('specialty' === i.type) {
         specialties.push(i);
       } else if ('weapon' === i.type) {
         weapons.push(i);
@@ -74,7 +73,9 @@ export class ChannelFearActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    if (!this.isEditable) return;
+    if (!this.isEditable) {
+      return;
+    }
 
     new ContextMenu(html, '.item', this.contextMenuItems);
 

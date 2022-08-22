@@ -49,11 +49,7 @@ async function _handleWeaponDamages(e) {
     return;
   }
 
-  const {
-    dice,
-    label,
-    reroll,
-  } = data;
+  const { dice, label, reroll } = data;
 
   await Dice.useWeapon({ actor, dice, label, reroll });
 }
