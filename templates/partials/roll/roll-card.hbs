@@ -36,7 +36,7 @@
       {{localize "CF.Global.Damages"}} ({{localize "CF.Global.xD" x=weapon.data.category}})
     </button>
 
-    {{#if weapon.data.contact}}
+    {{#if weapon.data.allMightHitReroll}}
       <button type="button" class="rollable use-weapon" data-actor-id="{{actorId}}" data-label="{{weapon.name}}"
               data-reroll="{{weapon.data.allMightHitReroll}}" data-dice="{{weapon.data.category}}">
         <i class="fas fa-fist-raised"></i>

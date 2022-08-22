@@ -35,7 +35,7 @@ export class ChannelFearItem extends Item {
     const data = itemData.data;
 
     // Add force reroll
-    if (data.contact) {
+    if ('fig' === data.ability) {
       data.allMightHitReroll = data.reroll;
 
       if (this.actor && this.actor.data) {
