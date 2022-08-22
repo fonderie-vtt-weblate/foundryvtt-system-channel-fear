@@ -33,6 +33,7 @@
       "Difficulty": "Difficulty",
       "Edit": "Edit",
       "Name": "Name",
+      "NewItem": "New {type}",
       "Rerolls": "Rerolls",
       "Reroll": "Reroll",
       "RollDice": "Roll dice",

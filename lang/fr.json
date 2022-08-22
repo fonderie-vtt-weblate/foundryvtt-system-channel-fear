@@ -33,6 +33,7 @@
       "Difficulty": "Difficulté",
       "Edit": "Éditer",
       "Name": "Nom",
+      "NewItem": "Nouvelle {type}",
       "Rerolls": "Relances",
       "Reroll": "Relance",
       "RollDice": "Lancer les dés",
