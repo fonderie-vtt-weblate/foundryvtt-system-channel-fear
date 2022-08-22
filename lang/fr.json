@@ -1,6 +1,9 @@
 {
   "ACTOR.TypeCharacter": "Joueur",
   "ACTOR.TypeNpc": "Second rôle",
+  "ITEM.TypeItem": "Objet",
+  "ITEM.TypeSpecialty": "Spécialité",
+  "ITEM.TypeWeapon": "Arme",
   "CF": {
     "Warnings": {
       "MacroOnlyForOwnedItem": "Vous pouvez seulement créer des macros pour les objets que vous possédez",
@@ -8,7 +11,7 @@
     },
     "Abilities": {
       "Act": "Agir",
-      "Kno": "Savoir",
+      "Kno": "Connaître",
       "Bea": "Endurer",
       "For": "Forcer",
       "Per": "Percevoir",

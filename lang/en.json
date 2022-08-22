@@ -1,6 +1,9 @@
 {
   "ACTOR.TypeCharacter": "Player",
   "ACTOR.TypeNpc": "Second role",
+  "ITEM.TypeItem": "Item",
+  "ITEM.TypeSpecialty": "Specialty",
+  "ITEM.TypeWeapon": "Weapon",
   "CF": {
     "Warnings": {
       "MacroOnlyForOwnedItem": "You can only create macro buttons for owned Items",
