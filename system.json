@@ -1,15 +1,25 @@
 {
   "name": "channel-fear",
   "title": "Channel Fear",
-  "description": "The Channel Fear system for FoundryVTT!",
+  "description": "The Channel Fear system for FoundryVTT",
   "version": "0.0.1",
   "minimumCoreVersion": "0.9",
   "compatibleCoreVersion": "9",
-  "author": "DjLeChuck",
-  "esmodules": ["module/app.mjs"],
-  "styles": ["css/app.css"],
-  "scripts": [],
-  "packs": [],
+  "authors": [
+    {
+      "name": "DjLeChuck",
+      "email": "djlechuck@gmail.com",
+      "url": "https://github.com/djlechuck/"
+    }
+  ],
+  "esmodules": [
+    "scripts/channel-fear.mjs"
+  ],
+  "styles": [
+    "styles/channel-fear.css"
+  ],
+  "scripts": [ ],
+  "packs": [ ],
   "languages": [
     {
       "lang": "en",
@@ -22,8 +32,12 @@
       "path": "lang/fr.json"
     }
   ],
-  "url": "",
-  "manifest": "",
-  "download": "",
-  "license": "LICENSE.txt"
+  "socket": false,
+  "url": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear",
+  "manifest": "https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/module.json",
+  "download": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/archive/0.0.1.zip",
+  "bugs": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/issues",
+  "changelog": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/blob/main/CHANGELOG.md",
+  "license": "./LICENSE",
+  "readme": "./README.md"
 }

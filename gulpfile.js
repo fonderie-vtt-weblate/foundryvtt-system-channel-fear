@@ -13,27 +13,27 @@ function handleError(err) {
   this.emit('end');
 }
 
-const SYSTEM_SCSS = ["scss/**/*.scss"];
+const SYSTEM_SCSS = ['scss/**/*.scss'];
+
 function compileScss() {
   // Configure options for sass output. For example, 'expanded' or 'nested'
   let options = {
-    outputStyle: 'expanded'
+    outputStyle: 'expanded',
   };
   return gulp.src(SYSTEM_SCSS)
     .pipe(sourcemaps.init())
-    .pipe(
-      sass(options)
-        .on('error', handleError)
-    )
+    .pipe(sass(options).on('error', handleError))
     .pipe(prefix({
-      cascade: false
+      cascade: false,
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./css"))
+    .pipe(gulp.dest('./styles'));
 }
+
 const css = gulp.series(compileScss);
 
 /* ----------------------------------------- */
+
 /*  Watch Updates
 /* ----------------------------------------- */
 
@@ -47,9 +47,9 @@ function watchUpdates() {
 
 exports.default = gulp.series(
   compileScss,
-  watchUpdates
+  watchUpdates,
 );
 exports.build = gulp.series(
-  compileScss
+  compileScss,
 );
 exports.css = css;
