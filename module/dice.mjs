@@ -105,17 +105,13 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
 
   const rollResult = await _getRollResult(dice, score);
   let isSuccess = false;
-  let isHardFailure = false;
   let canReroll = reroll && 0 < reroll.available;
   let rerollData = { can: false };
 
   if (difficulty) {
     isSuccess = rollResult.total >= difficulty;
-    isHardFailure = 1 < difficulty && 0 === rollResult.total;
     canReroll = canReroll && 1 < difficulty && rollResult.total < difficulty;
   }
-
-  canReroll = canReroll && !isHardFailure;
 
   if (canReroll) {
     const usable = Math.min(reroll.available, _getNbFailure(rollResult));
@@ -135,7 +131,7 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
     failure: (!reroll || 'weapon' !== reroll.type) && !isSuccess && (0 === rollResult.total || !canReroll),
     formula: rollResult.formula,
     hardSuccess: 1 < difficulty && rollResult.total > difficulty,
-    hardFailure: isHardFailure,
+    hardFailure: 0 === rollResult.total && !canReroll,
     success: isSuccess || (reroll && 'weapon' === reroll.type && !canReroll),
     reroll: rerollData,
     tooltip: await rollResult.getTooltip(),
@@ -146,7 +142,10 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
   });
 
   await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
-  await _handleRollResult({ actor, difficulty, rollResult, usedResources });
+
+  if (!canReroll) {
+    await _handleRollResult({ actor, difficulty, rollResult, usedResources });
+  }
 }
 
 function _getRollResult(dice, bonus) {
