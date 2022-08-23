@@ -23,11 +23,11 @@
       <ul>
         {{#each specialties as |specialty key|}}
           <li class="specialty item flexrow flex-group-left rollable" data-item-id="{{specialty._id}}">
-            <div class="flex-auto specialty-name"><p>{{specialty.name}}</p></div>
-            <div class="flex-auto linked-ability">
+            <div class="specialty-name"><p>{{specialty.name}}</p></div>
+            <div class="linked-ability">
               ({{localize (lookup @root.abilitiesList specialty.data.ability)}})
             </div>
-            <div class="flex-initial reroll grid grid-3col">
+            <div class="reroll grid grid-3col">
               <input type="checkbox" readonly disabled
                      {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />
               <input type="checkbox" readonly disabled
