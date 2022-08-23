@@ -1,0 +1,14 @@
+{
+	"label": "Specialties - To aim",
+	"entries": {
+		"Armes à feu": {
+			"name": "Fire arms"
+		},
+		"Cibler": {
+			"name": "Target"
+		},
+		"Lancer (avec précision)": {
+			"name": "Throw (accurately)"
+		}
+	}
+}

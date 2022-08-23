@@ -1,0 +1,14 @@
+{
+	"label": "Unarmed weapons",
+	"entries": {
+		"Griffes": {
+			"name": "Claws"
+		},
+		"Poing & cie": {
+			"name": "Fist & cie"
+		},
+		"Poing américain": {
+			"name": "Brass knuckles"
+		}
+	}
+}

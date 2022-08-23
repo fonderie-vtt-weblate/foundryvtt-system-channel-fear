@@ -1,0 +1,3 @@
+{"_id":"0Kcw7tWQAbz2HyvC","name":"Cibler","type":"specialty","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":1},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"n4AquhG62OnSOZor","name":"Lancer (avec précision)","type":"specialty","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":1},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"nXwqcV4qLusRol0c","name":"Armes à feu","type":"specialty","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":1},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}

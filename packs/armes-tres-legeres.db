@@ -1,0 +1,6 @@
+{"_id":"BBVL8XeQgNHWJAZD","name":"Batte","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":2},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"DwIHmzHzQf2RMG2h","name":"Matraque","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":2},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"KOaBEbZigGksqRPe","name":"Planche de bois","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":0,"category":2},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"LbEVt8vRLPM0mevi","name":"Lance-pierre","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":0,"category":2,"contact":false},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"P4pXP0ZgeustT72J","name":"Rasoir","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":2},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"cVwrqgv0aA0bEaUy","name":"Taser","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":2},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}

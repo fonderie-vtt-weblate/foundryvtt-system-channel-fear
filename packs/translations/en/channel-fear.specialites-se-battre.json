@@ -1,0 +1,14 @@
+{
+	"label": "Specialties - Fight",
+	"entries": {
+		"Armes blanches": {
+			"name": "Cold steel"
+		},
+		"Armes improvisées": {
+			"name": "Improvised weapons"
+		},
+		"Mains nues": {
+			"name": "Bare hands"
+		}
+	}
+}

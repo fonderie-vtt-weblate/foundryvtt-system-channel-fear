@@ -1,0 +1,20 @@
+{
+	"label": "Light weapons",
+	"entries": {
+		"Brique": {
+			"name": "Brick"
+		},
+		"Cran d'arrêt": {
+			"name": "Switchblade"
+		},
+		"Pelle": {
+			"name": "Shovel"
+		},
+		"Scalpel": {
+			"name": "Scalpel"
+		},
+		"Tuyau": {
+			"name": "Pipe"
+		}
+	}
+}

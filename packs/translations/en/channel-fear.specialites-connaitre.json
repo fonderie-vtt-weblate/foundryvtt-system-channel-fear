@@ -1,0 +1,20 @@
+{
+	"label": "Specialties - To know",
+	"entries": {
+		"Actualité": {
+			"name": "News"
+		},
+		"Démonologie": {
+			"name": "Demonology"
+		},
+		"Informatique": {
+			"name": "Computer science"
+		},
+		"Paranormal": {
+			"name": "Paranormal"
+		},
+		"Réseau": {
+			"name": "Network"
+		}
+	}
+}

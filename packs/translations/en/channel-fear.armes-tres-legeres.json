@@ -1,0 +1,23 @@
+{
+	"label": "Very light weapons",
+	"entries": {
+		"Batte": {
+			"name": "Bat"
+		},
+		"Lance-pierre": {
+			"name": "Slingshot"
+		},
+		"Matraque": {
+			"name": "Baton"
+		},
+		"Planche de bois": {
+			"name": "Plank of wood"
+		},
+		"Rasoir": {
+			"name": "Shaver"
+		},
+		"Taser": {
+			"name": "Taser"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"label": "Specialties - Perceive",
+	"entries": {
+		"Écoute": {
+			"name": "Listen"
+		},
+		"Observation": {
+			"name": "Observation"
+		},
+		"Orientation": {
+			"name": "Orientation"
+		}
+	}
+}

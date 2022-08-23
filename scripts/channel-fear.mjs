@@ -27,6 +27,10 @@ Hooks.once('init', async function () {
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('channelfear', ChannelFearItemSheet, { makeDefault: true });
 
+  if (typeof Babele !== 'undefined') {
+    Babele.get().setSystemTranslationsDir('packs/translations');
+  }
+
   return preloadHandlebarsTemplates();
 });
 

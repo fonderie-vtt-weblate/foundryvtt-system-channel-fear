@@ -1,0 +1,23 @@
+{
+	"label": "Heavy weapons",
+	"entries": {
+		"Explosifs": {
+			"name": "Explosives"
+		},
+		"Fusil d'assaut": {
+			"name": "Assault rifle"
+		},
+		"Grenades": {
+			"name": "Grenades"
+		},
+		"Mitrailleur": {
+			"name": "Rifle machine gun"
+		},
+		"Mitrailleuse": {
+			"name": "Machine gun"
+		},
+		"Pistolet mitrailleur": {
+			"name": "Submachine gun"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"label": "Specialties - To impose",
+	"entries": {
+		"Argumentation": {
+			"name": "Argument"
+		},
+		"Gestion": {
+			"name": "Management"
+		},
+		"Intimidation": {
+			"name": "Intimidation"
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{"_id":"4LwybjZndtGDnOEC","name":"Tronçonneuse","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":3,"category":4},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"9fNnvazPXFJ5B8dg","name":"Masse","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":4},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"A3KOU7fDy61QweH8","name":"Barre à mine","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":0,"category":4},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"H3j1mOFVUTT54vUc","name":"Hache d'incendie","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":2,"category":4},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"NrhjcuRa5mEWltEz","name":"Fusil à pompe","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":3,"category":4,"contact":false},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"ctLM7pnjLPU4Wu3J","name":"Chaîne","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":0,"category":4},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"fql4d3Nvod3tmrZk","name":"Machette","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":4},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"x5eIbtGn8NwbGdvg","name":"Pistolet","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":2,"category":4,"contact":false},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}

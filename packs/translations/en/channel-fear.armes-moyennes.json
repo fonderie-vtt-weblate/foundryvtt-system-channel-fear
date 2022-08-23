@@ -1,0 +1,32 @@
+{
+	"label": "Medium weapons",
+	"entries": {
+		"Barre à mine": {
+			"name": "Crowbar"
+		},
+		"Chaîne": {
+			"name": "Chain"
+		},
+		"Colt 45": {
+			"name": "Colt 45"
+		},
+		"Fusil à pompe": {
+			"name": "Shotgun"
+		},
+		"Hache d'incendie": {
+			"name": "Fire ax"
+		},
+		"Machette": {
+			"name": "Machete"
+		},
+		"Masse": {
+			"name": "Mass"
+		},
+		"Pistolet": {
+			"name": "Gun"
+		},
+		"Tronçonneuse": {
+			"name": "Chain saw"
+		}
+	}
+}

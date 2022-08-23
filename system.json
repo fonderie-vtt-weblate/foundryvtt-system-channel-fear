@@ -19,7 +19,104 @@
     "styles/channel-fear.css"
   ],
   "scripts": [ ],
-  "packs": [ ],
+  "packs": [
+    {
+      "name": "pre-tires",
+      "label": "Pré-tirés",
+      "path": "packs/pre-tires.db",
+      "type": "Actor"
+    },
+    {
+      "name": "armes-a-mains-nues",
+      "label": "Armes à mains nues",
+      "path": "packs/armes-a-mains-nues.db",
+      "type": "Item"
+    },
+    {
+      "name": "armes-tres-legeres",
+      "label": "Armes très légères",
+      "path": "packs/armes-tres-legeres.db",
+      "type": "Item"
+    },
+    {
+      "name": "armes-legeres",
+      "label": "Armes légères",
+      "path": "packs/armes-legeres.db",
+      "type": "Item"
+    },
+    {
+      "name": "armes-moyennes",
+      "label": "Armes moyennes",
+      "path": "packs/armes-moyennes.db",
+      "type": "Item"
+    },
+    {
+      "name": "armes-lourdes",
+      "label": "Armes lourdes",
+      "path": "packs/armes-lourdes.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-agir",
+      "label": "Spécialités - Agir",
+      "path": "packs/specialites-agir.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-connaitre",
+      "label": "Spécialités - Connaître",
+      "path": "packs/specialites-connaitre.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-endurer",
+      "label": "Spécialités - Endurer",
+      "path": "packs/specialites-endurer.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-forcer",
+      "label": "Spécialités - Forcer",
+      "path": "packs/specialites-forcer.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-percevoir",
+      "label": "Spécialités - Percevoir",
+      "path": "packs/specialites-percevoir.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-savoir-faire",
+      "label": "Spécialités - Savoir-faire",
+      "path": "packs/specialites-savoir-faire.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-se-battre",
+      "label": "Spécialités - Se battre",
+      "path": "packs/specialites-se-battre.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-se-controler",
+      "label": "Spécialités - Se contrôler",
+      "path": "packs/specialites-se-controler.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-simposer",
+      "label": "Spécialités - S'imposer",
+      "path": "packs/specialites-simposer.db",
+      "type": "Item"
+    },
+    {
+      "name": "specialites-viser",
+      "label": "Spécialités - Viser",
+      "path": "packs/specialites-viser.db",
+      "type": "Item"
+    }
+  ],
   "languages": [
     {
       "lang": "en",

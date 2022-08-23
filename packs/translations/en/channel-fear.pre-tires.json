@@ -1,0 +1,40 @@
+{
+	"label": "Pre-made",
+	"mapping": {
+		"keywords": "data.keywords",
+		"profile":  "data.info.profile",
+		"profdef": "data.info.profdef"
+	},
+	"entries": {
+		"Archie “Bulldog” Grimm": {
+			"name": "Archie “Bulldog” Grimm",
+			"keywords": "53 years. Caucasian. Average height.\nWhite hair. Black costume.\nBeige overcoat. Scowl.",
+			"profile": "Former policeman",
+			"profdef": "Psychologist: By using 1 Resource point, Archie can tell if he is being lied to or knowingly omitting information."
+		},
+		"Damien Barnes": {
+			"name": "Damien Barnes",
+			"keywords": "33 years. Black. Average height.\nBrown short hair. Goat. Heavy dark circles.\nCassock. Rosary in hand.",
+			"profile": "Exorcist",
+			"profdef":  "Lay on Hands: By using 1 Resource point and touching a third party, Damien can tell if the person is possessed or closely related to a demon."
+		},
+		"Elsa Faust": {
+			"name": "Elsa Faust",
+			"keywords": "47 years. Caucasian. Tall.\nLong white hair. Pale skin. Shawl.\nBlack dress. Superior and haughty air.",
+			"profile": "Historian",
+			"profdef":  "Charismatic: by using 1 Resource point, Elsa can convince a third party of what she says."
+		},
+		"Julian Cross": {
+			"name": "Julian Cross",
+			"keywords": "61 years old. Caucasian. Tall.\nWhite short hair. Panama hat.\nTurtleneck. Long brown overcoat.",
+			"profile": "Medium",
+			"profdef":  "Sensitivity: by using 1 Resource point, Julian can sense if a spirit haunts the precise place where he is."
+		},
+		"Sunny O": {
+			"name": "Sunny O",
+			"keywords": "34 years old. Métis. Average height.\nBrown. Mid-length. Leather jacket.\nShoulder bag with equipment.",
+			"profile": "Technical expert",
+			"profdef":  "Attentive to sounds: By using 1 Resource point, Sunny is able to pick up sounds inaudible to the ear and electronic voice phenomena through his equipment."
+		}
+	}
+}

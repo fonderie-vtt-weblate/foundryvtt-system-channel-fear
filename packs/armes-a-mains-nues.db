@@ -1,0 +1,3 @@
+{"_id":"1rSAPUxmfZMNax6o","name":"Poing américain","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":1},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"NpvKzr8byZGiBxfu","name":"Griffes","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":1},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
+{"_id":"aILtFenTlwnV3q4n","name":"Poing & cie","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":0,"category":1},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}

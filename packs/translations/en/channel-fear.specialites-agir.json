@@ -1,0 +1,14 @@
+{
+	"label": "Specialties - To act",
+	"entries": {
+		"Équilibre": {
+			"name": "Balance"
+		},
+		"Réflexe": {
+			"name": "Reflex"
+		},
+		"Saut": {
+			"name": "Jump"
+		}
+	}
+}
