@@ -1,5 +1,0 @@
-{"_id":"JSbb6zuTUg5eyo22","name":"Brique","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"aim","reroll":0,"category":3,"contact":false},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
-{"_id":"KjE4lVr350mT4C3Z","name":"Pelle","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":3},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
-{"_id":"WmlUvbpS1gQ5FVIN","name":"Scalpel","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":3},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
-{"_id":"c5nfGTBHSKrOChc3","name":"Tuyau","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":1,"category":3},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}
-{"_id":"f1gIEJuZMSInKb0g","name":"Cran d'arrêt","type":"weapon","img":"icons/svg/item-bag.svg","data":{"ability":"fig","reroll":0,"category":3},"effects":[],"folder":null,"sort":0,"permission":{"default":0},"flags":{}}

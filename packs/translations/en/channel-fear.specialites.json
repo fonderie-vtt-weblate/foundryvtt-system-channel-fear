@@ -1,0 +1,110 @@
+{
+	"label": "Specialties",
+	"entries": {
+		"Actualité": {
+			"name": "News"
+		},
+		"Argumentation": {
+			"name": "Argument"
+		},
+		"Armes à feu": {
+			"name": "Fire arms"
+		},
+		"Armes blanches": {
+			"name": "Cold steel"
+		},
+		"Armes improvisées": {
+			"name": "Improvised weapons"
+		},
+		"Cibler": {
+			"name": "Target"
+		},
+		"Conduire": {
+			"name": "Drive"
+		},
+		"Course": {
+			"name": "Run"
+		},
+		"Démonologie": {
+			"name": "Demonology"
+		},
+		"Discrétion": {
+			"name": "Discretion"
+		},
+		"Écoute": {
+			"name": "Listen"
+		},
+		"Équilibre": {
+			"name": "Balance"
+		},
+		"Exorcisme": {
+			"name": "Exorcism"
+		},
+		"Gestion": {
+			"name": "Management"
+		},
+		"Informatique": {
+			"name": "Computer science"
+		},
+		"Intimidation": {
+			"name": "Intimidation"
+		},
+		"Lancer (avec force)": {
+			"name": "Throw (with force)"
+		},
+		"Lancer (avec précision)": {
+			"name": "Throw (accurately)"
+		},
+		"Mains nues": {
+			"name": "Bare hands"
+		},
+		"Maîtrise de soi": {
+			"name": "Self control"
+		},
+		"Mécanique": {
+			"name": "Mechanic"
+		},
+		"Observation": {
+			"name": "Observation"
+		},
+		"Orientation": {
+			"name": "Orientation"
+		},
+		"Paranormal": {
+			"name": "Paranormal"
+		},
+		"Pousser": {
+			"name": "Push"
+		},
+		"Premiers secours": {
+			"name": "First aid"
+		},
+		"Réflexe": {
+			"name": "Reflex"
+		},
+		"Réseau": {
+			"name": "Network"
+		},
+		"Résistance (immunitaire)": {
+			"name": "Resistance (immune)"
+		},
+		"Respiration": {
+			"name": "Breathing"
+		},
+		"Saut": {
+			"name": "Jump"
+		},
+		"Spiritisme": {
+			"name": "Spiritism"
+		},
+		"Technologie": {
+			"name": "Technology"
+		},
+		"Tirer": {
+			"name": "Pull"
+		},
+		"Volonté": {
+			"name": "Will"
+		}
+	}
+}
