@@ -15,6 +15,18 @@ This system implements the game in FoundryVTT.
 In order to install the system, you must add it to Foundry using the manifest link:
 `https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json`
 
+## Modules dependencies
+
+The following modules are required and should be enabled in your world settings.
+
+### [Babele](https://foundryvtt.com/packages/babele)
+
+Used to translate compendiums. Translations are automatically loaded.
+
+### [Compendium Folders](https://foundryvtt.com/packages/compendium-folders)
+
+Used to organize weapons and abilities compendium into subdirectories.
+
 ---
 
 _Français_
@@ -27,6 +39,19 @@ Ce système implémente le jeu dans FoundryVTT.
 
 Afin de pouvoir installer le système, vous devez l'ajouter à Foundry en utilisant le lien du manifest :
 `https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json`
+
+## Dépendances de modules
+
+Les modules suivants sont requis et doivent être activés dans vos paramètres de monde.
+
+### [Babele](https://foundryvtt.com/packages/babele)
+
+Utilisé pour traduire les compendiums. Les traductions sont automatiquement chargées. _(Utile uniquement si vous ne
+jouez pas en français)_
+
+### [Compendium Folders](https://foundryvtt.com/packages/compendium-folders)
+
+Utilisé pour organiser les compendiums d'armes et de capacités en sous-répertoires.
 
 ---
 

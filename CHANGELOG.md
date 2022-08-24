@@ -7,7 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.4] - 2022-08-23
+## [0.0.5] - 2022-08-24
+
+### Added
+
+- Dependency to "Compendium Folders" module
+
+### Updated
+
+- Use one compendium form weapons and one for abilities instead of multiple per category
+
+## 0.0.4 - 2022-08-23
 
 ### Fixed
 
@@ -31,5 +41,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First system version
 
-[Unreleased]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.0.4...HEAD
+[Unreleased]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.0.5...HEAD
 
+[0.0.5]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.0.5...0.0.4
