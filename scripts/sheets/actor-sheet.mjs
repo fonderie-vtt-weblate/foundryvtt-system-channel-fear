@@ -94,6 +94,18 @@ export class ChannelFearActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
+    html.find('textarea.autosize').each(function () {
+      if ('' !== this.value) {
+        this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+      }
+    });
+
+    html.find('textarea.autosize').on('input', ev => {
+      const textarea = ev.currentTarget;
+
+      textarea.style.height = (textarea.scrollHeight) + 'px';
+    });
+
     if (this.actor.isOwner) {
       html.find('.rollable').on('click', this._onRoll.bind(this));
 
