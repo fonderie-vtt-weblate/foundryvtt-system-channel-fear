@@ -34,7 +34,7 @@ Hooks.once('init', async function () {
   return preloadHandlebarsTemplates();
 });
 
-Handlebars.registerHelper('image', fileName => `systems/channel-fear/images/${fileName}`);
+Handlebars.registerHelper('cf_image', fileName => `systems/channel-fear/images/${fileName}`);
 
 Handlebars.registerHelper('markSpecialtyActive', (askedLevel, currentLevel) => currentLevel >= askedLevel);
 
