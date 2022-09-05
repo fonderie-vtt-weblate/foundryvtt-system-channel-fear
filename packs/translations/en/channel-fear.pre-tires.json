@@ -1,9 +1,9 @@
 {
 	"label": "Pre-made",
 	"mapping": {
-		"keywords": "data.keywords",
-		"profile":  "data.info.profile",
-		"profdef": "data.info.profdef"
+		"keywords": "system.keywords",
+		"profile":  "system.info.profile",
+		"profdef": "system.info.profdef"
 	},
 	"entries": {
 		"Archie “Bulldog” Grimm": {
