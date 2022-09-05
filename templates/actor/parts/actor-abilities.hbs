@@ -7,11 +7,11 @@
     </div>
 
     <div class="block-content-inner">
-      {{#each data.abilities as |ability key|}}
+      {{#each system.abilities as |ability key|}}
         <div class="ability flex flex-group-center">
-          <input type="text" id="data.abilities.{{key}}" name="data.abilities.{{key}}"
+          <input type="text" id="system.abilities.{{key}}" name="system.abilities.{{key}}"
                  value="{{ability}}" data-dtype="Number" />
-          <label for="data.abilities.{{key}}" class="rollable" data-ability="{{ability}}"
+          <label for="system.abilities.{{key}}" class="rollable" data-ability="{{ability}}"
                  data-label="{{localize (lookup ../abilitiesList key)}}">{{localize (lookup ../abilitiesList key)}}</label>
         </div>
       {{/each}}

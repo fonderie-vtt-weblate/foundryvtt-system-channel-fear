@@ -25,15 +25,15 @@
           <li class="specialty item flexrow flex-group-left rollable" data-item-id="{{specialty._id}}">
             <div class="specialty-name"><p>{{specialty.name}}</p></div>
             <div class="linked-ability">
-              ({{localize (lookup @root.abilitiesList specialty.data.ability)}})
+              ({{localize (lookup @root.abilitiesList specialty.system.ability)}})
             </div>
             <div class="reroll grid grid-3col">
               <input type="checkbox" readonly disabled
-                     {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />
+                     {{#if (markSpecialtyActive 1 specialty.system.reroll)}}checked="checked"{{/if}} />
               <input type="checkbox" readonly disabled
-                     {{#if (markSpecialtyActive 2 specialty.data.reroll)}}checked="checked"{{/if}} />
+                     {{#if (markSpecialtyActive 2 specialty.system.reroll)}}checked="checked"{{/if}} />
               <input type="checkbox" readonly disabled
-                     {{#if (markSpecialtyActive 3 specialty.data.reroll)}}checked="checked"{{/if}} />
+                     {{#if (markSpecialtyActive 3 specialty.system.reroll)}}checked="checked"{{/if}} />
             </div>
           </li>
         {{/each}}

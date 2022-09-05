@@ -18,8 +18,19 @@ Hooks.once('init', async function () {
   CONFIG.Actor.documentClass = ChannelFearActor;
   CONFIG.Item.documentClass = ChannelFearItem;
 
+  CONFIG.fontDefinitions['MuseoSlab'] = {
+    editor: true,
+    fonts: [{
+      urls: ['systems/channel-fear/fonts/museoslab-300.otf']
+    }],
+  };
+  CONFIG.fontDefinitions['ChalkDuster'] = {
+    editor: true,
+    fonts: [{
+      urls: ['systems/channel-fear/fonts/chalkduster.ttf']
+    }],
+  };
   CONFIG.canvasTextStyle.fontFamily = 'MuseoSlab';
-  CONFIG.fontFamilies.push('MuseoSlab', 'ChalkDuster');
   CONFIG.defaultFontFamily = 'MuseoSlab';
 
   Actors.unregisterSheet('core', ActorSheet);

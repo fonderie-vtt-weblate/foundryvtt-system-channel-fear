@@ -10,12 +10,12 @@ export class ChannelFearItemSheet extends ItemSheet {
   }
 
   get template() {
-    return `systems/channel-fear/templates/item/item-${this.item.data.type}-sheet.hbs`;
+    return `systems/channel-fear/templates/item/item-${this.item.type}-sheet.hbs`;
   }
 
   getData(options) {
     const context = super.getData(options);
-    const itemData = context.item.data;
+    const itemData = this.item.toObject(false);
 
     context.rollData = {};
     let actor = this.object?.parent ?? null;
@@ -23,7 +23,7 @@ export class ChannelFearItemSheet extends ItemSheet {
       context.rollData = actor.getRollData();
     }
 
-    context.data = itemData.data;
+    context.system = itemData.system;
     context.flags = itemData.flags;
 
     if ('specialty' === itemData.type) {

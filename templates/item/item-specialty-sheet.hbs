@@ -5,14 +5,14 @@
     <div class="grid grid-2col">
       <div>
         <label for="ability-{{item.id}}">{{localize "CF.Global.Ability"}}</label>
-        <select name="data.ability" id="ability-{{item.id}}" data-dtype="String">
-          {{selectOptions abilitiesList selected=data.ability localize=true}}
+        <select name="system.ability" id="ability-{{item.id}}" data-dtype="String">
+          {{selectOptions abilitiesList selected=system.ability localize=true}}
         </select>
       </div>
       <div>
-        <label for="data.reroll">{{localize "CF.Global.Rerolls"}}</label>
-        <select id="reroll-{{item.id}}" name="data.reroll" data-dtype="Number">
-          {{#select data.reroll}}
+        <label for="system.reroll">{{localize "CF.Global.Rerolls"}}</label>
+        <select id="reroll-{{item.id}}" name="system.reroll" data-dtype="Number">
+          {{#select system.reroll}}
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
