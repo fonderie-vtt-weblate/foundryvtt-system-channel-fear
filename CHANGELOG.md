@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2022-09-05
+
+### Updated
+
+- First release for the FoundryVTT v10
+
 ## [0.0.7] - 2022-09-05
 
 Dummy version to see if it fix the non apparition on the FoundryVTT list
@@ -53,7 +59,11 @@ Dummy version to see if it fix the non apparition on the FoundryVTT list
 
 - First system version
 
-[Unreleased]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.0.6...HEAD
+[Unreleased]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.1.0...HEAD
+
+[0.1.0]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.1.0...0.0.7
+
+[0.0.6]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.0.7...0.0.6
 
 [0.0.6]: https://github.com/DjLeChuck/foundryvtt-pf1-fr-babele/compare/0.0.6...0.0.5
 
