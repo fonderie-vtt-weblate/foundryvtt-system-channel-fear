@@ -1,5 +1,5 @@
 export async function abilityCheck({ ability, label, actor }) {
-  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', actor.data.data.resource);
+  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', actor.system.attributes.resource);
 
   await _doCheck({
     dice: ability,
@@ -11,13 +11,13 @@ export async function abilityCheck({ ability, label, actor }) {
 }
 
 export async function specialtyCheck(specialty) {
-  const actor = specialty.document.actor;
-  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', actor.data.data.resource);
+  const actor = specialty.actor;
+  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', actor.system.attributes.resource);
 
   await _doCheck({
-    dice: actor.data.data.abilities[specialty.data.ability],
+    dice: actor.system.abilities[specialty.system.ability],
     reroll: {
-      available: specialty.data.reroll,
+      available: specialty.system.reroll,
       label: specialty.name,
       type: 'specialty',
     },
@@ -29,11 +29,11 @@ export async function specialtyCheck(specialty) {
 }
 
 export async function weaponCheck(weapon) {
-  const actor = weapon.document.actor;
-  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', actor.data.data.resource);
+  const actor = weapon.actor;
+  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', actor.system.attributes.resource);
 
   await _doCheck({
-    dice: actor.data.data.abilities[weapon.data.ability],
+    dice: actor.system.abilities[weapon.system.ability],
     title: game.i18n.format('CF.Rolls.WeaponCheck.Card.Title', { name: weapon.name }),
     usedResources: resources,
     actor,
@@ -234,7 +234,7 @@ function _processAbilityCheckOptions(form) {
 }
 
 async function _handleRollResult({ actor, canReroll, difficulty, rollResult, usedResources }) {
-  let newResources = actor.data.data.resource;
+  let newResources = actor.system.attributes.resource;
 
   // Remove used resource points
   if (0 < usedResources) {
@@ -253,8 +253,8 @@ async function _handleRollResult({ actor, canReroll, difficulty, rollResult, use
   }
 
   // Update if needed
-  if (newResources !== actor.data.data.resource) {
-    await actor.update({ 'data.attributes.resource': Math.min(newResources, CONFIG.CF.maxResource) });
+  if (newResources !== actor.system.attributes.resource) {
+    await actor.update({ 'system.attributes.resource': Math.min(newResources, CONFIG.CF.maxResource) });
   }
 }
 

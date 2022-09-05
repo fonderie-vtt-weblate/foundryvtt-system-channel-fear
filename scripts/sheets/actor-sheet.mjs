@@ -11,7 +11,7 @@ export class ChannelFearActorSheet extends ActorSheet {
   }
 
   get template() {
-    return `systems/channel-fear/templates/actor/actor-${this.actor.data.type}-sheet.hbs`;
+    return `systems/channel-fear/templates/actor/actor-${this.actor.type}-sheet.hbs`;
   }
 
   contextMenuItems = [{
@@ -32,9 +32,9 @@ export class ChannelFearActorSheet extends ActorSheet {
 
   getData(options) {
     const context = super.getData(options);
-    const actorData = this.actor.data.toObject(false);
+    const actorData = this.actor.toObject(false);
 
-    context.data = actorData.data;
+    context.system = actorData.system;
     context.flags = actorData.flags;
     context.isNpc = false;
     context.abilitiesList = CONFIG.CF.abilities;

@@ -1,10 +1,13 @@
 {
-  "name": "channel-fear",
+  "id": "channel-fear",
   "title": "Channel Fear",
   "description": "The Channel Fear system for FoundryVTT",
-  "version": "0.0.7",
-  "minimumCoreVersion": "9.269",
-  "compatibleCoreVersion": "9",
+  "version": "0.10.0",
+  "compatibility": {
+    "minimum": "9.269",
+    "verified": "10.284",
+    "maximum": "10"
+  },
   "authors": [
     {
       "name": "DjLeChuck",
@@ -66,7 +69,7 @@
   "socket": false,
   "url": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear",
   "manifest": "https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json",
-  "download": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/archive/0.0.7.zip",
+  "download": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/archive/0.10.0.zip",
   "bugs": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/issues",
   "changelog": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/blob/main/CHANGELOG.md",
   "license": "./LICENSE",

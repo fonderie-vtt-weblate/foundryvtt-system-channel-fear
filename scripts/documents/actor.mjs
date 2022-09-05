@@ -1,43 +1,41 @@
 export class ChannelFearActor extends Actor {
   prepareDerivedData() {
-    const actorData = this.data;
-
-    this._prepareCharacterData(actorData);
-    this._prepareNpcData(actorData);
+    this._prepareCharacterData();
+    this._prepareNpcData();
   }
 
-  _prepareCharacterData(actorData) {
-    if ('character' !== actorData.type) {
+  _prepareCharacterData() {
+    if ('character' !== this.type) {
       return;
     }
 
-    const data = actorData.data;
+    const system = this.system;
 
     // Ensure health and resource are between allowed boundaries
-    data.attributes.health = this._validateBoundaries(data.attributes.health, 0, CONFIG.CF.maxHealth);
-    data.attributes.resource = this._validateBoundaries(data.attributes.resource, 0, CONFIG.CF.maxResource);
+    system.attributes.health = this._validateBoundaries(system.attributes.health, 0, CONFIG.CF.maxHealth);
+    system.attributes.resource = this._validateBoundaries(system.attributes.resource, 0, CONFIG.CF.maxResource);
 
     // Ensure abilities are between allowed boundaries
-    for (let ability of Object.entries(data.abilities)) {
+    for (let ability of Object.entries(system.abilities)) {
       ability = this._validateBoundaries(ability, 0, CONFIG.CF.maxAbility);
     }
   }
 
-  _prepareNpcData(actorData) {
-    if ('npc' !== actorData.type) {
+  _prepareNpcData() {
+    if ('npc' !== this.type) {
       return;
     }
 
-    const data = actorData.data;
+    const system = this.system;
 
     // Ensure health is between allowed boundaries
-    data.attributes.health = this._validateBoundaries(data.attributes.health, 0, CONFIG.CF.maxHealth);
+    system.attributes.health = this._validateBoundaries(system.attributes.health, 0, CONFIG.CF.maxHealth);
 
-    if (data.abilities) {
-      const abilitiesPoints = CONFIG.CF.npcAbilitiesPoints[data.level];
+    if (system.abilities) {
+      const abilitiesPoints = CONFIG.CF.npcAbilitiesPoints[system.level];
 
-      for (const k of Object.keys(data.abilities)) {
-        data.abilities[k] = abilitiesPoints;
+      for (const k of Object.keys(system.abilities)) {
+        system.abilities[k] = abilitiesPoints;
       }
     }
   }
@@ -55,7 +53,7 @@ export class ChannelFearActor extends Actor {
   }
 
   getRollData() {
-    const data = super.getRollData();
+    const data = foundry.utils.deepClone(super.getRollData());
 
     this._getCharacterRollData(data);
 
@@ -63,7 +61,7 @@ export class ChannelFearActor extends Actor {
   }
 
   _getCharacterRollData(data) {
-    if (this.data.type !== 'character') return;
+    if (this.type !== 'character') return;
 
     if (data.abilities) {
       for (let [k, v] of Object.entries(data.abilities)) {

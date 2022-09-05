@@ -26,10 +26,10 @@
             <div class="flex-auto weapon-name">
               <p><strong>{{weapon.name}}</strong></p>
             </div>
-            <div class="flex-auto linked-ability">({{localize (lookup @root.abilitiesList weapon.data.ability)}})</div>
+            <div class="flex-auto linked-ability">({{localize (lookup @root.abilitiesList weapon.system.ability)}})</div>
             <div class="flex-initial reroll">
-              {{localize "CF.Global.xD" x=weapon.data.category}}
-              <strong>({{localize "CF.Global.xR" x=weapon.data.reroll}})</strong>
+              {{localize "CF.Global.xD" x=weapon.system.category}}
+              <strong>({{localize "CF.Global.xR" x=weapon.system.reroll}})</strong>
             </div>
           </li>
         {{/each}}

@@ -1,10 +1,5 @@
 {
 	"label": "Weapons",
-	"mapping": {
-		"keywords": "data.keywords",
-		"profile":  "data.info.profile",
-		"profdef": "data.info.profdef"
-	},
 	"entries": {
 		"Barre à mine": {
 			"name": "Crowbar"

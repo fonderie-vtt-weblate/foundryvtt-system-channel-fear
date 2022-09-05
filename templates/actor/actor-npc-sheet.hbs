@@ -23,13 +23,13 @@
               </p>
               <p>
                 <label for="char-level">{{localize "CF.NpcSheet.Level.Label"}}</label>
-                <select id="char-level" name="data.level">
-                  {{selectOptions levelsList selected=data.level localize=true}}
+                <select id="char-level" name="system.level">
+                  {{selectOptions levelsList selected=system.level localize=true}}
                 </select>
               </p>
               <p>
                 <label for="char-keywords">{{localize "CF.CharacterSheet.Keywords"}}</label>
-                <textarea name="data.keywords" id="char-keywords" rows="3" class="autosize">{{data.keywords}}</textarea>
+                <textarea name="system.keywords" id="char-keywords" rows="3" class="autosize">{{system.keywords}}</textarea>
               </p>
             </div>
             <div class="grid-span-4">
