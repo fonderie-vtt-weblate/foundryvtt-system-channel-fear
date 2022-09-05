@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2022-09-05
+
+Dummy version to see if it fix the non apparition on the FoundryVTT list
+
 ## [0.0.6] - 2022-09-01
 
 ### Fixed
