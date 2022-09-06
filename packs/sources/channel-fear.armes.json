@@ -1,0 +1,92 @@
+{
+	"label": "Armes",
+	"entries": {
+		"Barre à mine": {
+			"name": "Barre à mine"
+		},
+		"Batte": {
+			"name": "Batte"
+		},
+		"Brique": {
+			"name": "Brique"
+		},
+		"Chaîne": {
+			"name": "Chaîne"
+		},
+		"Colt 45": {
+			"name": "Colt 45"
+		},
+		"Cran d'arrêt": {
+			"name": "Cran d'arrêt"
+		},
+		"Explosifs": {
+			"name": "Explosifs"
+		},
+		"Fusil à pompe": {
+			"name": "Fusil à pompe"
+		},
+		"Fusil d'assaut": {
+			"name": "Fusil d'assaut"
+		},
+		"Grenades": {
+			"name": "Grenades"
+		},
+		"Griffes": {
+			"name": "Griffes"
+		},
+		"Hache d'incendie": {
+			"name": "Hache d'incendie"
+		},
+		"Lance-pierre": {
+			"name": "Lance-pierre"
+		},
+		"Machette": {
+			"name": "Machette"
+		},
+		"Masse": {
+			"name": "Masse"
+		},
+		"Matraque": {
+			"name": "Matraque"
+		},
+		"Mitrailleur": {
+			"name": "Mitrailleur"
+		},
+		"Mitrailleuse": {
+			"name": "Mitrailleuse"
+		},
+		"Pelle": {
+			"name": "Pelle"
+		},
+		"Pistolet": {
+			"name": "Pistolet"
+		},
+		"Pistolet mitrailleur": {
+			"name": "Pistolet mitrailleur"
+		},
+		"Planche de bois": {
+			"name": "Planche de bois"
+		},
+		"Poing & cie": {
+			"name": "Poing & cie"
+		},
+		"Poing américain": {
+			"name": "Poing américain"
+		},
+		"Rasoir": {
+			"name": "Rasoir"
+		},
+		"Scalpel": {
+			"name": "Scalpel"
+		},
+		"Taser": {
+			"name": "Taser"
+		},
+		"Tronçonneuse": {
+			"name": "Tronçonneuse"
+		},
+		"Tuyau": {
+			"name": "Tuyau"
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"label": "Pré-tirés",
+	"mapping": {
+		"keywords": "system.keywords",
+		"profile":  "system.info.profile",
+		"profdef": "system.info.profdef"
+	},
+	"entries": {
+		"Archie “Bulldog” Grimm": {
+			"name": "Archie “Bulldog” Grimm",
+			"keywords": "53 ans. Caucasien. Taille moyenne.\nCheveux blancs. Costume noir.\nPardessus beige. Mine renfrognée.",
+			"profile": "Ancien policier",
+			"profdef": "Psychologue : en utilisant 1 point de Ressource, Archie peut savoir si on lui ment ou omet sciemment des informations."
+		},
+		"Damien Barnes": {
+			"name": "Damien Barnes",
+			"keywords": "33 ans. Noir. Taille moyenne.\nCheveux courts bruns. Bouc. Cernés.\nSoutane. Chapelet en main.",
+			"profile": "Exorciste",
+			"profdef":  "Imposition des mains : en utilisant 1 point de Ressource et en touchant un tiers, Damien peut savoir si la personne est possédée ou étroitement liée à un démon."
+		},
+		"Elsa Faust": {
+			"name": "Elsa Faust",
+			"keywords": "47 ans. Caucasienne. Grande.\nLongs cheveux blancs. Teint pâle. Châle.\nRobe noire. Air supérieur et hautain.",
+			"profile": "Historienne",
+			"profdef":  "Charismatique : en utilisant 1 point de Ressource, Elsa peut convaincre un tiers de ce qu’elle affirme."
+		},
+		"Julian Cross": {
+			"name": "Julian Cross",
+			"keywords": "61 ans. Caucasien. Grand.\nCheveux courts blancs. Chapeau panama.\nCol roulé. Long pardessus marron.",
+			"profile": "Médium",
+			"profdef":  "Sensibilité : en utilisant 1 point de Ressource, Julian peut sentir si un esprit hante le lieu précis où il se trouve."
+		},
+		"Sunny O": {
+			"name": "Sunny O",
+			"keywords": "34 ans. Métisse. Taille moyenne.\nBrune. Mi-longs. Blouson en cuir.\nSac en bandoulière avec matériel.",
+			"profile": "Experte technique",
+			"profdef":  "Attentive aux sons : en utilisant 1 point de Ressource, Sunny est capable de capter des sons inaudibles à l’oreille et des phénomènes de voix électroniques par le biais de son équipement."
+		}
+	}
+}
