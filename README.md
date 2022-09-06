@@ -1,6 +1,6 @@
 # Channel Fear System
 
-![Foundry v9](https://img.shields.io/badge/foundry-v9-green)
+![Foundry v10](https://img.shields.io/badge/foundry-v10-green)
 
 ![image](./images/full_logo.webp)
 
@@ -12,7 +12,10 @@ This system implements the game in FoundryVTT.
 
 ## Installation
 
-In order to install the system, you must add it to Foundry using the manifest link:
+The system can be installed directly from Foundry by searching for its name: `Channel Fear`. You will then have the
+latest version and enjoy automatic updates.
+
+Otherwise, it is possible to add it using the link of its manifest:
 `https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json`
 
 ## Modules dependencies
@@ -27,6 +30,22 @@ Used to translate compendiums. Translations are automatically loaded.
 
 Used to organize weapons and abilities compendium into subdirectories.
 
+## How to contribute?
+
+### Bug report
+
+Please open an issue: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/issues
+
+You can also provide a fix via a pull request: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/pulls
+
+### Translate
+
+Translations are made via the Foundry Hub - Weblate instance: https://weblate.foundryvtt-hub.com/engage/channel-fear/
+
+<a href="https://weblate.foundryvtt-hub.com/engage/channel-fear/">
+<img src="https://weblate.foundryvtt-hub.com/widgets/channel-fear/-/287x66-black.png" alt="Translation state" />
+</a>
+
 ---
 
 _Français_
@@ -37,7 +56,10 @@ Ce système implémente le jeu dans FoundryVTT.
 
 ## Installation
 
-Afin de pouvoir installer le système, vous devez l'ajouter à Foundry en utilisant le lien du manifest :
+Le système est installable directement depuis Foundry en recherchant son nom : `Channel Fear`. Vous aurez alors la
+dernière version et profiterez des mises à jour automatiques.
+
+Sinon, il est possible l'ajouter en utilisant le lien de son manifest :
 `https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json`
 
 ## Dépendances de modules
@@ -52,6 +74,24 @@ jouez pas en français)_
 ### [Compendium Folders](https://foundryvtt.com/packages/compendium-folders)
 
 Utilisé pour organiser les compendiums d'armes et de capacités en sous-répertoires.
+
+## Comment contribuer ?
+
+### Rapport de bug
+
+Merci d'ouvrir un ticket : https://github.com/DjLeChuck/foundryvtt-system-channel-fear/issues
+
+Vous pouvez aussi proposer un fix via une pull
+request : https://github.com/DjLeChuck/foundryvtt-system-channel-fear/pulls
+
+### Traduire
+
+Les traductions sont gérés via l'instance Weblate de Foundry
+Hub : https://weblate.foundryvtt-hub.com/engage/channel-fear/
+
+<a href="https://weblate.foundryvtt-hub.com/engage/channel-fear/">
+<img src="https://weblate.foundryvtt-hub.com/widgets/channel-fear/-/287x66-black.png" alt="État de la traduction" />
+</a>
 
 ---
 
