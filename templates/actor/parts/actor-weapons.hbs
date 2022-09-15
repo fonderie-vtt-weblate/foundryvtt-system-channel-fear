@@ -2,20 +2,22 @@
   <h1 class="block-title">
     {{localize "CF.Global.Weapons"}}
 
-    <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Weapons.Add"}}"
-       data-type="weapon">
-      <i class="fas fa-plus"></i>
-    </a>
+    {{#if editable}}
+      <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Weapons.Add"}}"
+         data-type="weapon">
+        <i class="fas fa-plus"></i>
+      </a>
+    {{/if}}
   </h1>
 
   <div class="block-content">
     <div class="block-header-info small-info align-left">
-      <div class="grid grid-3col mt-0 mb-0">
-        <div class="grid-span-2">
+      <div class="flexrow">
+        <div class="flex2">
           <strong>{{localize "CF.Global.Name"}}</strong>
           {{localize "CF.CharacterSheet.Weapons.PlusLinkedAbility"}}
         </div>
-        <div class="align-right head-damages"><strong>{{localize "CF.Global.Damages"}}</strong></div>
+        <div class="align-right"><strong>{{localize "CF.Global.Damages"}}</strong></div>
       </div>
     </div>
 

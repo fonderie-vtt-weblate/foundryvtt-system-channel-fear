@@ -1,0 +1,60 @@
+.specialties {
+  @include gray-to-blue-gradient;
+  box-shadow: 0 0 10px 2px rgb(0 0 0 / 60%);
+
+  .block-content {
+    border-top-right-radius: 0;
+
+    .specialty {
+      background: $c-white;
+      border: 1px dotted $c-black;
+      margin-bottom: 3px;
+      font-family: $font-handwrite;
+      padding-left: 5px;
+
+      &-name {
+        flex-grow: 0;
+      }
+
+      .linked-ability {
+        margin-left: 5px;
+        font-size: x-small;
+      }
+
+      .reroll {
+        background-color: $c-black;
+        margin: 0;
+        align-self: stretch;
+        align-content: center;
+        flex: 0 1 auto;
+        padding: 0 5px;
+        gap: 10px;
+
+        input {
+          appearance: none;
+          background-color: $c-white;
+          margin: 0;
+          font: inherit;
+          color: currentColor;
+          width: 1.2em;
+          height: 1.2em;
+          display: grid;
+          place-content: center;
+
+          &::before {
+            content: "";
+            width: 1em;
+            height: 1em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em $c-black;
+          }
+
+          &:checked::before {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

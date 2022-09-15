@@ -1,6 +1,6 @@
 <form class="{{cssClass}} {{actor.type}}" autocomplete="off">
-  <div class="grid grid-3col no-gap">
-    <div class="grid-span-2">
+  <div class="flexcol">
+    <div>
       <div class="banner-yno small-info">
         <p>
           {{{localize "CF.CharacterSheet.Yno" serial=(
@@ -9,45 +9,36 @@
         </p>
       </div>
 
-      <img src="{{ cf_image "full_logo.webp" }}" alt="" width="540" height="200" class="logo" />
-
-      <div class="basic-informations">
-        <h1 class="block-title top-shadow informations">{{localize "CF.CharacterSheet.Informations"}}</h1>
-
-        <div class="block-content top-shadow">
-          <div class="grid grid-12col mt-0 block-content-inner">
-            <div class="grid-span-8 informations-container">
-              <p class="flex flex-group-center">
-                <label for="char-name">{{localize "CF.CharacterSheet.Identity"}}</label>
-                <input name="name" type="text" value="{{actor.name}}" id="char-name" />
-              </p>
-              <p class="flex flex-group-center">
-                <label for="char-profile">{{localize "CF.CharacterSheet.Profile"}}</label>
-                <input name="data.info.profile" type="text" value="{{data.info.profile}}" id="char-profile" />
-              </p>
-              <p>
-                <label for="char-keywords">{{localize "CF.CharacterSheet.Keywords"}}</label>
-                <textarea name="data.keywords" id="char-keywords" rows="3" class="autosize">{{data.keywords}}</textarea>
-              </p>
-              <p>
-                <label for="char-profdef">{{localize "CF.CharacterSheet.ProfDef"}}</label>
-                <textarea name="data.info.profdef" id="char-profdef" rows="5" class="autosize">{{data.info.profdef}}</textarea>
-              </p>
-            </div>
-            <div class="grid-span-4">
-              <div class="profile-img-container">
-                <img class="profile-img" src="{{actor.img}}" data-edit="img" alt="" title="{{actor.name}}" />
-              </div>
-            </div>
-          </div>
-
-          <div class="grid grid-2col">
-            {{> "systems/channel-fear/templates/actor/parts/actor-abilities.hbs"}}
-            {{> "systems/channel-fear/templates/actor/parts/actor-specialties.hbs"}}
-          </div>
-        </div>
+      <div class="align-center">
+        <img src="{{ cf_image "full_logo.webp" }}" alt="" width="432" height="160" class="logo" />
       </div>
     </div>
-    <div>{{> "systems/channel-fear/templates/actor/parts/actor-right-part.hbs"}}</div>
+    <div>
+      <nav class="tabs tabs-nav" data-group="primary">
+        <a class="item block-title" data-tab="informations">{{localize "CF.CharacterSheet.Informations"}}</a>
+        <a class="item block-title" data-tab="abilities-items">
+          {{localize "CF.CharacterSheet.Tabs.AbilitiesSpecialtiesWeapons"}}
+        </a>
+        <a class="item block-title" data-tab="bio">{{localize "CF.CharacterSheet.Tabs.BiographyEvolution"}}</a>
+        <a class="item block-title" data-tab="notes">{{localize "CF.CharacterSheet.Notes"}}</a>
+      </nav>
+
+      <section class="tabs-section block-content top-shadow">
+        <div class="tab" data-group="primary" data-tab="informations">
+          {{~> "systems/channel-fear/templates/actor/parts/actor-informations.hbs"}}
+        </div>
+        <div class="tab flexrow" data-group="primary" data-tab="abilities-items">
+          {{> "systems/channel-fear/templates/actor/parts/actor-abilities.hbs"}}
+          {{> "systems/channel-fear/templates/actor/parts/actor-specialties.hbs"}}
+          {{> "systems/channel-fear/templates/actor/parts/actor-weapons.hbs"}}
+        </div>
+        <div class="tab flexrow" data-group="primary" data-tab="bio">
+          {{> "systems/channel-fear/templates/actor/parts/actor-bio.hbs"}}
+        </div>
+        <div class="tab flexrow" data-group="primary" data-tab="notes">
+          {{> "systems/channel-fear/templates/actor/parts/actor-notes.hbs"}}
+        </div>
+      </section>
+    </div>
   </div>
 </form>

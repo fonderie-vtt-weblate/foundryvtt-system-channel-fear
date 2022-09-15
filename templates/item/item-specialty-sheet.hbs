@@ -2,8 +2,8 @@
   {{> "systems/channel-fear/templates/item/parts/simple-header.hbs"}}
 
   <section>
-    <div class="grid grid-2col">
-      <div>
+    <div class="flexrow">
+      <div class="flex2">
         <label for="ability-{{item.id}}">{{localize "CF.Global.Ability"}}</label>
         <select name="data.ability" id="ability-{{item.id}}" data-dtype="String">
           {{selectOptions abilitiesList selected=data.ability localize=true}}

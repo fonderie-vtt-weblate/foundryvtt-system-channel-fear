@@ -1,0 +1,53 @@
+.basic-informations {
+  .informations {
+    width: 60%;
+  }
+
+  .informations-container {
+    p {
+      label {
+        margin-right: 5px;
+
+        color: $c-white;
+        background-color: $c-black;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 2px 6px;
+      }
+
+      input {
+        flex-grow: 1;
+
+        text-align: left;
+      }
+    }
+
+    input, textarea {
+      border: none;
+      background-image: linear-gradient(to right, $c-black 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: bottom;
+      background-size: 5px 1px;
+      background-repeat: repeat-x;
+      font-size: inherit;
+    }
+  }
+
+  .profile-img-container {
+    background-image: url("../images/phone.webp");
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 290px;
+    background-size: 150px;
+    margin-top: 12px;
+    @include rotate(-10);
+
+    img {
+      margin-top: 40px;
+      margin-left: 12px;
+      width: 126px;
+      height: 220px;
+      object-fit: cover;
+    }
+  }
+}

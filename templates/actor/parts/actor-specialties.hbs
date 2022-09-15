@@ -1,17 +1,19 @@
 <div class="specialties">
-  <h1 class="block-title top-shadow">
+  <h1 class="block-title top-shadow no-radius">
     {{localize "CF.Global.Specialties"}}
 
-    <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Specialties.Add"}}"
-       data-type="specialty">
-      <i class="fas fa-plus"></i>
-    </a>
+    {{#if editable}}
+      <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Specialties.Add"}}"
+         data-type="specialty">
+        <i class="fas fa-plus"></i>
+      </a>
+    {{/if}}
   </h1>
 
   <div class="block-content">
     <div class="block-header-info small-info">
-      <div class="grid grid-3col mt-0 mb-0">
-        <div class="grid-span-2">
+      <div class="flexrow">
+        <div class="flex2">
           <strong>{{localize "CF.Global.Name"}}</strong>
           {{localize "CF.CharacterSheet.Specialties.PlusLinkedAbility"}}
         </div>
@@ -27,13 +29,19 @@
             <div class="linked-ability">
               ({{localize (lookup @root.abilitiesList specialty.data.ability)}})
             </div>
-            <div class="reroll grid grid-3col">
-              <input type="checkbox" readonly disabled
-                     {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />
-              <input type="checkbox" readonly disabled
-                     {{#if (markSpecialtyActive 2 specialty.data.reroll)}}checked="checked"{{/if}} />
-              <input type="checkbox" readonly disabled
-                     {{#if (markSpecialtyActive 3 specialty.data.reroll)}}checked="checked"{{/if}} />
+            <div class="reroll flexrow">
+              <div>
+                <input type="checkbox" readonly disabled
+                       {{#if (markSpecialtyActive 1 specialty.data.reroll)}}checked="checked"{{/if}} />
+              </div>
+              <div>
+                <input type="checkbox" readonly disabled
+                       {{#if (markSpecialtyActive 2 specialty.data.reroll)}}checked="checked"{{/if}} />
+              </div>
+              <div>
+                <input type="checkbox" readonly disabled
+                       {{#if (markSpecialtyActive 3 specialty.data.reroll)}}checked="checked"{{/if}} />
+              </div>
             </div>
           </li>
         {{/each}}
