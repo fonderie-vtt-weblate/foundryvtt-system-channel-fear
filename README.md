@@ -13,7 +13,7 @@ This system implements the game in FoundryVTT.
 ## Installation
 
 In order to install the system, you must add it to Foundry using the manifest link:
-`https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json`
+`https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/9.x/system.json`
 
 ## Modules dependencies
 
@@ -38,7 +38,7 @@ Ce système implémente le jeu dans FoundryVTT.
 ## Installation
 
 Afin de pouvoir installer le système, vous devez l'ajouter à Foundry en utilisant le lien du manifest :
-`https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json`
+`https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/9.x/system.json`
 
 ## Dépendances de modules
 
