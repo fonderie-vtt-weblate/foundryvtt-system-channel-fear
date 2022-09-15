@@ -1,0 +1,22 @@
+.weapons-list {
+  box-shadow: 0 0 10px 2px rgb(0 0 0 / 60%);
+  border-top-right-radius: 15px;
+
+  .block-header-info, .block-content-inner {
+    padding-right: 10px;
+  }
+
+  .weapon {
+    &-name {
+      flex-grow: 0;
+    }
+
+    .reroll {
+      padding: 0 5px;
+    }
+
+    .linked-ability {
+      margin-left: 5px;
+    }
+  }
+}

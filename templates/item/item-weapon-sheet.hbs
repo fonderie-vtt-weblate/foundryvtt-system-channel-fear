@@ -2,7 +2,7 @@
   {{> "systems/channel-fear/templates/item/parts/simple-header.hbs"}}
 
   <section>
-    <div class="grid grid-2col">
+    <div class="flexrow">
       <div>
         <label for="ability-{{item.id}}">{{localize "CF.Global.Ability"}}</label>
         <select name="system.ability" id="ability-{{item.id}}" data-dtype="String">
@@ -15,6 +15,8 @@
           {{selectOptions weaponsCategories selected=system.category localize=true}}
         </select>
       </div>
+    </div>
+    <div class="flexrow">
       <div>
         <label for="reroll-{{item.id}}">{{localize "CF.Global.Rerolls"}}</label>
         <select id="reroll-{{item.id}}" name="system.reroll" data-dtype="Number">

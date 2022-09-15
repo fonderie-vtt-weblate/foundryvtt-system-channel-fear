@@ -1,0 +1,16 @@
+{{#if isNpc}}
+  <div class="wysiwyg-container">
+    {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
+  </div>
+{{/if}}
+{{#unless isNpc}}
+  <div class="flex2">
+    <h1 class="block-title no-radius">{{localize "CF.CharacterSheet.Biography"}}</h1>
+
+    <div class="wysiwyg-container">
+      {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
+    </div>
+  </div>
+
+  {{> "systems/channel-fear/templates/actor/parts/actor-evolution.hbs"}}
+{{/unless}}

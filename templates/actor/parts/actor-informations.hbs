@@ -1,0 +1,42 @@
+<div class="basic-informations flexrow">
+  <div class="flex2">
+    <div class="flexrow block-content-inner">
+      <div class="flex2 informations-container">
+        <p class="flex flex-group-center">
+          <label for="char-name">{{localize "CF.CharacterSheet.Identity"}}</label>
+          <input name="name" type="text" value="{{actor.name}}" id="char-name" />
+        </p>
+        {{#if isNpc}}
+          <p>
+            <label for="char-level">{{localize "CF.NpcSheet.Level.Label"}}</label>
+            <select id="char-level" name="system.level">
+              {{selectOptions levelsList selected=system.level localize=true}}
+            </select>
+          </p>
+        {{/if}}
+        {{#unless isNpc}}
+          <p class="flex flex-group-center">
+            <label for="char-profile">{{localize "CF.CharacterSheet.Profile"}}</label>
+            <input name="system.info.profile" type="text" value="{{system.info.profile}}" id="char-profile" />
+          </p>
+        {{/unless}}
+        <p>
+          <label for="char-keywords">{{localize "CF.CharacterSheet.Keywords"}}</label>
+          <textarea name="system.keywords" id="char-keywords" rows="4" class="autosize">{{system.keywords}}</textarea>
+        </p>
+        {{#unless isNpc}}
+          <p>
+            <label for="char-profdef">{{localize "CF.CharacterSheet.ProfDef"}}</label>
+            <textarea name="system.info.profdef" id="char-profdef" rows="6" class="autosize">{{system.info.profdef}}</textarea>
+          </p>
+        {{/unless}}
+      </div>
+      <div>
+        <div class="profile-img-container">
+          <img class="profile-img" src="{{actor.img}}" data-edit="img" alt="" title="{{actor.name}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>{{> "systems/channel-fear/templates/actor/parts/actor-informations-right-part.hbs"}}</div>
+</div>

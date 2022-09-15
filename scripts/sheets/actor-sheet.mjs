@@ -5,8 +5,9 @@ export class ChannelFearActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ['channelfear', 'sheet', 'actor'],
       template: 'systems/channel-fear/templates/actor/actor-sheet.hbs',
-      width: 870,
-      height: 916,
+      width: 800,
+      height: 630,
+      tabs: [{ navSelector: '.tabs-nav', contentSelector: '.tabs-section', initial: 'informations' }],
     });
   }
 
@@ -51,7 +52,6 @@ export class ChannelFearActorSheet extends ActorSheet {
   }
 
   _prepareItems(context) {
-    const gear = [];
     const specialties = [];
     const weapons = [];
 
@@ -65,7 +65,6 @@ export class ChannelFearActorSheet extends ActorSheet {
       }
     }
 
-    context.gear = gear;
     context.specialties = specialties;
     context.weapons = weapons;
   }

@@ -87,6 +87,13 @@
       "Profile": "Profile",
       "Keywords": "Keywords",
       "ProfDef": "Professional deformation(s)",
+      "Biography": "Biography",
+      "Notes": "Notes",
+      "Tabs": {
+        "AbilitiesSpecialtiesWeapons": "Abilities, specialties and weapons",
+        "AbilitiesWeapons": "Abilities and weapons",
+        "BiographyEvolution": "Biography end evolution"
+      },
       "Abilities": {
         "MinMaxInfo": "Value between {min} and {max}",
         "PointsToSpent": "35 points to distribute",

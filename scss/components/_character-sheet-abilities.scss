@@ -1,0 +1,26 @@
+.abilities {
+  @include gray-to-blue-gradient;
+
+  .ability {
+    margin-bottom: 5px;
+    flex-direction: row;
+    align-items: stretch;
+
+    input {
+      background: $c-white;
+      border: 1px dotted $c-black;
+      width: 50px;
+    }
+
+    label {
+      color: $c-white;
+      background-color: $c-black;
+      text-transform: uppercase;
+      flex-grow: 1;
+      align-items: center;
+      display: flex;
+      font-weight: bold;
+      padding-left: 5px;
+    }
+  }
+}
