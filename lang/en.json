@@ -34,7 +34,7 @@
     },
     "Warnings": {
       "MacroOnlyForOwnedItem": "You can only create macro buttons for owned Items",
-      "MacroItemNotFound": "Your controlled Actor does not have an item with ID {id}"
+      "MacroItemNotFound": "Could not find item {name}. You may need to delete and recreate this macro."
     },
     "Abilities": {
       "Act": "To act",

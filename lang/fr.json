@@ -34,7 +34,7 @@
     },
     "Warnings": {
       "MacroOnlyForOwnedItem": "Vous pouvez seulement créer des macros pour les objets que vous possédez",
-      "MacroItemNotFound": "Le personnage que vous contrôlez n'a pas d'objet ayant l'ID {id}"
+      "MacroItemNotFound": "Impossible de trouver l'objet {name}. Essayez de supprimer puis recréer cette macro."
     },
     "Abilities": {
       "Act": "Agir",

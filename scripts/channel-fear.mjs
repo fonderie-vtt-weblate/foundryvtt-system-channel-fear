@@ -10,7 +10,7 @@ Hooks.once('init', async function () {
   game.channelfear = {
     ChannelFearActor,
     ChannelFearItem,
-    rollItem,
+    rollItemMacro,
   };
 
   CONFIG.CF = CF;
@@ -21,13 +21,13 @@ Hooks.once('init', async function () {
   CONFIG.fontDefinitions['MuseoSlab'] = {
     editor: true,
     fonts: [{
-      urls: ['systems/channel-fear/fonts/museoslab-300.otf']
+      urls: ['systems/channel-fear/fonts/museoslab-300.otf'],
     }],
   };
   CONFIG.fontDefinitions['ChalkDuster'] = {
     editor: true,
     fonts: [{
-      urls: ['systems/channel-fear/fonts/chalkduster.ttf']
+      urls: ['systems/channel-fear/fonts/chalkduster.ttf'],
     }],
   };
   CONFIG.canvasTextStyle.fontFamily = 'MuseoSlab';
@@ -69,50 +69,52 @@ Hooks.on('renderChatMessage', (app, html, data) => {
   Chat.hideActionsButtons(html);
 });
 
-async function createItemMacro(data, slot) {
+function createItemMacro(data, slot) {
   if (data.type !== 'Item') {
     return;
   }
 
-  if (!('data' in data)) {
+  if (!data.uuid.includes('Actor.') && !data.uuid.includes('Token.')) {
     return ui.notifications.warn(game.i18n.localize('CF.Warnings.MacroOnlyForOwnedItem'));
   }
 
-  const item = data.data;
+  (async function () {
+    const item = await Item.fromDropData(data);
 
-  // Create the macro command
-  const command = `game.channelfear.rollItem("${item._id}");`;
-  let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
-  if (!macro) {
-    macro = await Macro.create({
-      name: item.name,
-      type: 'script',
-      img: item.img,
-      command: command,
-      flags: { 'channelfear.itemMacro': true },
-    });
-  }
+    // Create the macro command using the uuid.
+    const command = `game.channelfear.rollItemMacro("${data.uuid}");`;
+    let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
+    if (!macro) {
+      macro = await Macro.create({
+        name: item.name,
+        type: 'script',
+        img: item.img,
+        command: command,
+        flags: { 'channelfear.itemMacro': true },
+      });
+    }
 
-  game.user.assignHotbarMacro(macro, slot);
+    await game.user.assignHotbarMacro(macro, slot);
+  })();
 
   return false;
 }
 
-function rollItem(itemId) {
-  const speaker = ChatMessage.getSpeaker();
-  let actor;
-  if (speaker.token) {
-    actor = game.actors.tokens[speaker.token];
-  }
+function rollItemMacro(itemUuid) {
+  // Reconstruct the drop data so that we can load the item.
+  const dropData = {
+    type: 'Item',
+    uuid: itemUuid,
+  };
+  // Load the item from the uuid.
+  Item.fromDropData(dropData).then(item => {
+    // Determine if the item loaded and if it's an owned item.
+    if (!item || !item.parent) {
+      const name = item?.name ?? itemUuid;
+      return ui.notifications.warn(game.i18n.format('CF.Warnings.MacroItemNotFound', { name }));
+    }
 
-  if (!actor) {
-    actor = game.actors.get(speaker.actor);
-  }
-
-  const item = actor ? actor.items.find(i => i.id === itemId) : null;
-  if (!item) {
-    return ui.notifications.warn(game.i18n.format('CF.Warnings.MacroItemNotFound', { id: itemId }));
-  }
-
-  return item.roll();
+    // Trigger the item roll
+    item.roll();
+  });
 }
