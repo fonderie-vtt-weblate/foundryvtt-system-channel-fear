@@ -1,6 +1,6 @@
 {{#if isNpc}}
   <div class="wysiwyg-container">
-    {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
+    {{editor system.biography target="system.biography" button=true editable=editable}}
   </div>
 {{/if}}
 {{#unless isNpc}}
@@ -8,7 +8,7 @@
     <h1 class="block-title no-radius">{{localize "CF.CharacterSheet.Biography"}}</h1>
 
     <div class="wysiwyg-container">
-      {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
+      {{editor system.biography target="system.biography" button=true editable=editable}}
     </div>
   </div>
 
