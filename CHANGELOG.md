@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2022-11-21
+
 ### Added
 
 - Català translation (thanks @trombonecot)
@@ -97,7 +99,9 @@ Dummy version to see if it fix the non apparition on the FoundryVTT list
 
 - First system version
 
-[Unreleased]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/0.1.3...HEAD
+[Unreleased]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/0.1.4...HEAD
+
+[0.1.4]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/0.1.3...0.1.4
 
 [0.1.3]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/0.1.2...0.1.3
 
