@@ -1,0 +1,184 @@
+{
+  "ACTOR.TypeCharacter": "Jugador",
+  "ACTOR.TypeNpc": "Rol secundari",
+  "ITEM.TypeItem": "Objecte",
+  "ITEM.TypeSpecialty": "Especialitat",
+  "ITEM.TypeWeapon": "Arma",
+  "CF": {
+    "Compendium": {
+      "Abilities": {
+        "Act": "01. Actuar",
+        "Kno": "02. Conèixer",
+        "Bea": "03. Aguantar",
+        "For": "04. Forçar",
+        "Per": "05. Percebre",
+        "Imp": "06. Imposar",
+        "Knh": "07. Perícia",
+        "Fig": "08. Lluitar",
+        "Sel": "09. Controlar-se",
+        "Aim": "10. Apuntar"
+      },
+      "Weapons": {
+        "BareHands": "1. Punys & CIA",
+        "VeryLight": "2. Molt lleugera",
+        "Light": "3. Lleugera",
+        "Medium": "4. Mitjana",
+        "Heavy": "5. Pesada"
+      },
+      "Efficiencies": {
+        "Normal":  "Normal (0R)",
+        "Efficient": "Eficient (1R)",
+        "Dangerous":  "Perillosa (2R)",
+        "Murderer": "Mortal (3R)"
+      }
+    },
+    "Warnings": {
+      "MacroOnlyForOwnedItem": "Només pots crear macros per objectes propis",
+      "MacroItemNotFound": "No s'ha trobat l'objecte {name}. Prova de borrar i tornar a crear la macro."
+    },
+    "Abilities": {
+      "Act": "Actuar",
+      "Kno": "Conèixer",
+      "Bea": "Agunatar",
+      "For": "Forçar",
+      "Per": "Percebre",
+      "Imp": "Imposar",
+      "Knh": "Perícia",
+      "Fig": "Lluitar",
+      "Sel": "Controlar-se",
+      "Aim": "Apuntar"
+    },
+    "Global": {
+      "xD": "{x}D",
+      "xR": "{x}R",
+      "Ability": "Aptitud",
+      "Abilities": "Aptituds",
+      "Cancel": "Cancel·lar",
+      "Category": "Categoria",
+      "Delete": "Borrar",
+      "Damages": "Danys",
+      "Difficulty": "Dificultat",
+      "Edit": "Editar",
+      "Name": "Nom",
+      "NewItem": "Nou {type}",
+      "Rerolls": "Tornar a tirar",
+      "Reroll": "Tornar a tirar",
+      "RollDice": "Tirar dau",
+      "Specialty": "Especialitat",
+      "Specialties": "Especialitats",
+      "Weapon": "Arma",
+      "Weapons": "armes",
+      "XOutOfY": "{x} de {y}"
+    },
+    "Weapons": {
+      "Categories": {
+        "BareHands": "Punys & CIA",
+        "VeryLight": "Molt lleuger",
+        "Light": "Lleugera",
+        "Medium": "Mitjana",
+        "Heavy": "Pesada"
+      }
+    },
+    "CharacterSheet": {
+      "Yno": "Un {serial} creat per Anthony “Yno” Combrexelle",
+      "YnoSerial": "serial",
+      "Informations": "Informació",
+      "Identity": "Identitat",
+      "Profile": "Perfil",
+      "Keywords": "Mots claus",
+      "ProfDef": "Deformacions professionals",
+      "Biography": "Biografia",
+      "Notes": "Notes",
+      "Tabs": {
+        "AbilitiesSpecialtiesWeapons": "Aptituds, especialitats i armes",
+        "AbilitiesWeapons": "Aptituds i armes",
+        "BiographyEvolution": "Biografia i evolució"
+      },
+      "Abilities": {
+        "MinMaxInfo": "Valor entre {min} i {max}",
+        "PointsToSpent": "35 punts a distribuïr",
+        "PointsCost": "(1 pt = 1 pt)"
+      },
+      "Specialties": {
+        "Add": "Afageix una especialitat",
+        "PlusLinkedAbility": "(+ aptitud enllaçada)",
+        "PointsToSpent": "30 punts a distribuïr",
+        "PointsCost": "(punts = evolució)"
+      },
+      "Weapons": {
+        "Add": "Afageix un arma",
+        "PlusLinkedAbility": "(+ aptitud enllaçada)"
+      },
+      "Health": {
+        "Title": "Salut",
+        "MaxInfo": "En bona salut",
+        "AtValue": "A {value}",
+        "WhenAt2": "+1 triomf exigit",
+        "WhenAt1": "+2 triomfs exigits",
+        "WhenAt0": "Inconscient"
+      },
+      "Resource": {
+        "Title": "Recursos",
+        "MaxInfo": "En plena forma",
+        "SuccessTitle": "Triomf",
+        "SuccessDesc": "+1 triomf automàtic",
+        "ProfDefBonusDesc": "Tirada automàtica utilitzable un cop per episodi"
+      },
+      "Evolution": {
+        "Title": "Evolució",
+        "Subtitle": "En reserva",
+        "Points": "{value} punts",
+        "SpecialtyFromTo": "{from}R > {to}R a especialitat",
+        "AbilityBonusDesc": "+1D a aptitud",
+        "ProfDefBonusDesc": "+1 deformació professional"
+      }
+    },
+    "NpcSheet": {
+      "Level": {
+        "Label": "Nivell",
+        "Values": {
+          "weak": "Dèbil",
+          "medium": "Mitjà",
+          "strong": "Fort",
+          "unbeatable": "Unbeatable"
+        }
+      }
+    },
+    "Rolls": {
+      "Difficulty": "Dificultat: {difficulty}",
+      "Dialog": {
+        "Difficulty": "Tirar difficultat",
+        "Difficulty1": "Relativament fàcil - 1 triomf",
+        "Difficulty2": "Mitjà - 2 triomfs",
+        "Difficulty3": "Difícil - 3 triomfs",
+        "Difficulty4": "Molt difícil - 4 triomfs",
+        "ResourcesToUse": "Punts del recurs per usar"
+      },
+      "AbilityCheck": {
+        "Title": "Tirada d'aptitud",
+        "Card": {
+          "Title": "Tira aptitud: {name}"
+        }
+      },
+      "SpecialtyCheck": {
+        "Title": "Tirada d'especialitat",
+        "Card": {
+          "Title": "Tirada d'especialitat: {name}"
+        }
+      },
+      "WeaponCheck": {
+        "Title": "Tirada d'arma",
+        "Card": {
+          "Title": "Tirada d'arma: {name}"
+        }
+      },
+      "Damages": {
+        "Title": "Tirada de dany",
+        "Card": {
+          "Title": "Tirada de dany: {name}",
+          "HitAllMight": "Toca amb tota la teva força"
+        }
+      }
+    }
+  }
+}
