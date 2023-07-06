@@ -1,9 +1,8 @@
 {
-  "ACTOR.TypeCharacter": "Jugador",
-  "ACTOR.TypeNpc": "Rol secundari",
-  "ITEM.TypeItem": "Objecte",
-  "ITEM.TypeSpecialty": "Especialitat",
-  "ITEM.TypeWeapon": "Arma",
+  "TYPES.Actor.character": "Jugador",
+  "TYPES.Actor.npc": "Rol secundari",
+  "TYPES.Item.specialty": "Especialitat",
+  "TYPES.Item.weapon": "Arma",
   "CF": {
     "Compendium": {
       "Abilities": {

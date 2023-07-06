@@ -1,9 +1,8 @@
 {
-  "ACTOR.TypeCharacter": "Player",
-  "ACTOR.TypeNpc": "Second role",
-  "ITEM.TypeItem": "Item",
-  "ITEM.TypeSpecialty": "Specialty",
-  "ITEM.TypeWeapon": "Weapon",
+  "TYPES.Actor.character": "Player",
+  "TYPES.Actor.npc": "Second role",
+  "TYPES.Item.specialty": "Specialty",
+  "TYPES.Item.weapon": "Weapon",
   "CF": {
     "Compendium": {
       "Abilities": {
