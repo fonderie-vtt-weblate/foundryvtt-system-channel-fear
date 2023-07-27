@@ -4,33 +4,6 @@
   "TYPES.Item.specialty": "Specialty",
   "TYPES.Item.weapon": "Weapon",
   "CF": {
-    "Compendium": {
-      "Abilities": {
-        "Act": "01. To act",
-        "Kno": "02. To know",
-        "Bea": "03. To bear",
-        "For": "04. Force",
-        "Per": "05. Perceive",
-        "Imp": "06. To impose",
-        "Knh": "07. Know-how",
-        "Fig": "08. Fight",
-        "Sel": "09. To self-control",
-        "Aim": "10. To aim"
-      },
-      "Weapons": {
-        "BareHands": "1. Bare hands",
-        "VeryLight": "2. Very light",
-        "Light": "3. Light",
-        "Medium": "4. Medium",
-        "Heavy": "5. Heavy"
-      },
-      "Efficiencies": {
-        "Normal":  "Normal (0R)",
-        "Efficient": "Efficient (1R)",
-        "Dangerous":  "Dangerous (2R)",
-        "Murderer": "Murderer (3R)"
-      }
-    },
     "Warnings": {
       "MacroOnlyForOwnedItem": "You can only create macro buttons for owned Items",
       "MacroItemNotFound": "Could not find item {name}. You may need to delete and recreate this macro."

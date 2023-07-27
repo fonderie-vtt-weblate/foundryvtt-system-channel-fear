@@ -1,15 +1,15 @@
 {
-	"label": "Weapons",
+	"label": "Armes",
 	"folders": {
-		"1. Mains nues": "1. Bare hands",
-		"2. Très légères": "2. Very light",
-		"3. Légères": "3. Light",
-		"4. Moyennes": "4. Medium",
-		"5. Lourdes": "5. Heavy",
+		"1. Mains nues": "1. Punys & CIA",
+		"2. Très légères": "2. Molt lleugera",
+		"3. Légères": "3. Lleugera",
+		"4. Moyennes": "4. Mitjana",
+		"5. Lourdes": "5. Pesada",
 		"Normale (0R)": "Normal (0R)",
-		"Efficace (1R)": "Efficient (1R)",
-		"Dangereuse (2R)": "Dangerous (2R)",
-		"Meurtrière (3R)": "Murderer (3R)"
+		"Efficace (1R)": "Eficient (1R)",
+		"Dangereuse (2R)": "Perillosa (2R)",
+		"Meurtrière (3R)": "Mortal (3R)"
 	},
 	"entries": {
 		"Barre à mine": {

@@ -4,33 +4,6 @@
   "TYPES.Item.specialty": "Spécialité",
   "TYPES.Item.weapon": "Arme",
   "CF": {
-    "Compendium": {
-      "Abilities": {
-        "Act": "01. Agir",
-        "Kno": "02. Connaître",
-        "Bea": "03. Endurer",
-        "For": "04. Forcer",
-        "Per": "05. Percevoir",
-        "Imp": "06. S'imposer",
-        "Knh": "07. Savoir-faire",
-        "Fig": "08. Se battre",
-        "Sel": "09. Se contrôler",
-        "Aim": "10. Viser"
-      },
-      "Weapons": {
-        "BareHands": "1. Mains nues",
-        "VeryLight": "2. Très légères",
-        "Light": "3. Légères",
-        "Medium": "4. Moyennes",
-        "Heavy": "5. Lourdes"
-      },
-      "Efficiencies": {
-        "Normal":  "Normale (0R)",
-        "Efficient": "Efficace (1R)",
-        "Dangerous":  "Dangereuse (2R)",
-        "Murderer": "Meurtrière (3R)"
-      }
-    },
     "Warnings": {
       "MacroOnlyForOwnedItem": "Vous pouvez seulement créer des macros pour les objets que vous possédez",
       "MacroItemNotFound": "Impossible de trouver l'objet {name}. Essayez de supprimer puis recréer cette macro."

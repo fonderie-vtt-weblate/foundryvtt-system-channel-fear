@@ -4,33 +4,6 @@
   "TYPES.Item.specialty": "Especialitat",
   "TYPES.Item.weapon": "Arma",
   "CF": {
-    "Compendium": {
-      "Abilities": {
-        "Act": "01. Actuar",
-        "Kno": "02. Conèixer",
-        "Bea": "03. Aguantar",
-        "For": "04. Forçar",
-        "Per": "05. Percebre",
-        "Imp": "06. Imposar",
-        "Knh": "07. Perícia",
-        "Fig": "08. Lluitar",
-        "Sel": "09. Controlar-se",
-        "Aim": "10. Apuntar"
-      },
-      "Weapons": {
-        "BareHands": "1. Punys & CIA",
-        "VeryLight": "2. Molt lleugera",
-        "Light": "3. Lleugera",
-        "Medium": "4. Mitjana",
-        "Heavy": "5. Pesada"
-      },
-      "Efficiencies": {
-        "Normal":  "Normal (0R)",
-        "Efficient": "Eficient (1R)",
-        "Dangerous":  "Perillosa (2R)",
-        "Murderer": "Mortal (3R)"
-      }
-    },
     "Warnings": {
       "MacroOnlyForOwnedItem": "Només pots crear macros per objectes propis",
       "MacroItemNotFound": "No s'ha trobat l'objecte {name}. Prova de borrar i tornar a crear la macro."

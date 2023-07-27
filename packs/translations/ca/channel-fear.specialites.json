@@ -1,16 +1,16 @@
 {
-	"label": "Specialties",
+	"label": "Especialitats",
 	"folders": {
-		"01. Agir": "01. To act",
-		"02. Connaître": "02. To know",
-		"03. Endurer": "03. To bear",
-		"04. Forcer": "04. Force",
-		"05. Percevoir": "05. Perceive",
-		"06. S'imposer": "06. To impose",
-		"07. Savoir-faire": "07. Know-how",
-		"08. Se battre": "08. Fight",
-		"09. Se contrôler": "09. To self-control",
-		"10. Viser": "10. To aim"
+		"01. Agir": "01. Actuar",
+		"02. Connaître": "02. Conèixer",
+		"03. Endurer": "03. Aguantar",
+		"04. Forcer": "04. Forçar",
+		"05. Percevoir": "05. Percebre",
+		"06. S'imposer": "06. Imposar",
+		"07. Savoir-faire": "07. Perícia",
+		"08. Se battre": "08. Lluitar",
+		"09. Se contrôler": "09. Controlar-se",
+		"10. Viser": "10. Apuntar"
 	},
 	"entries": {
 		"Actualité": {
