@@ -58,9 +58,7 @@ export class ChannelFearItem extends Item {
     }
 
     const rollData = this.actor.getRollData();
-    console.log('AAAAAAAAA');
-    console.log(this.data.data);
-    console.log(this.system);
+
     rollData.item = foundry.utils.deepClone(this.data.data);
 
     return rollData;
