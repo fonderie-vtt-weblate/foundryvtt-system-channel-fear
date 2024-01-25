@@ -4,6 +4,12 @@
   "TYPES.Item.specialty": "Spécialité",
   "TYPES.Item.weapon": "Arme",
   "CF": {
+    "Settings": {
+      "HideProfileImage": {
+        "Title": "Masquer l’image de profile",
+        "Hint": "Retire l’affichage de l’image dans le téléphone portable sur les fiches"
+      }
+    },
     "Warnings": {
       "MacroOnlyForOwnedItem": "Vous pouvez seulement créer des macros pour les objets que vous possédez",
       "MacroItemNotFound": "Impossible de trouver l'objet {name}. Essayez de supprimer puis recréer cette macro."

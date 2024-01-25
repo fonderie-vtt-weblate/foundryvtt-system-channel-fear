@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Option to hide display of the profile picture on sheets
+
 ## [11.1.0] - 2023-07-27
 
 ### Added

@@ -1,5 +1,5 @@
-export const preloadHandlebarsTemplates = async function () {
-  return loadTemplates([
+export const preloadHandlebarsTemplates = function () {
+  loadTemplates([
     // Actor partials
     'systems/channel-fear/templates/actor/parts/actor-abilities.hbs',
     'systems/channel-fear/templates/actor/parts/actor-bio.hbs',

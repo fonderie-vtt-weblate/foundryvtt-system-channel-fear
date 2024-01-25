@@ -31,11 +31,13 @@
           </p>
         {{/unless}}
       </div>
-      <div>
-        <div class="profile-img-container">
-          <img class="profile-img" src="{{actor.img}}" data-edit="img" alt="" title="{{actor.name}}" />
+      {{#if (displayProfileImage)}}
+        <div>
+          <div class="profile-img-container">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" alt="" title="{{actor.name}}" />
+          </div>
         </div>
-      </div>
+      {{/if}}
     </div>
   </div>
   <div>{{> "systems/channel-fear/templates/actor/parts/actor-informations-right-part.hbs"}}</div>

@@ -3,10 +3,14 @@ import { ChannelFearItem } from './documents/item.mjs';
 import { ChannelFearActorSheet } from './sheets/actor-sheet.mjs';
 import { ChannelFearItemSheet } from './sheets/item-sheet.mjs';
 import { preloadHandlebarsTemplates } from './helpers/templates.mjs';
+import { registerSettings } from './helpers/settings.mjs';
 import { CF } from './helpers/config.mjs';
 import * as Chat from './chat.mjs';
+import { registerHandlebarsHelper } from './helpers/handlerbars-helpers.mjs';
 
-Hooks.once('init', async function () {
+Hooks.on('init', function () {
+  console.log('Channel Fear | Initializing System');
+
   game.channelfear = {
     ChannelFearActor,
     ChannelFearItem,
@@ -42,12 +46,10 @@ Hooks.once('init', async function () {
     Babele.get().setSystemTranslationsDir('packs/translations');
   }
 
-  return preloadHandlebarsTemplates();
+  registerHandlebarsHelper();
+  registerSettings();
+  preloadHandlebarsTemplates();
 });
-
-Handlebars.registerHelper('cf_image', fileName => `systems/channel-fear/images/${fileName}`);
-
-Handlebars.registerHelper('markSpecialtyActive', (askedLevel, currentLevel) => currentLevel >= askedLevel);
 
 Hooks.once('ready', async function () {
   const logo = document.getElementById('logo');

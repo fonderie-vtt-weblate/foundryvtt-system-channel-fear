@@ -4,6 +4,12 @@
   "TYPES.Item.specialty": "Especialitat",
   "TYPES.Item.weapon": "Arma",
   "CF": {
+    "Settings": {
+      "HideProfileImage": {
+        "Title": "Hide the profile image",
+        "Hint": "Remove image display in the cell phone on sheets"
+      }
+    },
     "Warnings": {
       "MacroOnlyForOwnedItem": "Només pots crear macros per objectes propis",
       "MacroItemNotFound": "No s'ha trobat l'objecte {name}. Prova de borrar i tornar a crear la macro."
