@@ -1,1 +1,24 @@
-{}
+{
+    "entries": {
+        "Damien Barnes": {
+            "profdef": "Imposición de manos: utilizando 1 punto de Recurso y tocando a un tercero, Damien puede saber si la persona está poseída por un demonio o estrechamente vinculada a él.",
+            "name": "Damien Barnes",
+            "keywords": "33 años. Negra. Estatura media.\nPelo castaño corto. Perilla de chivo. \nSotana. Rosario en mano.",
+            "profile": "Exorcista"
+        },
+        "Archie “Bulldog” Grimm": {
+            "keywords": "53 años. Caucásico. Estatura media.\nPelo blanco. Traje negro.\nAbrigo beige. Ceño fruncido.",
+            "profile": "Antiguo agente de policía",
+            "profdef": "Psicólogo: utilizando 1 punto de Recurso, Archie puede saber si alguien le está mintiendo u omitiendo información a sabiendas."
+        },
+        "Elsa Faust": {
+            "name": "Elsa Faust"
+        },
+        "Sunny O": {
+            "name": "Sunny O",
+            "keywords": "34 años. Mestiza. Estatura media.\nMorena. Media melena. Chaqueta de cuero.\nBolso en bandolera con herrajes.\nEspañola.",
+            "profile": "Experto técnico",
+            "profdef": "Atenta al sonido: utilizando 1 punto de Recurso, Sunny es capaz de captar sonidos inaudibles para el oído y fenómenos de voz electrónica a través de su equipo."
+        }
+    }
+}
