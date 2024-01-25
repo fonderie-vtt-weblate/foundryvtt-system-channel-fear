@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.1.1] - 2024-01-25
+
 ### Added
 
 - Option to hide display of the profile picture on sheets
+- Spanish translation of pre-made (thanks @montver)
 
 ## [11.1.0] - 2023-07-27
 
@@ -119,7 +122,9 @@ Dummy version to see if it fix the non apparition on the FoundryVTT list
 
 - First system version
 
-[Unreleased]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/11.1.0...HEAD
+[Unreleased]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/11.1.1...HEAD
+
+[11.1.1]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/11.1.0...11.1.1
 
 [11.1.0]: https://github.com/DjLeChuck/foundryvtt-system-channel-fear/compare/11.0.0...11.1.0
 
