@@ -54,6 +54,7 @@ export class ChannelFearActorSheet extends ActorSheet {
   _prepareItems(context) {
     const specialties = [];
     const weapons = [];
+    const items = [];
 
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
@@ -62,11 +63,14 @@ export class ChannelFearActorSheet extends ActorSheet {
         specialties.push(i);
       } else if ('weapon' === i.type) {
         weapons.push(i);
+      } else if ('item' === i.type) {
+        items.push(i);
       }
     }
 
     context.specialties = specialties;
     context.weapons = weapons;
+    context.items = items;
   }
 
   activateListeners(html) {

@@ -48,7 +48,8 @@
       "Weapon": "Arma",
       "Weapons": "armes",
       "XOutOfY": "{x} de {y}",
-      "Description": "Descripció"
+      "Description": "Descripció",
+      "Items": "Objectes"
     },
     "Weapons": {
       "Categories": {
@@ -111,6 +112,9 @@
         "SpecialtyFromTo": "{from}R > {to}R a especialitat",
         "AbilityBonusDesc": "+1D a aptitud",
         "ProfDefBonusDesc": "+1 deformació professional"
+      },
+      "Items": {
+        "Add": "Afegeix un objecte"
       }
     },
     "NpcSheet": {

@@ -9,7 +9,7 @@ export const preloadHandlebarsTemplates = function () {
     'systems/channel-fear/templates/actor/parts/actor-notes.hbs',
     'systems/channel-fear/templates/actor/parts/actor-resources.hbs',
     'systems/channel-fear/templates/actor/parts/actor-specialties.hbs',
-    'systems/channel-fear/templates/actor/parts/actor-weapons.hbs',
+    'systems/channel-fear/templates/actor/parts/actor-weapons-items.hbs',
     // Rolls partials
     'systems/channel-fear/templates/partials/roll/roll-card.hbs',
     'systems/channel-fear/templates/partials/roll/roll-dialog.hbs',

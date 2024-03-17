@@ -38,4 +38,37 @@
       </ul>
     </div>
   </div>
+
+  <h1 class="block-title">
+    {{localize "CF.Global.Items"}}
+
+    {{#if editable}}
+      <a class="item-control item-create add-btn" title="{{localize "CF.CharacterSheet.Items.Add"}}"
+         data-type="item">
+        <i class="fas fa-plus"></i>
+      </a>
+    {{/if}}
+  </h1>
+
+  <div class="block-content">
+    <div class="block-header-info small-info align-left">
+      <div class="flexrow">
+        <div class="flex2">
+          <strong>{{localize "CF.Global.Name"}}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="block-content-inner">
+      <ul>
+        {{#each items as |item id|}}
+          <li class="item flexrow flex-group-left" data-item-id="{{item._id}}">
+            <div class="flex-auto weapon-name">
+              <p><strong>{{item.name}}</strong></p>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </div>

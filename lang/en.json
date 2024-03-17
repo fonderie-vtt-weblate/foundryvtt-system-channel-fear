@@ -48,7 +48,8 @@
       "Weapon": "Weapon",
       "Weapons": "Weapons",
       "XOutOfY": "{x} out of {y}",
-      "Description": "Description"
+      "Description": "Description",
+      "Items": "Items"
     },
     "Weapons": {
       "Categories": {
@@ -111,6 +112,9 @@
         "SpecialtyFromTo": "{from}R > {to}R in specialty",
         "AbilityBonusDesc": "+1D in ability",
         "ProfDefBonusDesc": "+1 professional deformation"
+      },
+      "Items": {
+        "Add": "Add an item"
       }
     },
     "NpcSheet": {
