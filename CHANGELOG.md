@@ -11,10 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Ability to create items
 - Add item on actor's sheet
+- Update chat message on reroll
 
 ### Fixed
 
 - New item default label malformated
+- Error when no roll required
 
 ## [11.1.1] - 2024-01-25
 
