@@ -82,11 +82,26 @@
       "flags": {}
     }
   ],
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "lang/",
+        "scss/",
+        "templates/"
+      ]
+    }
+  },
   "url": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear",
   "manifest": "https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json",
   "download": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/archive/11.1.1.zip",
   "bugs": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/issues",
   "changelog": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/blob/main/CHANGELOG.md",
   "license": "./LICENSE",
-  "readme": "./README.md"
+  "readme": "./README.md",
+  "background": "systems/channel-fear/images/system_background.webp"
 }
