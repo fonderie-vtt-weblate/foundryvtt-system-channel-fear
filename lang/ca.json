@@ -3,6 +3,7 @@
   "TYPES.Actor.npc": "Rol secundari",
   "TYPES.Item.specialty": "Especialitat",
   "TYPES.Item.weapon": "Arma",
+  "TYPES.Item.item": "Objecte",
   "CF": {
     "Settings": {
       "HideProfileImage": {
@@ -46,7 +47,8 @@
       "Specialties": "Especialitats",
       "Weapon": "Arma",
       "Weapons": "armes",
-      "XOutOfY": "{x} de {y}"
+      "XOutOfY": "{x} de {y}",
+      "Description": "Descripció"
     },
     "Weapons": {
       "Categories": {

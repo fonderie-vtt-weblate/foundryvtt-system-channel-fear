@@ -1,0 +1,16 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{> "systems/channel-fear/templates/item/parts/simple-header.hbs"}}
+
+  <section>
+    <div class="flexcol">
+      <div>
+        <h1 class="block-title no-radius">
+          <label for="system.description">{{localize "CF.Global.Description"}}</label>
+        </h1>
+        <div class="wysiwyg-container">
+          {{editor system.description target="system.description" button=true editable=editable}}
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

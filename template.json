@@ -50,7 +50,8 @@
   "Item": {
     "types": [
       "specialty",
-      "weapon"
+      "weapon",
+      "item"
     ],
     "templates": {
       "with_ability_reroll": {
@@ -70,6 +71,9 @@
       ],
       "ability": "fig",
       "category": 1
+    },
+    "item": {
+      "description": ""
     }
   }
 }

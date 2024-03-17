@@ -12,6 +12,7 @@
 /* Styles limited to channelfear sheets */
 .channelfear {
   @import 'utils/reset';
+  @import 'components/common';
   @import 'components/forms';
   @import 'components/items';
   @import 'components/character-sheet';
