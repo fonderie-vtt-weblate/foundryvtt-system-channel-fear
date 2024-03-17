@@ -27,6 +27,12 @@ async function _handleReroll(e) {
     return;
   }
 
+  const message = await game.messages.get(e.currentTarget.closest('.chat-message').dataset.messageId);
+
+  if (!message) {
+    return;
+  }
+
   const {
     rerollUsable: usable,
     rerollAvailable: available,
@@ -36,7 +42,7 @@ async function _handleReroll(e) {
     type,
   } = data;
 
-  await Dice.reroll({ actor, available, bonus, difficulty, label, type, usable });
+  await Dice.reroll({ actor, available, bonus, difficulty, label, type, usable, message });
 }
 
 async function _handleWeaponDamages(e) {
