@@ -123,7 +123,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     const type = header.dataset.type;
     const data = duplicate(header.dataset);
     const name = game.i18n.format('CF.Global.NewItem', {
-      type: game.i18n.localize(`ITEM.Type${type.capitalize()}`).toLowerCase(),
+      type: game.i18n.localize(`TYPES.Item.${type.toLowerCase()}`).toLowerCase(),
     });
     const itemData = {
       name: name,
