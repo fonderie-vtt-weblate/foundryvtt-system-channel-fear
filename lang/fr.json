@@ -39,7 +39,7 @@
       "Difficulty": "Difficulté",
       "Edit": "Éditer",
       "Name": "Nom",
-      "NewItem": "Nouvelle {type}",
+      "NewItem": "Nouvel(le) {type}",
       "Rerolls": "Relances",
       "Reroll": "Relance",
       "RollDice": "Lancer les dés",
@@ -48,7 +48,8 @@
       "Weapon": "Arme",
       "Weapons": "Armes",
       "XOutOfY": "{x} sur {y}",
-      "Description": "Description"
+      "Description": "Description",
+      "Items": "Objets"
     },
     "Weapons": {
       "Categories": {
@@ -111,6 +112,9 @@
         "SpecialtyFromTo": "{from}R > {to}R en spécialité",
         "AbilityBonusDesc": "+1D en aptitude",
         "ProfDefBonusDesc": "+1 déformation professionnelle"
+      },
+      "Items": {
+        "Add": "Ajouter un objet"
       }
     },
     "NpcSheet": {
