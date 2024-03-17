@@ -1,4 +1,6 @@
 &.item {
+  min-height: 440px;
+
   .window-content {
     @include blue-to-gray-gradient;
   }

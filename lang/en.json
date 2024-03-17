@@ -3,6 +3,7 @@
   "TYPES.Actor.npc": "Second role",
   "TYPES.Item.specialty": "Specialty",
   "TYPES.Item.weapon": "Weapon",
+  "TYPES.Item.item": "Item",
   "CF": {
     "Settings": {
       "HideProfileImage": {
@@ -46,7 +47,8 @@
       "Specialties": "Specialties",
       "Weapon": "Weapon",
       "Weapons": "Weapons",
-      "XOutOfY": "{x} out of {y}"
+      "XOutOfY": "{x} out of {y}",
+      "Description": "Description"
     },
     "Weapons": {
       "Categories": {

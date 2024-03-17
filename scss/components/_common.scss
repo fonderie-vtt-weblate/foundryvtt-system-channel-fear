@@ -1,0 +1,16 @@
+.block-title {
+  color: #fff;
+  background-color: #000;
+  font-size: 1em;
+  margin: 0;
+  border-top-right-radius: 15px;
+  padding: 5px 0 5px 20px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: bold;
+
+  &.no-radius {
+    border-top-right-radius: inherit;
+    box-shadow: 0px -10px 10px -6px $c-black;
+  }
+}
