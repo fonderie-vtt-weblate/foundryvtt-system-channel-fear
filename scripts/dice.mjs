@@ -1,5 +1,8 @@
 export async function abilityCheck({ ability, label, actor }) {
-  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', actor.system.attributes.resource);
+  const {
+    difficulty,
+    resources,
+  } = await _getCheckOptions('CF.Rolls.AbilityCheck.Title', actor.system.attributes.resource);
 
   await _doCheck({
     dice: ability,
@@ -12,7 +15,10 @@ export async function abilityCheck({ ability, label, actor }) {
 
 export async function specialtyCheck(specialty) {
   const actor = specialty.actor;
-  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', actor.system.attributes.resource);
+  const {
+    difficulty,
+    resources,
+  } = await _getCheckOptions('CF.Rolls.SpecialtyCheck.Title', actor.system.attributes.resource);
 
   await _doCheck({
     dice: actor.system.abilities[specialty.system.ability],
@@ -30,7 +36,10 @@ export async function specialtyCheck(specialty) {
 
 export async function weaponCheck(weapon) {
   const actor = weapon.actor;
-  const { difficulty, resources } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', actor.system.attributes.resource);
+  const {
+    difficulty,
+    resources,
+  } = await _getCheckOptions('CF.Rolls.WeaponCheck.Title', actor.system.attributes.resource);
 
   await _doCheck({
     dice: actor.system.abilities[weapon.system.ability],
@@ -85,7 +94,7 @@ export async function useWeapon({ actor, dice, label, reroll }) {
 
   const chatContent = await renderTemplate('systems/channel-fear/templates/partials/roll/roll-card.hbs', templateData);
 
-  await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
+  await _createChatMessage(actor, rollResult, chatContent);
 }
 
 async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedResources, weapon }) {
@@ -157,7 +166,7 @@ async function _doCheck({ actor, bonus, dice, difficulty, reroll, title, usedRes
     weapon,
   });
 
-  await _createChatMessage(actor, rollResult, chatContent, CONST.CHAT_MESSAGE_TYPES.ROLL);
+  await _createChatMessage(actor, rollResult, chatContent);
   await _handleRollResult({ actor, canReroll: rerollData.can, difficulty, rollResult, usedResources });
 }
 
@@ -167,7 +176,7 @@ function _getRollResult(dice, bonus) {
     formula = `${bonus} + ${formula}`;
   }
 
-  return new Roll(formula).roll({ async: true });
+  return new Roll(formula).roll();
 }
 
 async function _rollNoRoll({ title, actor, difficulty, weapon }) {
@@ -181,18 +190,23 @@ async function _rollNoRoll({ title, actor, difficulty, weapon }) {
     weapon,
   });
 
-  _createChatMessage(actor, null, chatContent, CONST.CHAT_MESSAGE_TYPES.OTHER);
+  _createChatMessage(actor, null, chatContent, CONST.CHAT_MESSAGE_STYLES.OTHER);
 }
 
-function _createChatMessage(actor, rollResult, content, type) {
-  return ChatMessage.create({
+function _createChatMessage(actor, rollResult, content, type = null) {
+  const data = {
+    content,
     user: game.user.id,
     speaker: ChatMessage.getSpeaker({ actor }),
     roll: rollResult,
-    content: content,
     sound: CONFIG.sounds.dice,
-    type: type,
-  });
+  };
+
+  if (null !== type) {
+    data.type = type;
+  }
+
+  return ChatMessage.create(data);
 }
 
 async function _getCheckOptions(title, currentActorResource) {

@@ -1,6 +1,6 @@
 export class ChannelFearItemSheet extends ItemSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['channelfear', 'sheet', 'item'],
       submitOnChange: false,
       resizable: false,
@@ -39,10 +39,21 @@ export class ChannelFearItemSheet extends ItemSheet {
 
   _prepareAbilitiesData(context) {
     context.abilitiesList = CONFIG.CF.abilities;
+    context.rerollOptions = {
+      1: 1,
+      2: 2,
+      3: 3,
+    };
   }
 
   _prepareWeaponsData(context) {
     context.abilitiesList = CONFIG.CF.weaponsAbilities;
     context.weaponsCategories = CONFIG.CF.weaponsCategories;
+    context.rerollOptions = {
+      0: 0,
+      1: 1,
+      2: 2,
+      3: 3,
+    };
   }
 }

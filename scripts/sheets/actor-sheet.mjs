@@ -2,7 +2,7 @@ import * as Dice from '../dice.mjs';
 
 export class ChannelFearActorSheet extends ActorSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['channelfear', 'sheet', 'actor'],
       template: 'systems/channel-fear/templates/actor/actor-sheet.hbs',
       width: 800,
