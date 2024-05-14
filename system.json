@@ -2,17 +2,17 @@
   "id": "channel-fear",
   "title": "Channel Fear",
   "description": "The Channel Fear system for FoundryVTT",
-  "version": "11.1.1",
+  "version": "#{VERSION}#",
   "compatibility": {
-    "minimum": "11",
-    "verified": "11"
+    "minimum": 11,
+    "verified": "12.322"
   },
   "authors": [
     {
       "name": "DjLeChuck",
       "email": "djlechuck@gmail.com",
       "url": "https://github.com/djlechuck/",
-      "discord": "DjLeChuck#9015",
+      "discord": "djlechuck",
       "flags": {}
     }
   ],
@@ -82,11 +82,19 @@
       "flags": {}
     }
   ],
-  "url": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear",
-  "manifest": "https://raw.githubusercontent.com/DjLeChuck/foundryvtt-system-channel-fear/main/system.json",
-  "download": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/archive/11.1.1.zip",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
   "bugs": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/issues",
   "changelog": "https://github.com/DjLeChuck/foundryvtt-system-channel-fear/blob/main/CHANGELOG.md",
   "license": "./LICENSE",
-  "readme": "./README.md"
+  "readme": "./README.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/channel-fear/images/channel-fear-background.webp",
+      "thumbnail": "systems/channel-fear/images/channel-fear-background.webp"
+    }
+  ],
+  "background": "systems/channel-fear/images/channel-fear-background.webp"
 }
