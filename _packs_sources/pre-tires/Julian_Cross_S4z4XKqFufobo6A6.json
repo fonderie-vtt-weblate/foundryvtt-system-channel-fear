@@ -1,0 +1,298 @@
+{
+  "_id": "S4z4XKqFufobo6A6",
+  "name": "Julian Cross",
+  "type": "character",
+  "img": "systems/channel-fear/images/actors/julianc.webp",
+  "system": {
+    "keywords": "61 ans. Caucasien. Grand.\nCheveux courts blancs. Chapeau panama.\nCol roulé. Long pardessus marron.",
+    "abilities": {
+      "act": 4,
+      "kno": 3,
+      "bea": 3,
+      "for": 3,
+      "per": 4,
+      "imp": 3,
+      "knh": 5,
+      "fig": 3,
+      "sel": 4,
+      "aim": 3
+    },
+    "attributes": {
+      "health": 6,
+      "resource": 6,
+      "evolution": 0
+    },
+    "notes": "",
+    "info": {
+      "profile": "Médium",
+      "profdef": "Sensibilité : en utilisant 1 point de Ressource, Julian peut sentir si un esprit hante le lieu précis où il se trouve."
+    },
+    "biography": ""
+  },
+  "prototypeToken": {
+    "name": "Julian Cross",
+    "texture": {
+      "src": "systems/channel-fear/images/actors/julianc.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "attenuation": 0.5,
+      "negative": false,
+      "priority": 0,
+      "color": null
+    },
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "locked": false,
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "889IUDHjjOD631nb",
+      "name": "Poing & cie",
+      "type": "weapon",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "fig",
+        "reroll": 0,
+        "category": 1
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aILtFenTlwnV3q4n"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "_key": "!actors.items!S4z4XKqFufobo6A6.889IUDHjjOD631nb"
+    },
+    {
+      "_id": "DdBivpeN9FsPJ1j1",
+      "name": "Spiritisme",
+      "type": "specialty",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "knh",
+        "reroll": 2
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!S4z4XKqFufobo6A6.DdBivpeN9FsPJ1j1"
+    },
+    {
+      "_id": "cyhOJm6dFlOazDCP",
+      "name": "Discrétion",
+      "type": "specialty",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "sel",
+        "reroll": 1
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.BihLXYm3FzYteoN9"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!S4z4XKqFufobo6A6.cyhOJm6dFlOazDCP"
+    },
+    {
+      "_id": "5DjJ8xTNKF6NWPNE",
+      "name": "Maîtrise de soi",
+      "type": "specialty",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "sel",
+        "reroll": 1
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.P1UsALjaqjQfyzz8"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!S4z4XKqFufobo6A6.5DjJ8xTNKF6NWPNE"
+    },
+    {
+      "_id": "kHbWsWcel4epCy27",
+      "name": "Volonté",
+      "type": "specialty",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "sel",
+        "reroll": 1
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.9qC5FNxO6UWhyliE"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!S4z4XKqFufobo6A6.kHbWsWcel4epCy27"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.319",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!actors!S4z4XKqFufobo6A6"
+}

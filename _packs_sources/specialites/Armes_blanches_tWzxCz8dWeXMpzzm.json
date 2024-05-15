@@ -1,0 +1,36 @@
+{
+  "_id": "tWzxCz8dWeXMpzzm",
+  "name": "Armes blanches",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "kWorMoTOEaq1MF3l",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-se-battre.EgS4q2uNjug1boqh"
+    },
+    "cf": {
+      "id": "temp_i5w6rwpu3"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675272552,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!tWzxCz8dWeXMpzzm"
+}

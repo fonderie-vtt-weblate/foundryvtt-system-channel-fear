@@ -1,0 +1,19 @@
+{
+  "name": "4. Moyennes",
+  "sorting": "m",
+  "folder": null,
+  "type": "Item",
+  "_id": "1tdz81ypNkqTg6Sl",
+  "sort": 0,
+  "color": "#e67e55",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688675636732,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!1tdz81ypNkqTg6Sl"
+}

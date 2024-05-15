@@ -1,0 +1,36 @@
+{
+  "_id": "b0bbMNwKL3Teq7sG",
+  "name": "Lancer (avec précision)",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "Un7UV8NoJpINRklq",
+  "sort": 150000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-viser.n4AquhG62OnSOZor"
+    },
+    "cf": {
+      "id": "temp_vfan5r6tl5t"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675294250,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!b0bbMNwKL3Teq7sG"
+}

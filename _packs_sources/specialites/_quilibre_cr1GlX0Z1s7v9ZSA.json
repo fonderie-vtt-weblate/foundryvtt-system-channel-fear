@@ -1,0 +1,36 @@
+{
+  "_id": "cr1GlX0Z1s7v9ZSA",
+  "name": "Équilibre",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "Tvg72er3EUHzk2IX",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-agir.Mkxz4L7geyPY38vv"
+    },
+    "cf": {
+      "id": "temp_fh4a98wo84j"
+    }
+  },
+  "system": {
+    "ability": "act",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675341708,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!cr1GlX0Z1s7v9ZSA"
+}

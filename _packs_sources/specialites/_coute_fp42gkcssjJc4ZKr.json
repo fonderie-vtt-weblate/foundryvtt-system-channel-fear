@@ -1,0 +1,36 @@
+{
+  "_id": "fp42gkcssjJc4ZKr",
+  "name": "Écoute",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "t2Y9CUCamqLLX5yY",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-percevoir.DOobk5avBCjwM2Vy"
+    },
+    "cf": {
+      "id": "temp_e2c8bq6alf4"
+    }
+  },
+  "system": {
+    "ability": "per",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675321824,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!fp42gkcssjJc4ZKr"
+}

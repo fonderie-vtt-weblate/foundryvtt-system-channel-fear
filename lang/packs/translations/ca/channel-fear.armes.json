@@ -1,0 +1,103 @@
+{
+	"label": "Armes",
+	"folders": {
+		"1. Mains nues": "1. Punys & CIA",
+		"2. Très légères": "2. Molt lleugera",
+		"3. Légères": "3. Lleugera",
+		"4. Moyennes": "4. Mitjana",
+		"5. Lourdes": "5. Pesada",
+		"Normale (0R)": "Normal (0R)",
+		"Efficace (1R)": "Eficient (1R)",
+		"Dangereuse (2R)": "Perillosa (2R)",
+		"Meurtrière (3R)": "Mortal (3R)"
+	},
+	"entries": {
+		"Barre à mine": {
+			"name": "Crowbar"
+		},
+		"Batte": {
+			"name": "Bat"
+		},
+		"Brique": {
+			"name": "Brick"
+		},
+		"Chaîne": {
+			"name": "Chain"
+		},
+		"Colt 45": {
+			"name": "Colt 45"
+		},
+		"Cran d'arrêt": {
+			"name": "Switchblade"
+		},
+		"Explosifs": {
+			"name": "Explosives"
+		},
+		"Fusil à pompe": {
+			"name": "Shotgun"
+		},
+		"Fusil d'assaut": {
+			"name": "Assault rifle"
+		},
+		"Grenades": {
+			"name": "Granades"
+		},
+		"Griffes": {
+			"name": "Claws"
+		},
+		"Hache d'incendie": {
+			"name": "Fire ax"
+		},
+		"Lance-pierre": {
+			"name": "Slingshot"
+		},
+		"Machette": {
+			"name": "Machete"
+		},
+		"Masse": {
+			"name": "Mass"
+		},
+		"Matraque": {
+			"name": "Baton"
+		},
+		"Mitrailleur": {
+			"name": "Rifle machine gun"
+		},
+		"Mitrailleuse": {
+			"name": "Machine gun"
+		},
+		"Pelle": {
+			"name": "Shovel"
+		},
+		"Pistolet": {
+			"name": "Gun"
+		},
+		"Pistolet mitrailleur": {
+			"name": "Submachine gun"
+		},
+		"Planche de bois": {
+			"name": "Plank of wood"
+		},
+		"Poing & cie": {
+			"name": "Fist & cie"
+		},
+		"Poing américain": {
+			"name": "Brass knuckles"
+		},
+		"Rasoir": {
+			"name": "Shaver"
+		},
+		"Scalpel": {
+			"name": "Bisturí"
+		},
+		"Taser": {
+			"name": "Taser"
+		},
+		"Tronçonneuse": {
+			"name": "Chain saw"
+		},
+		"Tuyau": {
+			"name": "Pipe"
+		}
+	}
+}

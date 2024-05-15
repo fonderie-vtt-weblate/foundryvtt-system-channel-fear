@@ -1,0 +1,19 @@
+{
+  "name": "5. Lourdes",
+  "sorting": "m",
+  "folder": null,
+  "type": "Item",
+  "_id": "NVa80nKkHWTRi2wm",
+  "sort": 0,
+  "color": "#fe5958",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688675639423,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!NVa80nKkHWTRi2wm"
+}

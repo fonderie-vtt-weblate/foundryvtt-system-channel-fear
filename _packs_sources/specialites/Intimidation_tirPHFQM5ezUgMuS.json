@@ -1,0 +1,36 @@
+{
+  "_id": "tirPHFQM5ezUgMuS",
+  "name": "Intimidation",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "HN1neBoZkDymvWfA",
+  "sort": 150000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-simposer.v6hxpA9x2ch96D4L"
+    },
+    "cf": {
+      "id": "temp_daa6uzq1mef"
+    }
+  },
+  "system": {
+    "ability": "imp",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675402189,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!tirPHFQM5ezUgMuS"
+}

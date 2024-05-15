@@ -1,0 +1,268 @@
+{
+  "_id": "gAqJ9jOtv4BXXv77",
+  "name": "Archie “Bulldog” Grimm",
+  "type": "character",
+  "img": "systems/channel-fear/images/actors/archieg.webp",
+  "system": {
+    "keywords": "53 ans. Caucasien. Taille moyenne.\nCheveux blancs. Costume noir.\nPardessus beige. Mine renfrognée.",
+    "abilities": {
+      "act": 4,
+      "kno": 3,
+      "bea": 3,
+      "for": 4,
+      "per": 5,
+      "imp": 3,
+      "knh": 3,
+      "fig": 3,
+      "sel": 3,
+      "aim": 4
+    },
+    "attributes": {
+      "health": 6,
+      "resource": 6,
+      "evolution": 0
+    },
+    "notes": "",
+    "info": {
+      "profile": "Ancien policier",
+      "profdef": "Psychologue : en utilisant 1 point de Ressource, Archie peut savoir si on lui ment ou omet sciemment des informations."
+    },
+    "biography": ""
+  },
+  "prototypeToken": {
+    "name": "Archie “Bulldog” Grimm",
+    "texture": {
+      "src": "systems/channel-fear/images/actors/archieg.webp",
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "displayName": 0,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "attenuation": 0.5,
+      "negative": false,
+      "priority": 0,
+      "color": null
+    },
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "sight": {
+      "angle": 360,
+      "enabled": false,
+      "range": 0,
+      "brightness": 1,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "appendNumber": false,
+    "prependAdjective": false,
+    "hexagonalShape": 0,
+    "locked": false,
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    }
+  },
+  "items": [
+    {
+      "_id": "v3DqUVm1B02aqYNH",
+      "name": "Observation",
+      "type": "specialty",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "per",
+        "reroll": 2
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.l5HLt00LyX54LUfq"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!gAqJ9jOtv4BXXv77.v3DqUVm1B02aqYNH"
+    },
+    {
+      "_id": "Q0boLnpOe88eFX85",
+      "name": "Armes à feu",
+      "type": "specialty",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "aim",
+        "reroll": 2
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.nXwqcV4qLusRol0c"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!gAqJ9jOtv4BXXv77.Q0boLnpOe88eFX85"
+    },
+    {
+      "_id": "GeiO5kCLZelVSNYG",
+      "name": "Poing & cie",
+      "type": "weapon",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "fig",
+        "reroll": 0,
+        "category": 1
+      },
+      "effects": [],
+      "folder": null,
+      "flags": {
+        "core": {
+          "sourceId": "Item.aILtFenTlwnV3q4n"
+        }
+      },
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "_key": "!actors.items!gAqJ9jOtv4BXXv77.GeiO5kCLZelVSNYG"
+    },
+    {
+      "_id": "tIEvWL8AokeWug3J",
+      "name": "Colt 45",
+      "type": "weapon",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "ability": "aim",
+        "reroll": 2,
+        "category": 4,
+        "contact": false
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "12.319",
+        "systemId": null,
+        "systemVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!gAqJ9jOtv4BXXv77.tIEvWL8AokeWug3J"
+    }
+  ],
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "12.319",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "ownership": {
+    "default": 0
+  },
+  "_key": "!actors!gAqJ9jOtv4BXXv77"
+}

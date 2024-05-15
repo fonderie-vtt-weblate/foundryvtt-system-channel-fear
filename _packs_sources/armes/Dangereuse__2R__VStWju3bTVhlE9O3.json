@@ -1,0 +1,19 @@
+{
+  "name": "Dangereuse (2R)",
+  "sorting": "a",
+  "folder": "NVa80nKkHWTRi2wm",
+  "type": "Item",
+  "_id": "VStWju3bTVhlE9O3",
+  "sort": -25000,
+  "color": "#dd8854",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.306",
+    "createdTime": null,
+    "modifiedTime": 1690485856774,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!VStWju3bTVhlE9O3"
+}

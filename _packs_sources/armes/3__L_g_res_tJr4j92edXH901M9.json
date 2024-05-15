@@ -1,0 +1,19 @@
+{
+  "name": "3. Légères",
+  "sorting": "m",
+  "folder": null,
+  "type": "Item",
+  "_id": "tJr4j92edXH901M9",
+  "sort": 0,
+  "color": "#c79b51",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688675634330,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!tJr4j92edXH901M9"
+}

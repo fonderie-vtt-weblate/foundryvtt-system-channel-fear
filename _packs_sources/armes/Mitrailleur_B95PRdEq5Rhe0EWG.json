@@ -1,0 +1,38 @@
+{
+  "_id": "B95PRdEq5Rhe0EWG",
+  "name": "Mitrailleur",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "VStWju3bTVhlE9O3",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-lourdes.B95PRdEq5Rhe0EWG"
+    },
+    "cf": {
+      "id": "temp_h6mpgbz7df"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 2,
+    "category": 5,
+    "contact": false
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675894656,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!B95PRdEq5Rhe0EWG"
+}

@@ -1,0 +1,36 @@
+{
+  "_id": "dlyDO4a6JgSwQWXA",
+  "name": "Lancer (avec force)",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "TiHRUSAd5F3k5D5x",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-forcer.rlY3XeOlshDzo0rl"
+    },
+    "cf": {
+      "id": "temp_hwuuokd8kxm"
+    }
+  },
+  "system": {
+    "ability": "for",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675409504,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!dlyDO4a6JgSwQWXA"
+}

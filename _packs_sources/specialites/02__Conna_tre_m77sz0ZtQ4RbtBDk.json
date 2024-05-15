@@ -1,0 +1,19 @@
+{
+  "name": "02. Connaître",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "m77sz0ZtQ4RbtBDk",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688675189609,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!m77sz0ZtQ4RbtBDk"
+}

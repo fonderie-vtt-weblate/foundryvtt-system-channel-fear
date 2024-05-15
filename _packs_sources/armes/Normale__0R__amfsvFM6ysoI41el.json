@@ -1,0 +1,19 @@
+{
+  "name": "Normale (0R)",
+  "sorting": "a",
+  "folder": "NVa80nKkHWTRi2wm",
+  "type": "Item",
+  "_id": "amfsvFM6ysoI41el",
+  "sort": -100000,
+  "color": "#4bcc46",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.306",
+    "createdTime": null,
+    "modifiedTime": 1690485854410,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!amfsvFM6ysoI41el"
+}

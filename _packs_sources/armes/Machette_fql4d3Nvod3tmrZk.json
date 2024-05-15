@@ -1,0 +1,37 @@
+{
+  "_id": "fql4d3Nvod3tmrZk",
+  "name": "Machette",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "k3lCQ6RwBXVVv79l",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-moyennes.fql4d3Nvod3tmrZk"
+    },
+    "cf": {
+      "id": "temp_l4bpxglod9e"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 1,
+    "category": 4
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675866654,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!fql4d3Nvod3tmrZk"
+}

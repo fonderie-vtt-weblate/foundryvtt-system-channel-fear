@@ -1,0 +1,37 @@
+{
+  "_id": "c5nfGTBHSKrOChc3",
+  "name": "Tuyau",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "CXxEbgb7QeizYnqB",
+  "sort": 150000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-legeres.c5nfGTBHSKrOChc3"
+    },
+    "cf": {
+      "id": "temp_g6upzc5jcfe"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 1,
+    "category": 3
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675990105,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!c5nfGTBHSKrOChc3"
+}

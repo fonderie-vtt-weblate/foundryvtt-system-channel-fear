@@ -1,0 +1,37 @@
+{
+  "_id": "KjE4lVr350mT4C3Z",
+  "name": "Pelle",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "CXxEbgb7QeizYnqB",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-legeres.KjE4lVr350mT4C3Z"
+    },
+    "cf": {
+      "id": "temp_g6upzc5jcfe"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 1,
+    "category": 3
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675922153,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!KjE4lVr350mT4C3Z"
+}

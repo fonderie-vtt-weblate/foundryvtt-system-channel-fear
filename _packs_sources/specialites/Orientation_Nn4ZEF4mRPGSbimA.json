@@ -1,0 +1,36 @@
+{
+  "_id": "Nn4ZEF4mRPGSbimA",
+  "name": "Orientation",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "t2Y9CUCamqLLX5yY",
+  "sort": 150000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-percevoir.5SGVu85W4PBIP4nK"
+    },
+    "cf": {
+      "id": "temp_e2c8bq6alf4"
+    }
+  },
+  "system": {
+    "ability": "per",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675329835,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!Nn4ZEF4mRPGSbimA"
+}

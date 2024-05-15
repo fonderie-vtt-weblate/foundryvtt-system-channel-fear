@@ -1,6 +1,7 @@
 # App
 assets/
 packs/
+!lang/packs
 
 # Yarn
 .pnp.*

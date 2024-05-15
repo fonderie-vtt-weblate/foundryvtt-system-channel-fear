@@ -1,0 +1,38 @@
+{
+  "_id": "lUANzgvg9rQeww6M",
+  "name": "Fusil d'assaut",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "VStWju3bTVhlE9O3",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-lourdes.lUANzgvg9rQeww6M"
+    },
+    "cf": {
+      "id": "temp_h6mpgbz7df"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 2,
+    "category": 5,
+    "contact": false
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675827490,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!lUANzgvg9rQeww6M"
+}

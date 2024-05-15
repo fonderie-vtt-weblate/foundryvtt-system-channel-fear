@@ -1,0 +1,37 @@
+{
+  "_id": "NpvKzr8byZGiBxfu",
+  "name": "Griffes",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "mLi7nmq0beqNKTW7",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-a-mains-nues.NpvKzr8byZGiBxfu"
+    },
+    "cf": {
+      "id": "temp_ftu83rd5xo9"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 1,
+    "category": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675837504,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!NpvKzr8byZGiBxfu"
+}

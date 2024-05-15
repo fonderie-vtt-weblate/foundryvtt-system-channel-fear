@@ -1,0 +1,37 @@
+{
+  "_id": "aILtFenTlwnV3q4n",
+  "name": "Poing & cie",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "GwXUWVQwNaeXTjX3",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-a-mains-nues.aILtFenTlwnV3q4n"
+    },
+    "cf": {
+      "id": "temp_8nouqdysmuy"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 0,
+    "category": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675950371,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!aILtFenTlwnV3q4n"
+}

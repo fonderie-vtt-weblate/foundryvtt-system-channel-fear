@@ -1,0 +1,19 @@
+{
+  "name": "Efficace (1R)",
+  "sorting": "a",
+  "folder": "1tdz81ypNkqTg6Sl",
+  "type": "Item",
+  "_id": "k3lCQ6RwBXVVv79l",
+  "sort": -50000,
+  "color": "#adac4e",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.306",
+    "createdTime": null,
+    "modifiedTime": 1690485849424,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!k3lCQ6RwBXVVv79l"
+}

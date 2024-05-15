@@ -1,0 +1,36 @@
+{
+  "_id": "iUwthUjj8X1jullA",
+  "name": "Résistance (immunitaire)",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "bdn6xDcoplCndcVe",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-endurer.H5vKmzTa07sgyV7J"
+    },
+    "cf": {
+      "id": "temp_4h1qo415bcu"
+    }
+  },
+  "system": {
+    "ability": "bea",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675387734,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!iUwthUjj8X1jullA"
+}

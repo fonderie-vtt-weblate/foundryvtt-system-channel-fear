@@ -1,0 +1,36 @@
+{
+  "_id": "ydzj8UitPdCfnKcJ",
+  "name": "Actualité",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "m77sz0ZtQ4RbtBDk",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-connaitre.b9rbj1Pad0p7k98F"
+    },
+    "cf": {
+      "id": "temp_theumr5tla"
+    }
+  },
+  "system": {
+    "ability": "kno",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675249923,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!ydzj8UitPdCfnKcJ"
+}

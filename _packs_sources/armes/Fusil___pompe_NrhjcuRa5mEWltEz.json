@@ -1,0 +1,38 @@
+{
+  "_id": "NrhjcuRa5mEWltEz",
+  "name": "Fusil à pompe",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "S0PCFriiyeAzW8Qj",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-moyennes.NrhjcuRa5mEWltEz"
+    },
+    "cf": {
+      "id": "temp_h82uu5ms7qh"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 3,
+    "category": 4,
+    "contact": false
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675815338,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!NrhjcuRa5mEWltEz"
+}

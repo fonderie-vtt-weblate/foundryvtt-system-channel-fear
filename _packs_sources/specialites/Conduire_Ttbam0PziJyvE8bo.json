@@ -1,0 +1,36 @@
+{
+  "_id": "Ttbam0PziJyvE8bo",
+  "name": "Conduire",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "5yxC42fD0hgtZ5DH",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-savoir-faire.NzHl5xfmWlTftAKi"
+    },
+    "cf": {
+      "id": "temp_8ba12m3xt13"
+    }
+  },
+  "system": {
+    "ability": "knh",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675307166,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!Ttbam0PziJyvE8bo"
+}

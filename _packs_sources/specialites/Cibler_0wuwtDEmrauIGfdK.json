@@ -1,0 +1,36 @@
+{
+  "_id": "0wuwtDEmrauIGfdK",
+  "name": "Cibler",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "Un7UV8NoJpINRklq",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-viser.0Kcw7tWQAbz2HyvC"
+    },
+    "cf": {
+      "id": "temp_vfan5r6tl5t"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675290717,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!0wuwtDEmrauIGfdK"
+}

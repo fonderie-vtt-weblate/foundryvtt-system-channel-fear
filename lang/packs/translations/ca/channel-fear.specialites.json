@@ -1,0 +1,122 @@
+{
+	"label": "Especialitats",
+	"folders": {
+		"01. Agir": "01. Actuar",
+		"02. Connaître": "02. Conèixer",
+		"03. Endurer": "03. Aguantar",
+		"04. Forcer": "04. Forçar",
+		"05. Percevoir": "05. Percebre",
+		"06. S'imposer": "06. Imposar",
+		"07. Savoir-faire": "07. Perícia",
+		"08. Se battre": "08. Lluitar",
+		"09. Se contrôler": "09. Controlar-se",
+		"10. Viser": "10. Apuntar"
+	},
+	"entries": {
+		"Actualité": {
+			"name": "News"
+		},
+		"Argumentation": {
+			"name": "Argument"
+		},
+		"Armes à feu": {
+			"name": "Fire arms"
+		},
+		"Armes blanches": {
+			"name": "Cold steel"
+		},
+		"Armes improvisées": {
+			"name": "Improvised weapons"
+		},
+		"Cibler": {
+			"name": "Target"
+		},
+		"Conduire": {
+			"name": "Drive"
+		},
+		"Course": {
+			"name": "Run"
+		},
+		"Démonologie": {
+			"name": "Demonology"
+		},
+		"Discrétion": {
+			"name": "Discretion"
+		},
+		"Écoute": {
+			"name": "Listen"
+		},
+		"Équilibre": {
+			"name": "Balance"
+		},
+		"Exorcisme": {
+			"name": "Exorcism"
+		},
+		"Gestion": {
+			"name": "Management"
+		},
+		"Informatique": {
+			"name": "Computer science"
+		},
+		"Intimidation": {
+			"name": "Intimidation"
+		},
+		"Lancer (avec force)": {
+			"name": "Throw (with force)"
+		},
+		"Lancer (avec précision)": {
+			"name": "Throw (accurately)"
+		},
+		"Mains nues": {
+			"name": "Bare hands"
+		},
+		"Maîtrise de soi": {
+			"name": "Self control"
+		},
+		"Mécanique": {
+			"name": "Mechanic"
+		},
+		"Observation": {
+			"name": "Observation"
+		},
+		"Orientation": {
+			"name": "Orientation"
+		},
+		"Paranormal": {
+			"name": "Paranormal"
+		},
+		"Pousser": {
+			"name": "Push"
+		},
+		"Premiers secours": {
+			"name": "First aid"
+		},
+		"Réflexe": {
+			"name": "Reflex"
+		},
+		"Réseau": {
+			"name": "Network"
+		},
+		"Résistance (immunitaire)": {
+			"name": "Resistance (immune)"
+		},
+		"Respiration": {
+			"name": "Breathing"
+		},
+		"Saut": {
+			"name": "Jump"
+		},
+		"Spiritisme": {
+			"name": "Spiritism"
+		},
+		"Technologie": {
+			"name": "Technology"
+		},
+		"Tirer": {
+			"name": "Pull"
+		},
+		"Volonté": {
+			"name": "Will"
+		}
+	}
+}

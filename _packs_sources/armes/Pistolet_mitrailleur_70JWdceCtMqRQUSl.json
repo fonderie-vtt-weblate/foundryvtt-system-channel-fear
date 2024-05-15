@@ -1,0 +1,38 @@
+{
+  "_id": "70JWdceCtMqRQUSl",
+  "name": "Pistolet mitrailleur",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "iW9QkqCf5JOd6Ai4",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-lourdes.70JWdceCtMqRQUSl"
+    },
+    "cf": {
+      "id": "temp_n1sjmnky7sb"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 1,
+    "category": 5,
+    "contact": false
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675902053,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!70JWdceCtMqRQUSl"
+}

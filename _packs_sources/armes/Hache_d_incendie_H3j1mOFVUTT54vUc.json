@@ -1,0 +1,37 @@
+{
+  "_id": "H3j1mOFVUTT54vUc",
+  "name": "Hache d'incendie",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "5WxxvSochc9rtZW8",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-moyennes.H3j1mOFVUTT54vUc"
+    },
+    "cf": {
+      "id": "temp_uz0q302vv5"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 2,
+    "category": 4
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675849171,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!H3j1mOFVUTT54vUc"
+}

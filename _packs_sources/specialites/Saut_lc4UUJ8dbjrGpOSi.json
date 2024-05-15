@@ -1,0 +1,36 @@
+{
+  "_id": "lc4UUJ8dbjrGpOSi",
+  "name": "Saut",
+  "type": "specialty",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "Tvg72er3EUHzk2IX",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.specialites-agir.D6K8rwDRnLEenKvw"
+    },
+    "cf": {
+      "id": "temp_fh4a98wo84j"
+    }
+  },
+  "system": {
+    "ability": "act",
+    "reroll": 1
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675358287,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!lc4UUJ8dbjrGpOSi"
+}

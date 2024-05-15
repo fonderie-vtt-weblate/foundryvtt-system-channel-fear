@@ -1,0 +1,19 @@
+{
+  "name": "03. Endurer",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "bdn6xDcoplCndcVe",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688675191731,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!bdn6xDcoplCndcVe"
+}

@@ -1,0 +1,37 @@
+{
+  "_id": "A3KOU7fDy61QweH8",
+  "name": "Barre à mine",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "niMiCjrP0NIDkjA5",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-moyennes.A3KOU7fDy61QweH8"
+    },
+    "cf": {
+      "id": "temp_qrp9ubxv5s"
+    }
+  },
+  "system": {
+    "ability": "fig",
+    "reroll": 0,
+    "category": 4
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675756893,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!A3KOU7fDy61QweH8"
+}

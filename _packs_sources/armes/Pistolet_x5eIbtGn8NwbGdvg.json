@@ -1,0 +1,38 @@
+{
+  "_id": "x5eIbtGn8NwbGdvg",
+  "name": "Pistolet",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "5WxxvSochc9rtZW8",
+  "sort": 200000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-moyennes.x5eIbtGn8NwbGdvg"
+    },
+    "cf": {
+      "id": "temp_uz0q302vv5"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 2,
+    "category": 4,
+    "contact": false
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675933672,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!x5eIbtGn8NwbGdvg"
+}

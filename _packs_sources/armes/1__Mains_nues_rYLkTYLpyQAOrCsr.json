@@ -1,0 +1,19 @@
+{
+  "name": "1. Mains nues",
+  "sorting": "m",
+  "folder": null,
+  "type": "Item",
+  "_id": "rYLkTYLpyQAOrCsr",
+  "sort": 0,
+  "color": "#4bcc46",
+  "flags": {},
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "11.304",
+    "createdTime": null,
+    "modifiedTime": 1688675627273,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H"
+  },
+  "_key": "!folders!rYLkTYLpyQAOrCsr"
+}

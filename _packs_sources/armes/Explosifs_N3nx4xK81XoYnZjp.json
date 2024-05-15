@@ -1,0 +1,38 @@
+{
+  "_id": "N3nx4xK81XoYnZjp",
+  "name": "Explosifs",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "effects": [],
+  "folder": "amfsvFM6ysoI41el",
+  "sort": 100000,
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.channel-fear.armes-lourdes.N3nx4xK81XoYnZjp"
+    },
+    "cf": {
+      "id": "temp_qeuaayp5nnr"
+    }
+  },
+  "system": {
+    "ability": "aim",
+    "reroll": 0,
+    "category": 5,
+    "contact": false
+  },
+  "ownership": {
+    "default": 0,
+    "dJZjxyDABm87Jo4x": 3
+  },
+  "_stats": {
+    "systemId": "channel-fear",
+    "systemVersion": "11.0.0",
+    "coreVersion": "12.319",
+    "createdTime": null,
+    "modifiedTime": 1688675800661,
+    "lastModifiedBy": "KnH9Pa8Utuie5f6H",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!N3nx4xK81XoYnZjp"
+}
