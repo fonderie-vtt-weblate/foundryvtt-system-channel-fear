@@ -125,7 +125,7 @@ export class ChannelFearActorSheet extends ActorSheet {
     event.preventDefault();
     const header = event.currentTarget;
     const type = header.dataset.type;
-    const data = duplicate(header.dataset);
+    const data = foundry.utils.duplicate(header.dataset);
     const name = game.i18n.format('CF.Global.NewItem', {
       type: game.i18n.localize(`TYPES.Item.${type.toLowerCase()}`).toLowerCase(),
     });
