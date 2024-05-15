@@ -1,12 +1,10 @@
 {
   "name": "channel-fear",
-  "version": "1.0.0",
-  "description": "CSS compiler for the Channel Fear system",
+  "type": "module",
   "scripts": {
-    "build": "gulp build",
-    "compile": "gulp css",
-    "watch": "gulp",
-    "gulp": "gulp"
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "pack-packs": "node pack-packs.mjs"
   },
   "browserslist": [
     "last 3 versions"
@@ -15,14 +13,16 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.53.0"
+    "@foundryvtt/foundryvtt-cli": "^1.0.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "rollup": "^4.16.4",
+    "rollup-plugin-sass": "^1.12.22"
   },
   "volta": {
-    "node": "16.16.0",
-    "yarn": "1.22.19"
+    "node": "18.17.1",
+    "yarn": "4.2.2"
   }
 }

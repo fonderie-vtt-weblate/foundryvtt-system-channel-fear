@@ -1,3 +1,5 @@
+import '../scss/channel-fear.scss';
+
 import { ChannelFearActor } from './documents/actor.mjs';
 import { ChannelFearItem } from './documents/item.mjs';
 import { ChannelFearActorSheet } from './sheets/actor-sheet.mjs';

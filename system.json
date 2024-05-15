@@ -7,6 +7,20 @@
     "minimum": 11,
     "verified": "12.322"
   },
+  "flags": {
+    "hotReload": {
+      "extensions": [
+        "css",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "lang/",
+        "assets/",
+        "templates/"
+      ]
+    }
+  },
   "authors": [
     {
       "name": "DjLeChuck",
@@ -17,10 +31,10 @@
     }
   ],
   "esmodules": [
-    "scripts/channel-fear.mjs"
+    "assets/channel-fear.js"
   ],
   "styles": [
-    "styles/channel-fear.css"
+    "assets/channel-fear.css"
   ],
   "packs": [
     {

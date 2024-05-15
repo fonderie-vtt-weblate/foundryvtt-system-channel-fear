@@ -1,12 +1,11 @@
-# IDE
-.idea/
-.vs/
+# App
+assets/
 
-# Node Modules
-node_modules/
-npm-debug.log
-
-# Foundry
-*.lock
-jsconfig.json
-foundry
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
