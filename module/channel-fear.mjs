@@ -44,28 +44,17 @@ Hooks.on('init', function () {
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('channelfear', ChannelFearItemSheet, { makeDefault: true });
 
-  if (typeof Babele !== 'undefined') {
-    Babele.get().setSystemTranslationsDir('packs/translations');
-  }
-
   registerHandlebarsHelper();
   registerSettings();
   preloadHandlebarsTemplates();
 });
 
 Hooks.once('ready', async function () {
-  const logo = document.getElementById('logo');
-  logo.src = '/systems/channel-fear/images/logo.webp';
-  logo.removeAttribute('height');
-  logo.classList.add('loaded');
+  if ('fr' !== game.i18n.lang && typeof Babele !== 'undefined') {
+    Babele.get().setSystemTranslationsDir('lang/packs/translations');
+  }
 
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
-});
-
-Hooks.on('renderPause', (app, html, options) => {
-  if (options.paused) {
-    html.find('img')[0].src = 'systems/channel-fear/images/logo.webp';
-  }
 });
 
 Hooks.on('renderChatMessage', (app, html, data) => {

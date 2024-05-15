@@ -19,14 +19,14 @@
   }
 
   .banner-yno {
-    background-color: $c-black;
-    color: $c-white;
+    background-color: var(--c-black);
+    color: var(--c-white);
     padding: 4px 0 4px 10px;
 
     .serial {
       font-weight: bold;
-      background: $c-white;
-      color: $c-black;
+      background: var(--c-white);
+      color: var(--c-black);
       padding: 0 4px;
 
       .arrow-right {
@@ -36,7 +36,7 @@
         height: 0;
         border-style: solid;
         border-width: 3px 0 3px 5.2px;
-        border-color: transparent transparent transparent $c-black;
+        border-color: transparent transparent transparent var(--c-black);
       }
     }
   }
@@ -89,7 +89,7 @@
 
     &.no-radius {
       border-top-right-radius: inherit;
-      box-shadow: 0px -10px 10px -6px $c-black;
+      box-shadow: 0px -10px 10px -6px var(--c-black);
     }
   }
 
@@ -107,7 +107,7 @@
     border-top-right-radius: 15px;
 
     .block-header-info {
-      background-color: $c-light-blue;
+      background-color: var(--c-light-blue);
       padding: 2px 0 2px 20px;
     }
 
@@ -135,7 +135,7 @@
       &.health-block, &.resource-block {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        box-shadow: -5px -5px 15px -2px $c-black;
+        box-shadow: -5px -5px 15px -2px var(--c-black);
 
         .block-title {
           border-top-left-radius: 15px;

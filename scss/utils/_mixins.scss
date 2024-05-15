@@ -20,9 +20,9 @@
 }
 
 @mixin gray-to-blue-gradient {
-  background: linear-gradient(90deg, $c-light-gray 30%, $c-light-blue);
+  background: linear-gradient(90deg, var(--c-light-gray) 30%, var(--c-light-blue));
 }
 
 @mixin blue-to-gray-gradient {
-  background: linear-gradient(90deg, $c-light-blue 30%, $c-light-gray);
+  background: linear-gradient(90deg, var(--c-light-blue) 30%, var(--c-light-gray));
 }

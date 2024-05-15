@@ -7,14 +7,14 @@
     align-items: stretch;
 
     input {
-      background: $c-white;
-      border: 1px dotted $c-black;
+      background: var(--c-white);
+      border: 1px dotted var(--c-black);
       width: 50px;
     }
 
     label {
-      color: $c-white;
-      background-color: $c-black;
+      color: var(--c-white);
+      background-color: var(--c-black);
       text-transform: uppercase;
       flex-grow: 1;
       align-items: center;

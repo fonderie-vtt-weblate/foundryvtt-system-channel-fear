@@ -1,15 +1,14 @@
 body {
-  font-family: $font-primary;
+  font-family: var(--f-primary);
 }
 
 #logo {
-  opacity: 0;
-  height: 100px;
+  content: url("../images/logo.webp");
+  min-height: 100px;
+}
 
-  &.loaded {
-    opacity: 1;
-    transition: opacity .3s ease-out;
-  }
+#pause img {
+  content: url("../images/logo.webp");
 }
 
 .editable {
@@ -38,7 +37,7 @@ body {
 }
 
 #sidebar {
-  background-image: url(../images/chat_bg.webp);
+  background-image: url("../images/chat_bg.webp");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;

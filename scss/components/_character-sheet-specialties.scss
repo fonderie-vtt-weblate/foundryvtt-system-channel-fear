@@ -6,10 +6,10 @@
     border-top-right-radius: 0;
 
     .specialty {
-      background: $c-white;
-      border: 1px dotted $c-black;
+      background: var(--c-white);
+      border: 1px dotted var(--c-black);
       margin-bottom: 3px;
-      font-family: $font-handwrite;
+      font-family: var(--f-handwrite);
       padding-left: 5px;
 
       &-name {
@@ -22,7 +22,7 @@
       }
 
       .reroll {
-        background-color: $c-black;
+        background-color: var(--c-black);
         margin: 0;
         align-self: stretch;
         align-content: center;
@@ -32,7 +32,7 @@
 
         input {
           appearance: none;
-          background-color: $c-white;
+          background-color: var(--c-white);
           margin: 0;
           font: inherit;
           color: currentColor;
@@ -47,7 +47,7 @@
             height: 1em;
             transform: scale(0);
             transition: 120ms transform ease-in-out;
-            box-shadow: inset 1em 1em $c-black;
+            box-shadow: inset 1em 1em var(--c-black);
           }
 
           &:checked::before {

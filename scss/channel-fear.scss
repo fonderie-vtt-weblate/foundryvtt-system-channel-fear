@@ -1,19 +1,17 @@
 // Import utilities.
-@import 'utils/fonts';
-@import 'utils/typography';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/variables';
+@import "utils/typography";
+@import "utils/colors";
+@import "utils/mixins";
 
 /* Global styles */
-@import 'global/flex';
-@import 'global/ui';
+@import "global/flex";
+@import "global/ui";
 
 /* Styles limited to channelfear sheets */
 .channelfear {
-  @import 'utils/reset';
-  @import 'components/forms';
-  @import 'components/items';
-  @import 'components/character-sheet';
-  @import 'components/chat';
+  @import "utils/reset";
+  @import "components/forms";
+  @import "components/items";
+  @import "components/character-sheet";
+  @import "components/chat";
 }

@@ -1,3 +1,16 @@
-$font-primary: 'MuseoSlab', sans-serif;
-$font-secondary: 'MuseoSlab', sans-serif;
-$font-handwrite: 'ChalkDuster', sans-serif;
+@font-face {
+  font-family: "ChalkDuster";
+  src: url("../fonts/chalkduster.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MuseoSlab";
+  src: url("../fonts/museoslab-300.otf") format("opentype");
+}
+
+:root {
+  --f-museo-slab: "MuseoSlab", sans-serif;
+  --f-chalk-duster: "ChalkDuster", sans-serif;
+
+  --font-primary: var(--f-museo-slab);
+}

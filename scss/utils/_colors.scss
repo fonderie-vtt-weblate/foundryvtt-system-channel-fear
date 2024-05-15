@@ -1,11 +1,13 @@
-$c-white: #fff;
-$c-black: #000;
+:root {
+  --c-white: #fff;
+  --c-black: #000;
 
-$c-dark: #191813;
-$c-faint: #c9c7b8;
-$c-beige: #b5b3a4;
-$c-tan: #444;
+  --c-dark: #191813;
+  --c-faint: #c9c7b8;
+  --c-beige: #b5b3a4;
+  --c-tan: #444;
 
-$c-light-gray: #eaeae6;
-$c-medium-gray: #f5f4f5;
-$c-light-blue: #b5bec8;
+  --c-light-gray: #eaeae6;
+  --c-medium-gray: #f5f4f5;
+  --c-light-blue: #b5bec8;
+}
