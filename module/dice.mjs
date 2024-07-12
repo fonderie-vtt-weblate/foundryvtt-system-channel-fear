@@ -198,7 +198,7 @@ function _createChatMessage(actor, rollResult, content, type = null) {
     content,
     user: game.user.id,
     speaker: ChatMessage.getSpeaker({ actor }),
-    roll: rollResult,
+    rolls: [rollResult],
     sound: CONFIG.sounds.dice,
   };
 

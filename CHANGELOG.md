@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Change the way to call Babele (remove deprecation)
 
+### Fixed
+
+- Chat message creation to trigger Dice So Nice!
+
 ## [12.0.0] - 2024-05-15
 
 ### Added
