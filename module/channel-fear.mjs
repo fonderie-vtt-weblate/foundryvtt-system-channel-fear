@@ -50,8 +50,8 @@ Hooks.on('init', function () {
 });
 
 Hooks.once('ready', async function () {
-  if ('fr' !== game.i18n.lang && typeof Babele !== 'undefined') {
-    Babele.get().setSystemTranslationsDir('lang/packs/translations');
+  if ('fr' !== game.i18n.lang && game?.babele) {
+    game.babele.setSystemTranslationsDir('lang/packs/translations');
   }
 
   Hooks.on('hotbarDrop', (bar, data, slot) => createItemMacro(data, slot));
