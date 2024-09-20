@@ -1,168 +1,168 @@
 {
-  "TYPES.Actor.character": "Player",
-  "TYPES.Actor.npc": "Second role",
-  "TYPES.Item.specialty": "Specialty",
-  "TYPES.Item.weapon": "Weapon",
-  "TYPES.Item.item": "Item",
-  "CF": {
-    "Settings": {
-      "HideProfileImage": {
-        "Title": "Hide the profile image",
-        "Hint": "Remove image display in the cell phone on sheets"
-      }
-    },
-    "Warnings": {
-      "MacroOnlyForOwnedItem": "You can only create macro buttons for owned Items",
-      "MacroItemNotFound": "Could not find item {name}. You may need to delete and recreate this macro."
-    },
-    "Abilities": {
-      "Act": "To act",
-      "Kno": "To know",
-      "Bea": "To bear",
-      "For": "Force",
-      "Per": "Perceive",
-      "Imp": "To impose",
-      "Knh": "Know-how",
-      "Fig": "Fight",
-      "Sel": "To self-control",
-      "Aim": "To aim"
-    },
-    "Global": {
-      "xD": "{x}D",
-      "xR": "{x}R",
-      "Ability": "Ability",
-      "Abilities": "Abilities",
-      "Cancel": "Cancel",
-      "Category": "Category",
-      "Delete": "Delete",
-      "Damages": "Damages",
-      "Difficulty": "Difficulty",
-      "Edit": "Edit",
-      "Name": "Name",
-      "NewItem": "New {type}",
-      "Rerolls": "Rerolls",
-      "Reroll": "Reroll",
-      "RollDice": "Roll dice",
-      "Specialty": "Specialty",
-      "Specialties": "Specialties",
-      "Weapon": "Weapon",
-      "Weapons": "Weapons",
-      "XOutOfY": "{x} out of {y}",
-      "Description": "Description",
-      "Items": "Items"
-    },
-    "Weapons": {
-      "Categories": {
-        "BareHands": "Bare hands",
-        "VeryLight": "Very light",
-        "Light": "Light",
-        "Medium": "Medium",
-        "Heavy": "Heavy"
-      }
-    },
-    "CharacterSheet": {
-      "Yno": "A {serial} created by Anthony “Yno” Combrexelle",
-      "YnoSerial": "serial",
-      "Informations": "Informations",
-      "Identity": "Identity",
-      "Profile": "Profile",
-      "Keywords": "Keywords",
-      "ProfDef": "Professional deformation(s)",
-      "Biography": "Biography",
-      "Notes": "Notes",
-      "Tabs": {
-        "AbilitiesSpecialtiesWeapons": "Abilities, specialties and weapons",
-        "AbilitiesWeapons": "Abilities and weapons",
-        "BiographyEvolution": "Biography end evolution"
-      },
-      "Abilities": {
-        "MinMaxInfo": "Value between {min} and {max}",
-        "PointsToSpent": "35 points to distribute",
-        "PointsCost": "(1 pt = 1 pt)"
-      },
-      "Specialties": {
-        "Add": "Add a specialty",
-        "PlusLinkedAbility": "(+ linked ability)",
-        "PointsToSpent": "30 points to distribute",
-        "PointsCost": "(points = evolution)"
-      },
-      "Weapons": {
-        "Add": "Add a weapon",
-        "PlusLinkedAbility": "(+ linked ability)"
-      },
-      "Health": {
-        "Title": "Health",
-        "MaxInfo": "In good health",
-        "AtValue": "At {value}",
-        "WhenAt2": "+1 success required",
-        "WhenAt1": "+2 success required",
-        "WhenAt0": "unconscious"
-      },
-      "Resource": {
-        "Title": "Resource",
-        "MaxInfo": "In good shape",
-        "SuccessTitle": "Success",
-        "SuccessDesc": "+1 automatic success",
-        "ProfDefBonusDesc": "Roll automatically successful once per episode"
-      },
-      "Evolution": {
-        "Title": "Evolution",
-        "Subtitle": "In reserve",
-        "Points": "{value} points",
-        "SpecialtyFromTo": "{from}R > {to}R in specialty",
-        "AbilityBonusDesc": "+1D in ability",
-        "ProfDefBonusDesc": "+1 professional deformation"
-      },
-      "Items": {
-        "Add": "Add an item"
-      }
-    },
-    "NpcSheet": {
-      "Level": {
-        "Label": "Level",
-        "Values": {
-          "weak": "Weak",
-          "medium": "Medium",
-          "strong": "Strong",
-          "unbeatable": "Unbeatable"
+    "TYPES.Actor.character": "Player test",
+    "TYPES.Actor.npc": "Second role",
+    "TYPES.Item.specialty": "Specialty",
+    "TYPES.Item.weapon": "Weapon",
+    "TYPES.Item.item": "Item",
+    "CF": {
+        "Settings": {
+            "HideProfileImage": {
+                "Title": "Hide the profile image",
+                "Hint": "Remove image display in the cell phone on sheets"
+            }
+        },
+        "Warnings": {
+            "MacroOnlyForOwnedItem": "You can only create macro buttons for owned Items",
+            "MacroItemNotFound": "Could not find item {name}. You may need to delete and recreate this macro."
+        },
+        "Abilities": {
+            "Act": "To act",
+            "Kno": "To know",
+            "Bea": "To bear",
+            "For": "Force",
+            "Per": "Perceive",
+            "Imp": "To impose",
+            "Knh": "Know-how",
+            "Fig": "Fight",
+            "Sel": "To self-control",
+            "Aim": "To aim"
+        },
+        "Global": {
+            "xD": "{x}D",
+            "xR": "{x}R",
+            "Ability": "Ability",
+            "Abilities": "Abilities",
+            "Cancel": "Cancel",
+            "Category": "Category",
+            "Delete": "Delete",
+            "Damages": "Damages",
+            "Difficulty": "Difficulty",
+            "Edit": "Edit",
+            "Name": "Name",
+            "NewItem": "New {type}",
+            "Rerolls": "Rerolls",
+            "Reroll": "Reroll",
+            "RollDice": "Roll dice",
+            "Specialty": "Specialty",
+            "Specialties": "Specialties",
+            "Weapon": "Weapon",
+            "Weapons": "Weapons",
+            "XOutOfY": "{x} out of {y}",
+            "Description": "Description",
+            "Items": "Items"
+        },
+        "Weapons": {
+            "Categories": {
+                "BareHands": "Bare hands",
+                "VeryLight": "Very light",
+                "Light": "Light",
+                "Medium": "Medium",
+                "Heavy": "Heavy"
+            }
+        },
+        "CharacterSheet": {
+            "Yno": "A {serial} created by Anthony “Yno” Combrexelle",
+            "YnoSerial": "serial",
+            "Informations": "Informations",
+            "Identity": "Identity",
+            "Profile": "Profile",
+            "Keywords": "Keywords",
+            "ProfDef": "Professional deformation(s)",
+            "Biography": "Biography",
+            "Notes": "Notes",
+            "Tabs": {
+                "AbilitiesSpecialtiesWeapons": "Abilities, specialties and weapons",
+                "AbilitiesWeapons": "Abilities and weapons",
+                "BiographyEvolution": "Biography end evolution"
+            },
+            "Abilities": {
+                "MinMaxInfo": "Value between {min} and {max}",
+                "PointsToSpent": "35 points to distribute",
+                "PointsCost": "(1 pt = 1 pt)"
+            },
+            "Specialties": {
+                "Add": "Add a specialty",
+                "PlusLinkedAbility": "(+ linked ability)",
+                "PointsToSpent": "30 points to distribute",
+                "PointsCost": "(points = evolution)"
+            },
+            "Weapons": {
+                "Add": "Add a weapon",
+                "PlusLinkedAbility": "(+ linked ability)"
+            },
+            "Health": {
+                "Title": "Health",
+                "MaxInfo": "In good health",
+                "AtValue": "At {value}",
+                "WhenAt2": "+1 success required",
+                "WhenAt1": "+2 success required",
+                "WhenAt0": "unconscious"
+            },
+            "Resource": {
+                "Title": "Resource",
+                "MaxInfo": "In good shape",
+                "SuccessTitle": "Success",
+                "SuccessDesc": "+1 automatic success",
+                "ProfDefBonusDesc": "Roll automatically successful once per episode"
+            },
+            "Evolution": {
+                "Title": "Evolution",
+                "Subtitle": "In reserve",
+                "Points": "{value} points",
+                "SpecialtyFromTo": "{from}R > {to}R in specialty",
+                "AbilityBonusDesc": "+1D in ability",
+                "ProfDefBonusDesc": "+1 professional deformation"
+            },
+            "Items": {
+                "Add": "Add an item"
+            }
+        },
+        "NpcSheet": {
+            "Level": {
+                "Label": "Level",
+                "Values": {
+                    "weak": "Weak",
+                    "medium": "Medium",
+                    "strong": "Strong",
+                    "unbeatable": "Unbeatable"
+                }
+            }
+        },
+        "Rolls": {
+            "Difficulty": "Difficulty: {difficulty}",
+            "Dialog": {
+                "Difficulty": "Roll difficulty",
+                "Difficulty1": "Relatively easy - 1 success",
+                "Difficulty2": "Medium - 2 successes",
+                "Difficulty3": "Difficult - 3 successes",
+                "Difficulty4": "Very difficult - 4 successes",
+                "ResourcesToUse": "Resource points to use"
+            },
+            "AbilityCheck": {
+                "Title": "Ability roll",
+                "Card": {
+                    "Title": "Ability roll: {name}"
+                }
+            },
+            "SpecialtyCheck": {
+                "Title": "Specialty roll",
+                "Card": {
+                    "Title": "Specialty roll: {name}"
+                }
+            },
+            "WeaponCheck": {
+                "Title": "Weapon roll",
+                "Card": {
+                    "Title": "Weapon roll: {name}"
+                }
+            },
+            "Damages": {
+                "Title": "Damages roll",
+                "Card": {
+                    "Title": "Damages roll: {name}",
+                    "HitAllMight": "Hit with all your might"
+                }
+            }
         }
-      }
-    },
-    "Rolls": {
-      "Difficulty": "Difficulty: {difficulty}",
-      "Dialog": {
-        "Difficulty": "Roll difficulty",
-        "Difficulty1": "Relatively easy - 1 success",
-        "Difficulty2": "Medium - 2 successes",
-        "Difficulty3": "Difficult - 3 successes",
-        "Difficulty4": "Very difficult - 4 successes",
-        "ResourcesToUse": "Resource points to use"
-      },
-      "AbilityCheck": {
-        "Title": "Ability roll",
-        "Card": {
-          "Title": "Ability roll: {name}"
-        }
-      },
-      "SpecialtyCheck": {
-        "Title": "Specialty roll",
-        "Card": {
-          "Title": "Specialty roll: {name}"
-        }
-      },
-      "WeaponCheck": {
-        "Title": "Weapon roll",
-        "Card": {
-          "Title": "Weapon roll: {name}"
-        }
-      },
-      "Damages": {
-        "Title": "Damages roll",
-        "Card": {
-          "Title": "Damages roll: {name}",
-          "HitAllMight": "Hit with all your might"
-        }
-      }
     }
-  }
 }
