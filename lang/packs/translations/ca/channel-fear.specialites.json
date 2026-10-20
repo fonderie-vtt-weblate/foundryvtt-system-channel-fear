@@ -6,7 +6,7 @@
 		"03. Endurer": "03. Aguantar",
 		"04. Forcer": "04. Forçar",
 		"05. Percevoir": "05. Percebre",
-		"06. S'imposer": "06. Imposar",
+		"06. S’imposer": "06. Imposar",
 		"07. Savoir-faire": "07. Perícia",
 		"08. Se battre": "08. Lluitar",
 		"09. Se contrôler": "09. Controlar-se",
@@ -37,9 +37,6 @@
 		"Course": {
 			"name": "Run"
 		},
-		"Démonologie": {
-			"name": "Demonology"
-		},
 		"Discrétion": {
 			"name": "Discretion"
 		},
@@ -48,9 +45,6 @@
 		},
 		"Équilibre": {
 			"name": "Balance"
-		},
-		"Exorcisme": {
-			"name": "Exorcism"
 		},
 		"Gestion": {
 			"name": "Management"
@@ -82,9 +76,6 @@
 		"Orientation": {
 			"name": "Orientation"
 		},
-		"Paranormal": {
-			"name": "Paranormal"
-		},
 		"Pousser": {
 			"name": "Push"
 		},
@@ -105,12 +96,6 @@
 		},
 		"Saut": {
 			"name": "Jump"
-		},
-		"Spiritisme": {
-			"name": "Spiritism"
-		},
-		"Technologie": {
-			"name": "Technology"
 		},
 		"Tirer": {
 			"name": "Pull"

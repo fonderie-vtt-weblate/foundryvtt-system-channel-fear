@@ -6,7 +6,7 @@
 		"03. Endurer": "03. To bear",
 		"04. Forcer": "04. Force",
 		"05. Percevoir": "05. Perceive",
-		"06. S'imposer": "06. To impose",
+		"06. S’imposer": "06. To impose",
 		"07. Savoir-faire": "07. Know-how",
 		"08. Se battre": "08. Fight",
 		"09. Se contrôler": "09. To self-control",
@@ -37,9 +37,6 @@
 		"Course": {
 			"name": "Run"
 		},
-		"Démonologie": {
-			"name": "Demonology"
-		},
 		"Discrétion": {
 			"name": "Discretion"
 		},
@@ -48,9 +45,6 @@
 		},
 		"Équilibre": {
 			"name": "Balance"
-		},
-		"Exorcisme": {
-			"name": "Exorcism"
 		},
 		"Gestion": {
 			"name": "Management"
@@ -82,9 +76,6 @@
 		"Orientation": {
 			"name": "Orientation"
 		},
-		"Paranormal": {
-			"name": "Paranormal"
-		},
 		"Pousser": {
 			"name": "Push"
 		},
@@ -105,12 +96,6 @@
 		},
 		"Saut": {
 			"name": "Jump"
-		},
-		"Spiritisme": {
-			"name": "Spiritism"
-		},
-		"Technologie": {
-			"name": "Technology"
 		},
 		"Tirer": {
 			"name": "Pull"
