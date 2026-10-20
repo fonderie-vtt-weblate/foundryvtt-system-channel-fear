@@ -94,6 +94,11 @@
       "name": "Català",
       "path": "lang/ca.json",
       "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
     }
   ],
   "documentTypes": {
