@@ -8,7 +8,7 @@ async function compilePacksInDir(sourceDir, targetDir) {
 
   // Filter the names for directories only
   const dirNames = names
-    .filter(value => value.isDirectory())
+    .filter(value => value.isDirectory() && '_compiled' !== value.name)
     .map(value => value.name);
 
   // For each directory, call compilePack with the correct arguments

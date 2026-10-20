@@ -1,0 +1,107 @@
+{
+  "label": "Spécialités",
+  "folders": {
+    "01. Agir": "01. Agir",
+    "02. Connaître": "02. Connaître",
+    "03. Endurer": "03. Endurer",
+    "04. Forcer": "04. Forcer",
+    "05. Percevoir": "05. Percevoir",
+    "06. S’imposer": "06. S’imposer",
+    "07. Savoir-faire": "07. Savoir-faire",
+    "08. Se battre": "08. Se battre",
+    "09. Se contrôler": "09. Se contrôler",
+    "10. Viser": "10. Viser"
+  },
+  "entries": {
+    "Actualité": {
+      "name": "Actualité"
+    },
+    "Argumentation": {
+      "name": "Argumentation"
+    },
+    "Armes à feu": {
+      "name": "Armes à feu"
+    },
+    "Armes blanches": {
+      "name": "Armes blanches"
+    },
+    "Armes improvisées": {
+      "name": "Armes improvisées"
+    },
+    "Cibler": {
+      "name": "Cibler"
+    },
+    "Conduire": {
+      "name": "Conduire"
+    },
+    "Course": {
+      "name": "Course"
+    },
+    "Discrétion": {
+      "name": "Discrétion"
+    },
+    "Gestion": {
+      "name": "Gestion"
+    },
+    "Informatique": {
+      "name": "Informatique"
+    },
+    "Intimidation": {
+      "name": "Intimidation"
+    },
+    "Lancer (avec force)": {
+      "name": "Lancer (avec force)"
+    },
+    "Lancer (avec précision)": {
+      "name": "Lancer (avec précision)"
+    },
+    "Mécanique": {
+      "name": "Mécanique"
+    },
+    "Maîtrise de soi": {
+      "name": "Maîtrise de soi"
+    },
+    "Mains nues": {
+      "name": "Mains nues"
+    },
+    "Observation": {
+      "name": "Observation"
+    },
+    "Orientation": {
+      "name": "Orientation"
+    },
+    "Pousser": {
+      "name": "Pousser"
+    },
+    "Premiers secours": {
+      "name": "Premiers secours"
+    },
+    "Réflexe": {
+      "name": "Réflexe"
+    },
+    "Réseau": {
+      "name": "Réseau"
+    },
+    "Résistance (immunitaire)": {
+      "name": "Résistance (immunitaire)"
+    },
+    "Respiration": {
+      "name": "Respiration"
+    },
+    "Saut": {
+      "name": "Saut"
+    },
+    "Tirer": {
+      "name": "Tirer"
+    },
+    "Volonté": {
+      "name": "Volonté"
+    },
+    "Écoute": {
+      "name": "Écoute"
+    },
+    "Équilibre": {
+      "name": "Équilibre"
+    }
+  }
+}

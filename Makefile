@@ -1,4 +1,4 @@
-.PHONY: workon clear unpack pack
+.PHONY: workon clear unpack pack lang-fr
 PACK_DIRS := ./packs
 
 workon:
@@ -22,3 +22,6 @@ pack:
 	    yarn run fvtt package pack --in _packs_sources/$$dir $$dir >/dev/null; \
 	done
 	@make -s clear
+
+lang-fr:
+	@node generate-fr-translations.mjs

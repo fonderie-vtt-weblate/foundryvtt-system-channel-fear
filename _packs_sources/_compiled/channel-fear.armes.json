@@ -1,0 +1,100 @@
+{
+  "label": "Armes",
+  "folders": {
+    "1. Mains nues": "1. Mains nues",
+    "2. Très légères": "2. Très légères",
+    "3. Légères": "3. Légères",
+    "4. Moyennes": "4. Moyennes",
+    "5. Lourdes": "5. Lourdes",
+    "Dangereuse (2R)": "Dangereuse (2R)",
+    "Efficace (1R)": "Efficace (1R)",
+    "Meurtrière (3R)": "Meurtrière (3R)",
+    "Normale (0R)": "Normale (0R)"
+  },
+  "entries": {
+    "Barre à mine": {
+      "name": "Barre à mine"
+    },
+    "Batte": {
+      "name": "Batte"
+    },
+    "Brique": {
+      "name": "Brique"
+    },
+    "Chaîne": {
+      "name": "Chaîne"
+    },
+    "Cran d'arrêt": {
+      "name": "Cran d'arrêt"
+    },
+    "Explosifs": {
+      "name": "Explosifs"
+    },
+    "Fusil à pompe": {
+      "name": "Fusil à pompe"
+    },
+    "Fusil d'assaut": {
+      "name": "Fusil d'assaut"
+    },
+    "Grenades": {
+      "name": "Grenades"
+    },
+    "Griffes": {
+      "name": "Griffes"
+    },
+    "Hache d'incendie": {
+      "name": "Hache d'incendie"
+    },
+    "Lance-pierre": {
+      "name": "Lance-pierre"
+    },
+    "Machette": {
+      "name": "Machette"
+    },
+    "Masse": {
+      "name": "Masse"
+    },
+    "Matraque": {
+      "name": "Matraque"
+    },
+    "Mitrailleur": {
+      "name": "Mitrailleur"
+    },
+    "Mitrailleuse": {
+      "name": "Mitrailleuse"
+    },
+    "Pelle": {
+      "name": "Pelle"
+    },
+    "Pistolet mitrailleur": {
+      "name": "Pistolet mitrailleur"
+    },
+    "Pistolet": {
+      "name": "Pistolet"
+    },
+    "Planche de bois": {
+      "name": "Planche de bois"
+    },
+    "Poing & cie": {
+      "name": "Poing & cie"
+    },
+    "Poing américain": {
+      "name": "Poing américain"
+    },
+    "Rasoir": {
+      "name": "Rasoir"
+    },
+    "Scalpel": {
+      "name": "Scalpel"
+    },
+    "Taser": {
+      "name": "Taser"
+    },
+    "Tronçonneuse": {
+      "name": "Tronçonneuse"
+    },
+    "Tuyau": {
+      "name": "Tuyau"
+    }
+  }
+}
