@@ -1,1 +1,22 @@
-{}
+{
+  "label": "Vorgefertigte Charaktere",
+  "entries": {
+    "Archie “Bulldog” Grimm": {
+      "name": "Archie „Bulldog“ Grimm",
+      "keywords": "53 Jahre alt. Kaukasisch. Mittelgroß.\nWeiße Haare. Schwarzer Anzug.\nBeiger Mantel. Finsterer Blick.",
+      "profile": "Ehemaliger Polizist"
+    },
+    "Damien Barnes": {
+      "name": "Damien Barnes"
+    },
+    "Elsa Faust": {
+      "name": "Elsa Faust"
+    },
+    "Julian Cross": {
+      "name": "Julian Cross"
+    },
+    "Sunny O": {
+      "name": "Sunny O"
+    }
+  }
+}
