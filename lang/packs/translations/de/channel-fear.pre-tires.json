@@ -7,16 +7,20 @@
       "profile": "Ehemaliger Polizist"
     },
     "Damien Barnes": {
-      "name": "Damien Barnes"
+      "name": "Damien Barnes",
+      "profile": "Exorzist"
     },
     "Elsa Faust": {
-      "name": "Elsa Faust"
+      "name": "Elsa Faust",
+      "profile": "Historikerin"
     },
     "Julian Cross": {
-      "name": "Julian Cross"
+      "name": "Julian Cross",
+      "profile": "Medium"
     },
     "Sunny O": {
-      "name": "Sunny O"
+      "name": "Sunny O",
+      "profile": "Technikexpertin"
     }
   }
 }
